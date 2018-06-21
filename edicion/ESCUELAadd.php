@@ -963,13 +963,13 @@ class cESCUELA_add extends cESCUELA {
 		$this->DOMICILIO->SetDbValueDef($rsnew, $this->DOMICILIO->CurrentValue, NULL, FALSE);
 
 		// LOCALIDAD
-		$this->LOCALIDAD->SetDbValueDef($rsnew, $this->LOCALIDAD->CurrentValue, NULL, strval($this->LOCALIDAD->CurrentValue) == "");
+		$this->LOCALIDAD->SetDbValueDef($rsnew, $this->LOCALIDAD->CurrentValue, NULL, FALSE);
 
 		// TELEFONO
 		$this->TELEFONO->SetDbValueDef($rsnew, $this->TELEFONO->CurrentValue, NULL, FALSE);
 
 		// NIVEL
-		$this->NIVEL->SetDbValueDef($rsnew, $this->NIVEL->CurrentValue, NULL, strval($this->NIVEL->CurrentValue) == "");
+		$this->NIVEL->SetDbValueDef($rsnew, $this->NIVEL->CurrentValue, NULL, FALSE);
 
 		// RPV
 		$this->RPV->SetDbValueDef($rsnew, $this->RPV->CurrentValue, NULL, FALSE);

@@ -374,6 +374,7 @@ class cniveles_list extends cniveles {
 		$this->Id_nivel->SetVisibility();
 		$this->Id_nivel->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
 		$this->Nivel->SetVisibility();
+		$this->INSPECTOR->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -701,6 +702,7 @@ class cniveles_list extends cniveles {
 		$sFilterList = "";
 		$sFilterList = ew_Concat($sFilterList, $this->Id_nivel->AdvancedSearch->ToJson(), ","); // Field Id_nivel
 		$sFilterList = ew_Concat($sFilterList, $this->Nivel->AdvancedSearch->ToJson(), ","); // Field Nivel
+		$sFilterList = ew_Concat($sFilterList, $this->INSPECTOR->AdvancedSearch->ToJson(), ","); // Field INSPECTOR
 		if ($this->BasicSearch->Keyword <> "") {
 			$sWrk = "\"" . EW_TABLE_BASIC_SEARCH . "\":\"" . ew_JsEncode2($this->BasicSearch->Keyword) . "\",\"" . EW_TABLE_BASIC_SEARCH_TYPE . "\":\"" . ew_JsEncode2($this->BasicSearch->Type) . "\"";
 			$sFilterList = ew_Concat($sFilterList, $sWrk, ",");
@@ -760,6 +762,14 @@ class cniveles_list extends cniveles {
 		$this->Nivel->AdvancedSearch->SearchValue2 = @$filter["y_Nivel"];
 		$this->Nivel->AdvancedSearch->SearchOperator2 = @$filter["w_Nivel"];
 		$this->Nivel->AdvancedSearch->Save();
+
+		// Field INSPECTOR
+		$this->INSPECTOR->AdvancedSearch->SearchValue = @$filter["x_INSPECTOR"];
+		$this->INSPECTOR->AdvancedSearch->SearchOperator = @$filter["z_INSPECTOR"];
+		$this->INSPECTOR->AdvancedSearch->SearchCondition = @$filter["v_INSPECTOR"];
+		$this->INSPECTOR->AdvancedSearch->SearchValue2 = @$filter["y_INSPECTOR"];
+		$this->INSPECTOR->AdvancedSearch->SearchOperator2 = @$filter["w_INSPECTOR"];
+		$this->INSPECTOR->AdvancedSearch->Save();
 		$this->BasicSearch->setKeyword(@$filter[EW_TABLE_BASIC_SEARCH]);
 		$this->BasicSearch->setType(@$filter[EW_TABLE_BASIC_SEARCH_TYPE]);
 	}
@@ -768,6 +778,7 @@ class cniveles_list extends cniveles {
 	function BasicSearchSQL($arKeywords, $type) {
 		$sWhere = "";
 		$this->BuildBasicSearchSQL($sWhere, $this->Nivel, $arKeywords, $type);
+		$this->BuildBasicSearchSQL($sWhere, $this->INSPECTOR, $arKeywords, $type);
 		return $sWhere;
 	}
 
@@ -915,6 +926,7 @@ class cniveles_list extends cniveles {
 			$this->CurrentOrderType = @$_GET["ordertype"];
 			$this->UpdateSort($this->Id_nivel); // Id_nivel
 			$this->UpdateSort($this->Nivel); // Nivel
+			$this->UpdateSort($this->INSPECTOR); // INSPECTOR
 			$this->setStartRecordNumber(1); // Reset start position
 		}
 	}
@@ -949,6 +961,7 @@ class cniveles_list extends cniveles {
 				$this->setSessionOrderBy($sOrderBy);
 				$this->Id_nivel->setSort("");
 				$this->Nivel->setSort("");
+				$this->INSPECTOR->setSort("");
 			}
 
 			// Reset start position
@@ -1399,6 +1412,7 @@ class cniveles_list extends cniveles {
 			return;
 		$this->Id_nivel->setDbValue($row['Id_nivel']);
 		$this->Nivel->setDbValue($row['Nivel']);
+		$this->INSPECTOR->setDbValue($row['INSPECTOR']);
 	}
 
 	// Return a row with default values
@@ -1406,6 +1420,7 @@ class cniveles_list extends cniveles {
 		$row = array();
 		$row['Id_nivel'] = NULL;
 		$row['Nivel'] = NULL;
+		$row['INSPECTOR'] = NULL;
 		return $row;
 	}
 
@@ -1416,6 +1431,7 @@ class cniveles_list extends cniveles {
 		$row = is_array($rs) ? $rs : $rs->fields;
 		$this->Id_nivel->DbValue = $row['Id_nivel'];
 		$this->Nivel->DbValue = $row['Nivel'];
+		$this->INSPECTOR->DbValue = $row['INSPECTOR'];
 	}
 
 	// Load old record
@@ -1458,6 +1474,7 @@ class cniveles_list extends cniveles {
 		// Common render codes for all row types
 		// Id_nivel
 		// Nivel
+		// INSPECTOR
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -1469,6 +1486,10 @@ class cniveles_list extends cniveles {
 		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
 		$this->Nivel->ViewCustomAttributes = "";
 
+		// INSPECTOR
+		$this->INSPECTOR->ViewValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->ViewCustomAttributes = "";
+
 			// Id_nivel
 			$this->Id_nivel->LinkCustomAttributes = "";
 			$this->Id_nivel->HrefValue = "";
@@ -1478,6 +1499,11 @@ class cniveles_list extends cniveles {
 			$this->Nivel->LinkCustomAttributes = "";
 			$this->Nivel->HrefValue = "";
 			$this->Nivel->TooltipValue = "";
+
+			// INSPECTOR
+			$this->INSPECTOR->LinkCustomAttributes = "";
+			$this->INSPECTOR->HrefValue = "";
+			$this->INSPECTOR->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -1795,6 +1821,15 @@ $niveles_list->ListOptions->Render("header", "left");
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
+<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+	<?php if ($niveles->SortUrl($niveles->INSPECTOR) == "") { ?>
+		<th data-name="INSPECTOR" class="<?php echo $niveles->INSPECTOR->HeaderCellClass() ?>"><div id="elh_niveles_INSPECTOR" class="niveles_INSPECTOR"><div class="ewTableHeaderCaption"><?php echo $niveles->INSPECTOR->FldCaption() ?></div></div></th>
+	<?php } else { ?>
+		<th data-name="INSPECTOR" class="<?php echo $niveles->INSPECTOR->HeaderCellClass() ?>"><div class="ewPointer" onclick="ew_Sort(event,'<?php echo $niveles->SortUrl($niveles->INSPECTOR) ?>',1);"><div id="elh_niveles_INSPECTOR" class="niveles_INSPECTOR">
+			<div class="ewTableHeaderBtn"><span class="ewTableHeaderCaption"><?php echo $niveles->INSPECTOR->FldCaption() ?><?php echo $Language->Phrase("SrchLegend") ?></span><span class="ewTableHeaderSort"><?php if ($niveles->INSPECTOR->getSort() == "ASC") { ?><span class="caret ewSortUp"></span><?php } elseif ($niveles->INSPECTOR->getSort() == "DESC") { ?><span class="caret"></span><?php } ?></span></div>
+		</div></div></th>
+	<?php } ?>
+<?php } ?>
 <?php
 
 // Render list options (header, right)
@@ -1873,6 +1908,14 @@ $niveles_list->ListOptions->Render("body", "left", $niveles_list->RowCnt);
 <span id="el<?php echo $niveles_list->RowCnt ?>_niveles_Nivel" class="niveles_Nivel">
 <span<?php echo $niveles->Nivel->ViewAttributes() ?>>
 <?php echo $niveles->Nivel->ListViewValue() ?></span>
+</span>
+</td>
+	<?php } ?>
+	<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+		<td data-name="INSPECTOR"<?php echo $niveles->INSPECTOR->CellAttributes() ?>>
+<span id="el<?php echo $niveles_list->RowCnt ?>_niveles_INSPECTOR" class="niveles_INSPECTOR">
+<span<?php echo $niveles->INSPECTOR->ViewAttributes() ?>>
+<?php echo $niveles->INSPECTOR->ListViewValue() ?></span>
 </span>
 </td>
 	<?php } ?>

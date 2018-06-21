@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<configuration date="2018/06/06" author="e.World Technology Ltd.">
-  <project id="{803A0725-AF43-41D4-9FF6-CD1AEBA17FEC}" file="C:\Users\adan aloe\Documents\PHPMaker\Projects\mesa_entrada.pmp" name="mesa_entrada" product="PHPMaker" version="14.0" datetime="2018/06/06 11:56:33" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;">
+<configuration date="2018/06/21" author="e.World Technology Ltd.">
+  <project id="{803A0725-AF43-41D4-9FF6-CD1AEBA17FEC}" file="C:\Users\adan aloe\Documents\PHPMaker\Projects\mesa_entrada.pmp" name="mesa_entrada" product="PHPMaker" version="14.0" datetime="2018/06/21 11:17:22" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;">
     <table id="cargos" name="cargos" caption="cargos" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
     <table id="ESCUELA" name="ESCUELA" caption="ESCUELA" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
     <table id="localidades" name="localidades" caption="localidades" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />

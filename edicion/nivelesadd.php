@@ -287,6 +287,7 @@ class cniveles_add extends cniveles {
 		$objForm = new cFormObj();
 		$this->CurrentAction = (@$_GET["a"] <> "") ? $_GET["a"] : @$_POST["a_list"]; // Set up current action
 		$this->Nivel->SetVisibility();
+		$this->INSPECTOR->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -490,6 +491,8 @@ class cniveles_add extends cniveles {
 		$this->Id_nivel->OldValue = $this->Id_nivel->CurrentValue;
 		$this->Nivel->CurrentValue = NULL;
 		$this->Nivel->OldValue = $this->Nivel->CurrentValue;
+		$this->INSPECTOR->CurrentValue = NULL;
+		$this->INSPECTOR->OldValue = $this->INSPECTOR->CurrentValue;
 	}
 
 	// Load form values
@@ -500,12 +503,16 @@ class cniveles_add extends cniveles {
 		if (!$this->Nivel->FldIsDetailKey) {
 			$this->Nivel->setFormValue($objForm->GetValue("x_Nivel"));
 		}
+		if (!$this->INSPECTOR->FldIsDetailKey) {
+			$this->INSPECTOR->setFormValue($objForm->GetValue("x_INSPECTOR"));
+		}
 	}
 
 	// Restore form values
 	function RestoreFormValues() {
 		global $objForm;
 		$this->Nivel->CurrentValue = $this->Nivel->FormValue;
+		$this->INSPECTOR->CurrentValue = $this->INSPECTOR->FormValue;
 	}
 
 	// Load row based on key values
@@ -543,6 +550,7 @@ class cniveles_add extends cniveles {
 			return;
 		$this->Id_nivel->setDbValue($row['Id_nivel']);
 		$this->Nivel->setDbValue($row['Nivel']);
+		$this->INSPECTOR->setDbValue($row['INSPECTOR']);
 	}
 
 	// Return a row with default values
@@ -551,6 +559,7 @@ class cniveles_add extends cniveles {
 		$row = array();
 		$row['Id_nivel'] = $this->Id_nivel->CurrentValue;
 		$row['Nivel'] = $this->Nivel->CurrentValue;
+		$row['INSPECTOR'] = $this->INSPECTOR->CurrentValue;
 		return $row;
 	}
 
@@ -561,6 +570,7 @@ class cniveles_add extends cniveles {
 		$row = is_array($rs) ? $rs : $rs->fields;
 		$this->Id_nivel->DbValue = $row['Id_nivel'];
 		$this->Nivel->DbValue = $row['Nivel'];
+		$this->INSPECTOR->DbValue = $row['INSPECTOR'];
 	}
 
 	// Load old record
@@ -597,6 +607,7 @@ class cniveles_add extends cniveles {
 		// Common render codes for all row types
 		// Id_nivel
 		// Nivel
+		// INSPECTOR
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -608,10 +619,19 @@ class cniveles_add extends cniveles {
 		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
 		$this->Nivel->ViewCustomAttributes = "";
 
+		// INSPECTOR
+		$this->INSPECTOR->ViewValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->ViewCustomAttributes = "";
+
 			// Nivel
 			$this->Nivel->LinkCustomAttributes = "";
 			$this->Nivel->HrefValue = "";
 			$this->Nivel->TooltipValue = "";
+
+			// INSPECTOR
+			$this->INSPECTOR->LinkCustomAttributes = "";
+			$this->INSPECTOR->HrefValue = "";
+			$this->INSPECTOR->TooltipValue = "";
 		} elseif ($this->RowType == EW_ROWTYPE_ADD) { // Add row
 
 			// Nivel
@@ -620,11 +640,21 @@ class cniveles_add extends cniveles {
 			$this->Nivel->EditValue = ew_HtmlEncode($this->Nivel->CurrentValue);
 			$this->Nivel->PlaceHolder = ew_RemoveHtml($this->Nivel->FldCaption());
 
+			// INSPECTOR
+			$this->INSPECTOR->EditAttrs["class"] = "form-control";
+			$this->INSPECTOR->EditCustomAttributes = "";
+			$this->INSPECTOR->EditValue = ew_HtmlEncode($this->INSPECTOR->CurrentValue);
+			$this->INSPECTOR->PlaceHolder = ew_RemoveHtml($this->INSPECTOR->FldCaption());
+
 			// Add refer script
 			// Nivel
 
 			$this->Nivel->LinkCustomAttributes = "";
 			$this->Nivel->HrefValue = "";
+
+			// INSPECTOR
+			$this->INSPECTOR->LinkCustomAttributes = "";
+			$this->INSPECTOR->HrefValue = "";
 		}
 		if ($this->RowType == EW_ROWTYPE_ADD || $this->RowType == EW_ROWTYPE_EDIT || $this->RowType == EW_ROWTYPE_SEARCH) // Add/Edit/Search row
 			$this->SetupFieldTitles();
@@ -670,6 +700,9 @@ class cniveles_add extends cniveles {
 
 		// Nivel
 		$this->Nivel->SetDbValueDef($rsnew, $this->Nivel->CurrentValue, NULL, FALSE);
+
+		// INSPECTOR
+		$this->INSPECTOR->SetDbValueDef($rsnew, $this->INSPECTOR->CurrentValue, NULL, FALSE);
 
 		// Call Row Inserting event
 		$rs = ($rsold == NULL) ? NULL : $rsold->fields;
@@ -891,6 +924,16 @@ $niveles_add->ShowMessage();
 <input type="text" data-table="niveles" data-field="x_Nivel" name="x_Nivel" id="x_Nivel" size="30" maxlength="255" placeholder="<?php echo ew_HtmlEncode($niveles->Nivel->getPlaceHolder()) ?>" value="<?php echo $niveles->Nivel->EditValue ?>"<?php echo $niveles->Nivel->EditAttributes() ?>>
 </span>
 <?php echo $niveles->Nivel->CustomMsg ?></div></div>
+	</div>
+<?php } ?>
+<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+	<div id="r_INSPECTOR" class="form-group">
+		<label id="elh_niveles_INSPECTOR" for="x_INSPECTOR" class="<?php echo $niveles_add->LeftColumnClass ?>"><?php echo $niveles->INSPECTOR->FldCaption() ?></label>
+		<div class="<?php echo $niveles_add->RightColumnClass ?>"><div<?php echo $niveles->INSPECTOR->CellAttributes() ?>>
+<span id="el_niveles_INSPECTOR">
+<input type="text" data-table="niveles" data-field="x_INSPECTOR" name="x_INSPECTOR" id="x_INSPECTOR" size="30" maxlength="255" placeholder="<?php echo ew_HtmlEncode($niveles->INSPECTOR->getPlaceHolder()) ?>" value="<?php echo $niveles->INSPECTOR->EditValue ?>"<?php echo $niveles->INSPECTOR->EditAttributes() ?>>
+</span>
+<?php echo $niveles->INSPECTOR->CustomMsg ?></div></div>
 	</div>
 <?php } ?>
 </div><!-- /page* -->

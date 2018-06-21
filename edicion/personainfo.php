@@ -15,6 +15,7 @@ class cpersona extends cTable {
 	var $telefono;
 	var $celular;
 	var $localidad;
+	var $email;
 
 	//
 	// Table class constructor
@@ -90,6 +91,11 @@ class cpersona extends cTable {
 		$this->localidad->PleaseSelectText = $Language->Phrase("PleaseSelect"); // PleaseSelect text
 		$this->localidad->FldDefaultErrMsg = $Language->Phrase("IncorrectInteger");
 		$this->fields['localidad'] = &$this->localidad;
+
+		// email
+		$this->email = new cField('persona', 'persona', 'x_email', 'email', '[email]', '[email]', 202, -1, FALSE, '[email]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->email->Sortable = TRUE; // Allow sort
+		$this->fields['email'] = &$this->email;
 	}
 
 	// Set Field Visibility
@@ -624,6 +630,7 @@ class cpersona extends cTable {
 		$this->telefono->setDbValue($rs->fields('telefono'));
 		$this->celular->setDbValue($rs->fields('celular'));
 		$this->localidad->setDbValue($rs->fields('localidad'));
+		$this->email->setDbValue($rs->fields('email'));
 	}
 
 	// Render list row values
@@ -642,6 +649,7 @@ class cpersona extends cTable {
 		// telefono
 		// celular
 		// localidad
+		// email
 		// id_persona
 
 		$this->id_persona->ViewValue = $this->id_persona->CurrentValue;
@@ -694,6 +702,10 @@ class cpersona extends cTable {
 		}
 		$this->localidad->ViewCustomAttributes = "";
 
+		// email
+		$this->email->ViewValue = $this->email->CurrentValue;
+		$this->email->ViewCustomAttributes = "";
+
 		// id_persona
 		$this->id_persona->LinkCustomAttributes = "";
 		$this->id_persona->HrefValue = "";
@@ -733,6 +745,11 @@ class cpersona extends cTable {
 		$this->localidad->LinkCustomAttributes = "";
 		$this->localidad->HrefValue = "";
 		$this->localidad->TooltipValue = "";
+
+		// email
+		$this->email->LinkCustomAttributes = "";
+		$this->email->HrefValue = "";
+		$this->email->TooltipValue = "";
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -793,6 +810,12 @@ class cpersona extends cTable {
 		// localidad
 		$this->localidad->EditCustomAttributes = "";
 
+		// email
+		$this->email->EditAttrs["class"] = "form-control";
+		$this->email->EditCustomAttributes = "";
+		$this->email->EditValue = $this->email->CurrentValue;
+		$this->email->PlaceHolder = ew_RemoveHtml($this->email->FldCaption());
+
 		// Call Row Rendered event
 		$this->Row_Rendered();
 	}
@@ -828,6 +851,7 @@ class cpersona extends cTable {
 					if ($this->telefono->Exportable) $Doc->ExportCaption($this->telefono);
 					if ($this->celular->Exportable) $Doc->ExportCaption($this->celular);
 					if ($this->localidad->Exportable) $Doc->ExportCaption($this->localidad);
+					if ($this->email->Exportable) $Doc->ExportCaption($this->email);
 				} else {
 					if ($this->id_persona->Exportable) $Doc->ExportCaption($this->id_persona);
 					if ($this->cuil->Exportable) $Doc->ExportCaption($this->cuil);
@@ -837,6 +861,7 @@ class cpersona extends cTable {
 					if ($this->telefono->Exportable) $Doc->ExportCaption($this->telefono);
 					if ($this->celular->Exportable) $Doc->ExportCaption($this->celular);
 					if ($this->localidad->Exportable) $Doc->ExportCaption($this->localidad);
+					if ($this->email->Exportable) $Doc->ExportCaption($this->email);
 				}
 				$Doc->EndExportRow();
 			}
@@ -876,6 +901,7 @@ class cpersona extends cTable {
 						if ($this->telefono->Exportable) $Doc->ExportField($this->telefono);
 						if ($this->celular->Exportable) $Doc->ExportField($this->celular);
 						if ($this->localidad->Exportable) $Doc->ExportField($this->localidad);
+						if ($this->email->Exportable) $Doc->ExportField($this->email);
 					} else {
 						if ($this->id_persona->Exportable) $Doc->ExportField($this->id_persona);
 						if ($this->cuil->Exportable) $Doc->ExportField($this->cuil);
@@ -885,6 +911,7 @@ class cpersona extends cTable {
 						if ($this->telefono->Exportable) $Doc->ExportField($this->telefono);
 						if ($this->celular->Exportable) $Doc->ExportField($this->celular);
 						if ($this->localidad->Exportable) $Doc->ExportField($this->localidad);
+						if ($this->email->Exportable) $Doc->ExportField($this->email);
 					}
 					$Doc->EndExportRow($RowCnt);
 				}

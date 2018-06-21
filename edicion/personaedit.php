@@ -295,6 +295,7 @@ class cpersona_edit extends cpersona {
 		$this->telefono->SetVisibility();
 		$this->celular->SetVisibility();
 		$this->localidad->SetVisibility();
+		$this->email->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -552,6 +553,9 @@ class cpersona_edit extends cpersona {
 		if (!$this->localidad->FldIsDetailKey) {
 			$this->localidad->setFormValue($objForm->GetValue("x_localidad"));
 		}
+		if (!$this->email->FldIsDetailKey) {
+			$this->email->setFormValue($objForm->GetValue("x_email"));
+		}
 	}
 
 	// Restore form values
@@ -565,6 +569,7 @@ class cpersona_edit extends cpersona {
 		$this->telefono->CurrentValue = $this->telefono->FormValue;
 		$this->celular->CurrentValue = $this->celular->FormValue;
 		$this->localidad->CurrentValue = $this->localidad->FormValue;
+		$this->email->CurrentValue = $this->email->FormValue;
 	}
 
 	// Load row based on key values
@@ -608,6 +613,7 @@ class cpersona_edit extends cpersona {
 		$this->telefono->setDbValue($row['telefono']);
 		$this->celular->setDbValue($row['celular']);
 		$this->localidad->setDbValue($row['localidad']);
+		$this->email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -621,6 +627,7 @@ class cpersona_edit extends cpersona {
 		$row['telefono'] = NULL;
 		$row['celular'] = NULL;
 		$row['localidad'] = NULL;
+		$row['email'] = NULL;
 		return $row;
 	}
 
@@ -637,6 +644,7 @@ class cpersona_edit extends cpersona {
 		$this->telefono->DbValue = $row['telefono'];
 		$this->celular->DbValue = $row['celular'];
 		$this->localidad->DbValue = $row['localidad'];
+		$this->email->DbValue = $row['email'];
 	}
 
 	// Load old record
@@ -679,6 +687,7 @@ class cpersona_edit extends cpersona {
 		// telefono
 		// celular
 		// localidad
+		// email
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -733,6 +742,10 @@ class cpersona_edit extends cpersona {
 		}
 		$this->localidad->ViewCustomAttributes = "";
 
+		// email
+		$this->email->ViewValue = $this->email->CurrentValue;
+		$this->email->ViewCustomAttributes = "";
+
 			// id_persona
 			$this->id_persona->LinkCustomAttributes = "";
 			$this->id_persona->HrefValue = "";
@@ -772,6 +785,11 @@ class cpersona_edit extends cpersona {
 			$this->localidad->LinkCustomAttributes = "";
 			$this->localidad->HrefValue = "";
 			$this->localidad->TooltipValue = "";
+
+			// email
+			$this->email->LinkCustomAttributes = "";
+			$this->email->HrefValue = "";
+			$this->email->TooltipValue = "";
 		} elseif ($this->RowType == EW_ROWTYPE_EDIT) { // Edit row
 
 			// id_persona
@@ -841,6 +859,12 @@ class cpersona_edit extends cpersona {
 			if ($rswrk) $rswrk->Close();
 			$this->localidad->EditValue = $arwrk;
 
+			// email
+			$this->email->EditAttrs["class"] = "form-control";
+			$this->email->EditCustomAttributes = "";
+			$this->email->EditValue = ew_HtmlEncode($this->email->CurrentValue);
+			$this->email->PlaceHolder = ew_RemoveHtml($this->email->FldCaption());
+
 			// Edit refer script
 			// id_persona
 
@@ -874,6 +898,10 @@ class cpersona_edit extends cpersona {
 			// localidad
 			$this->localidad->LinkCustomAttributes = "";
 			$this->localidad->HrefValue = "";
+
+			// email
+			$this->email->LinkCustomAttributes = "";
+			$this->email->HrefValue = "";
 		}
 		if ($this->RowType == EW_ROWTYPE_ADD || $this->RowType == EW_ROWTYPE_EDIT || $this->RowType == EW_ROWTYPE_SEARCH) // Add/Edit/Search row
 			$this->SetupFieldTitles();
@@ -951,6 +979,9 @@ class cpersona_edit extends cpersona {
 
 			// localidad
 			$this->localidad->SetDbValueDef($rsnew, $this->localidad->CurrentValue, NULL, $this->localidad->ReadOnly);
+
+			// email
+			$this->email->SetDbValueDef($rsnew, $this->email->CurrentValue, NULL, $this->email->ReadOnly);
 
 			// Call Row Updating event
 			$bUpdateRow = $this->Row_Updating($rsold, $rsnew);
@@ -1274,6 +1305,16 @@ $persona_edit->ShowMessage();
 </div>
 </span>
 <?php echo $persona->localidad->CustomMsg ?></div></div>
+	</div>
+<?php } ?>
+<?php if ($persona->email->Visible) { // email ?>
+	<div id="r_email" class="form-group">
+		<label id="elh_persona_email" for="x_email" class="<?php echo $persona_edit->LeftColumnClass ?>"><?php echo $persona->email->FldCaption() ?></label>
+		<div class="<?php echo $persona_edit->RightColumnClass ?>"><div<?php echo $persona->email->CellAttributes() ?>>
+<span id="el_persona_email">
+<input type="text" data-table="persona" data-field="x_email" name="x_email" id="x_email" size="30" maxlength="255" placeholder="<?php echo ew_HtmlEncode($persona->email->getPlaceHolder()) ?>" value="<?php echo $persona->email->EditValue ?>"<?php echo $persona->email->EditAttributes() ?>>
+</span>
+<?php echo $persona->email->CustomMsg ?></div></div>
 	</div>
 <?php } ?>
 </div><!-- /page* -->

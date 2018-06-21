@@ -9,6 +9,7 @@ $niveles = NULL;
 class cniveles extends cTable {
 	var $Id_nivel;
 	var $Nivel;
+	var $INSPECTOR;
 
 	//
 	// Table class constructor
@@ -51,6 +52,11 @@ class cniveles extends cTable {
 		$this->Nivel = new cField('niveles', 'niveles', 'x_Nivel', 'Nivel', '[Nivel]', '[Nivel]', 202, -1, FALSE, '[Nivel]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
 		$this->Nivel->Sortable = TRUE; // Allow sort
 		$this->fields['Nivel'] = &$this->Nivel;
+
+		// INSPECTOR
+		$this->INSPECTOR = new cField('niveles', 'niveles', 'x_INSPECTOR', 'INSPECTOR', '[INSPECTOR]', '[INSPECTOR]', 202, -1, FALSE, '[INSPECTOR]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->INSPECTOR->Sortable = TRUE; // Allow sort
+		$this->fields['INSPECTOR'] = &$this->INSPECTOR;
 	}
 
 	// Set Field Visibility
@@ -579,6 +585,7 @@ class cniveles extends cTable {
 	function LoadListRowValues(&$rs) {
 		$this->Id_nivel->setDbValue($rs->fields('Id_nivel'));
 		$this->Nivel->setDbValue($rs->fields('Nivel'));
+		$this->INSPECTOR->setDbValue($rs->fields('INSPECTOR'));
 	}
 
 	// Render list row values
@@ -591,6 +598,7 @@ class cniveles extends cTable {
 	// Common render codes
 		// Id_nivel
 		// Nivel
+		// INSPECTOR
 		// Id_nivel
 
 		$this->Id_nivel->ViewValue = $this->Id_nivel->CurrentValue;
@@ -599,6 +607,10 @@ class cniveles extends cTable {
 		// Nivel
 		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
 		$this->Nivel->ViewCustomAttributes = "";
+
+		// INSPECTOR
+		$this->INSPECTOR->ViewValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->ViewCustomAttributes = "";
 
 		// Id_nivel
 		$this->Id_nivel->LinkCustomAttributes = "";
@@ -609,6 +621,11 @@ class cniveles extends cTable {
 		$this->Nivel->LinkCustomAttributes = "";
 		$this->Nivel->HrefValue = "";
 		$this->Nivel->TooltipValue = "";
+
+		// INSPECTOR
+		$this->INSPECTOR->LinkCustomAttributes = "";
+		$this->INSPECTOR->HrefValue = "";
+		$this->INSPECTOR->TooltipValue = "";
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -635,6 +652,12 @@ class cniveles extends cTable {
 		$this->Nivel->EditCustomAttributes = "";
 		$this->Nivel->EditValue = $this->Nivel->CurrentValue;
 		$this->Nivel->PlaceHolder = ew_RemoveHtml($this->Nivel->FldCaption());
+
+		// INSPECTOR
+		$this->INSPECTOR->EditAttrs["class"] = "form-control";
+		$this->INSPECTOR->EditCustomAttributes = "";
+		$this->INSPECTOR->EditValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->PlaceHolder = ew_RemoveHtml($this->INSPECTOR->FldCaption());
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -665,9 +688,11 @@ class cniveles extends cTable {
 				if ($ExportPageType == "view") {
 					if ($this->Id_nivel->Exportable) $Doc->ExportCaption($this->Id_nivel);
 					if ($this->Nivel->Exportable) $Doc->ExportCaption($this->Nivel);
+					if ($this->INSPECTOR->Exportable) $Doc->ExportCaption($this->INSPECTOR);
 				} else {
 					if ($this->Id_nivel->Exportable) $Doc->ExportCaption($this->Id_nivel);
 					if ($this->Nivel->Exportable) $Doc->ExportCaption($this->Nivel);
+					if ($this->INSPECTOR->Exportable) $Doc->ExportCaption($this->INSPECTOR);
 				}
 				$Doc->EndExportRow();
 			}
@@ -701,9 +726,11 @@ class cniveles extends cTable {
 					if ($ExportPageType == "view") {
 						if ($this->Id_nivel->Exportable) $Doc->ExportField($this->Id_nivel);
 						if ($this->Nivel->Exportable) $Doc->ExportField($this->Nivel);
+						if ($this->INSPECTOR->Exportable) $Doc->ExportField($this->INSPECTOR);
 					} else {
 						if ($this->Id_nivel->Exportable) $Doc->ExportField($this->Id_nivel);
 						if ($this->Nivel->Exportable) $Doc->ExportField($this->Nivel);
+						if ($this->INSPECTOR->Exportable) $Doc->ExportField($this->INSPECTOR);
 					}
 					$Doc->EndExportRow($RowCnt);
 				}
