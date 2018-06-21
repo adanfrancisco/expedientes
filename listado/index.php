@@ -17,7 +17,8 @@
                             $(".servicios").toggleClass("show");});
                     $('.modalidades').click(function(){
                             $("#modalidades").toggleClass("show");});
-            });
+            })
+            ;
 
 
 
