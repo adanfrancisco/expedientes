@@ -70,10 +70,7 @@ $("#cambia_clave").on( "click", function() {
     <?php
     while ( odbc_fetch_row($rs) )
 
-        echo '<tr><td> '.odbc_result($rs,"NIVEL").' </td><td> '.odbc_result($rs,"nombre").' </td><td> ' .odbc_result($rs,"clave").' 
-    </td><td> ' .odbc_result($rs,"cue").' </td><td>' .odbc_result($rs,"domicilio").'</td><td>
-    ' .odbc_result($rs,"telefono").'</td><td></tr>';
-
+        C
     ?>
 
     </table>

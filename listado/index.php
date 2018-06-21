@@ -17,11 +17,21 @@
                             $(".servicios").toggleClass("show");});
                     $('.modalidades').click(function(){
                             $("#modalidades").toggleClass("show");});
-            })
-            ;
 
+            //imprimo las entradas
+            $('.inicial').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        $.post("grabar.php", { 
+                            fecha: fecha },
+                        function(data){$("#listados").html(data);}); 
 
+             });
 
+});
 </script>
 
 <style type="text/css">
@@ -42,7 +52,7 @@
     <body>
       <div class="col-lg-10">
                             <div id="fecha_inicio">
-                                <select name="dia">
+                                <select name="dia" id="dia_inicio">
                                     <?php
                                     for ($i=1; $i<=31; $i++) {
                                         if ($i == date('j'))
@@ -52,17 +62,18 @@
                                     }
                                     ?>
                             </select>
-                            <select name="mes">
+                            <select name="mes" id="mes_inicio">
                                     <?php
                                     for ($i=1; $i<=12; $i++) {
                                         if ($i == date('m'))
+
                                             echo '<option value="'.$i.'" selected>'.$i.'</option>';
                                         else
                                             echo '<option value="'.$i.'">'.$i.'</option>';
                                     }
                                     ?>
                             </select>
-                            <select name="ano">
+                            <select name="ano" id="anio_inicio">
                                     <?php
                                     for($i=date('o'); $i>=1910; $i--){
                                         if ($i == date('o'))
