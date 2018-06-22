@@ -124,6 +124,9 @@
                             nivel:nivel },
                         function(data){$("#listados").html(data);}); 
              });
+             
+
+
              $('.adultos').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
                 
@@ -153,6 +156,7 @@
                 
                 //envio la fecha al post    
                 console.log(fecha);
+                
                         var fecha=fecha;
                         var nivel='CIE';
                         $.post("grabar.php", { 
@@ -161,11 +165,13 @@
                         function(data){$("#listados").html(data);}); 
              });
 
+
              $('.cef').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
                 
                 //envio la fecha al post    
                 console.log(fecha);
+                
                         var fecha=fecha;
                         var nivel='CEF';
                         $.post("grabar.php", { 
@@ -186,8 +192,8 @@
 .inputstyle {
     font-family: Arial; 
     font-size: 20pt; 
-    ;
     }
+    
 .btn{font-family: Arial; font-size: 18pt; }
 
 </style>
