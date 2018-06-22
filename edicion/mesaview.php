@@ -5,7 +5,7 @@ ob_start(); // Turn on output buffering
 <?php include_once "ewcfg14.php" ?>
 <?php include_once ((EW_USE_ADODB) ? "adodb5/adodb.inc.php" : "ewmysql14.php") ?>
 <?php include_once "phpfn14.php" ?>
-<?php include_once "personainfo.php" ?>
+<?php include_once "mesainfo.php" ?>
 <?php include_once "userfn14.php" ?>
 <?php
 
@@ -13,9 +13,9 @@ ob_start(); // Turn on output buffering
 // Page class
 //
 
-$persona_view = NULL; // Initialize page object first
+$mesa_view = NULL; // Initialize page object first
 
-class cpersona_view extends cpersona {
+class cmesa_view extends cmesa {
 
 	// Page ID
 	var $PageID = 'view';
@@ -24,10 +24,10 @@ class cpersona_view extends cpersona {
 	var $ProjectID = '{803A0725-AF43-41D4-9FF6-CD1AEBA17FEC}';
 
 	// Table name
-	var $TableName = 'persona';
+	var $TableName = 'mesa';
 
 	// Page object name
-	var $PageObjName = 'persona_view';
+	var $PageObjName = 'mesa_view';
 
 	// Page headings
 	var $Heading = '';
@@ -280,15 +280,15 @@ class cpersona_view extends cpersona {
 		// Parent constuctor
 		parent::__construct();
 
-		// Table object (persona)
-		if (!isset($GLOBALS["persona"]) || get_class($GLOBALS["persona"]) == "cpersona") {
-			$GLOBALS["persona"] = &$this;
-			$GLOBALS["Table"] = &$GLOBALS["persona"];
+		// Table object (mesa)
+		if (!isset($GLOBALS["mesa"]) || get_class($GLOBALS["mesa"]) == "cmesa") {
+			$GLOBALS["mesa"] = &$this;
+			$GLOBALS["Table"] = &$GLOBALS["mesa"];
 		}
 		$KeyUrl = "";
-		if (@$_GET["id_persona"] <> "") {
-			$this->RecKey["id_persona"] = $_GET["id_persona"];
-			$KeyUrl .= "&amp;id_persona=" . urlencode($this->RecKey["id_persona"]);
+		if (@$_GET["Id"] <> "") {
+			$this->RecKey["Id"] = $_GET["Id"];
+			$KeyUrl .= "&amp;Id=" . urlencode($this->RecKey["Id"]);
 		}
 		$this->ExportPrintUrl = $this->PageUrl() . "export=print" . $KeyUrl;
 		$this->ExportHtmlUrl = $this->PageUrl() . "export=html" . $KeyUrl;
@@ -304,7 +304,7 @@ class cpersona_view extends cpersona {
 
 		// Table name (for backward compatibility)
 		if (!defined("EW_TABLE_NAME"))
-			define("EW_TABLE_NAME", 'persona', TRUE);
+			define("EW_TABLE_NAME", 'mesa', TRUE);
 
 		// Start timer
 		if (!isset($GLOBALS["gTimer"]))
@@ -340,16 +340,11 @@ class cpersona_view extends cpersona {
 		// Is modal
 		$this->IsModal = (@$_GET["modal"] == "1" || @$_POST["modal"] == "1");
 		$this->CurrentAction = (@$_GET["a"] <> "") ? $_GET["a"] : @$_POST["a_list"]; // Set up current action
-		$this->id_persona->SetVisibility();
-		$this->id_persona->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
-		$this->cuil->SetVisibility();
-		$this->apellido->SetVisibility();
-		$this->nombre->SetVisibility();
-		$this->domicilio->SetVisibility();
-		$this->telefono->SetVisibility();
-		$this->celular->SetVisibility();
-		$this->localidad->SetVisibility();
-		$this->_email->SetVisibility();
+		$this->Id->SetVisibility();
+		$this->Id->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
+		$this->fecha->SetVisibility();
+		$this->mensaje->SetVisibility();
+		$this->escuela->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -381,13 +376,13 @@ class cpersona_view extends cpersona {
 		Page_Unloaded();
 
 		// Export
-		global $EW_EXPORT, $persona;
+		global $EW_EXPORT, $mesa;
 		if ($this->CustomExport <> "" && $this->CustomExport == $this->Export && array_key_exists($this->CustomExport, $EW_EXPORT)) {
 				$sContent = ob_get_contents();
 			if ($gsExportFile == "") $gsExportFile = $this->TableVar;
 			$class = $EW_EXPORT[$this->CustomExport];
 			if (class_exists($class)) {
-				$doc = new $class($persona);
+				$doc = new $class($mesa);
 				$doc->Text = $sContent;
 				if ($this->Export == "email")
 					echo $this->ExportEmail($doc->Text);
@@ -413,7 +408,7 @@ class cpersona_view extends cpersona {
 				$pageName = ew_GetPageName($url);
 				if ($pageName != $this->GetListUrl()) { // Not List page
 					$row["caption"] = $this->GetModalCaption($pageName);
-					if ($pageName == "personaview.php")
+					if ($pageName == "mesaview.php")
 						$row["view"] = "1";
 				} else { // List page should not be shown as modal => error
 					$row["error"] = $this->getFailureMessage();
@@ -452,14 +447,14 @@ class cpersona_view extends cpersona {
 		$sReturnUrl = "";
 		$bMatchRecord = FALSE;
 		if ($this->IsPageRequest()) { // Validate request
-			if (@$_GET["id_persona"] <> "") {
-				$this->id_persona->setQueryStringValue($_GET["id_persona"]);
-				$this->RecKey["id_persona"] = $this->id_persona->QueryStringValue;
-			} elseif (@$_POST["id_persona"] <> "") {
-				$this->id_persona->setFormValue($_POST["id_persona"]);
-				$this->RecKey["id_persona"] = $this->id_persona->FormValue;
+			if (@$_GET["Id"] <> "") {
+				$this->Id->setQueryStringValue($_GET["Id"]);
+				$this->RecKey["Id"] = $this->Id->QueryStringValue;
+			} elseif (@$_POST["Id"] <> "") {
+				$this->Id->setFormValue($_POST["Id"]);
+				$this->RecKey["Id"] = $this->Id->FormValue;
 			} else {
-				$sReturnUrl = "personalist.php"; // Return to list
+				$sReturnUrl = "mesalist.php"; // Return to list
 			}
 
 			// Get action
@@ -469,11 +464,11 @@ class cpersona_view extends cpersona {
 					if (!$this->LoadRow()) { // Load record based on key
 						if ($this->getSuccessMessage() == "" && $this->getFailureMessage() == "")
 							$this->setFailureMessage($Language->Phrase("NoRecord")); // Set no record message
-						$sReturnUrl = "personalist.php"; // No matching record, return to list
+						$sReturnUrl = "mesalist.php"; // No matching record, return to list
 					}
 			}
 		} else {
-			$sReturnUrl = "personalist.php"; // Not page request, return to list
+			$sReturnUrl = "mesalist.php"; // Not page request, return to list
 		}
 		if ($sReturnUrl <> "")
 			$this->Page_Terminate($sReturnUrl);
@@ -609,29 +604,19 @@ class cpersona_view extends cpersona {
 		$this->Row_Selected($row);
 		if (!$rs || $rs->EOF)
 			return;
-		$this->id_persona->setDbValue($row['id_persona']);
-		$this->cuil->setDbValue($row['cuil']);
-		$this->apellido->setDbValue($row['apellido']);
-		$this->nombre->setDbValue($row['nombre']);
-		$this->domicilio->setDbValue($row['domicilio']);
-		$this->telefono->setDbValue($row['telefono']);
-		$this->celular->setDbValue($row['celular']);
-		$this->localidad->setDbValue($row['localidad']);
-		$this->_email->setDbValue($row['email']);
+		$this->Id->setDbValue($row['Id']);
+		$this->fecha->setDbValue($row['fecha']);
+		$this->mensaje->setDbValue($row['mensaje']);
+		$this->escuela->setDbValue($row['escuela']);
 	}
 
 	// Return a row with default values
 	function NewRow() {
 		$row = array();
-		$row['id_persona'] = NULL;
-		$row['cuil'] = NULL;
-		$row['apellido'] = NULL;
-		$row['nombre'] = NULL;
-		$row['domicilio'] = NULL;
-		$row['telefono'] = NULL;
-		$row['celular'] = NULL;
-		$row['localidad'] = NULL;
-		$row['email'] = NULL;
+		$row['Id'] = NULL;
+		$row['fecha'] = NULL;
+		$row['mensaje'] = NULL;
+		$row['escuela'] = NULL;
 		return $row;
 	}
 
@@ -640,15 +625,10 @@ class cpersona_view extends cpersona {
 		if (!$rs || !is_array($rs) && $rs->EOF)
 			return;
 		$row = is_array($rs) ? $rs : $rs->fields;
-		$this->id_persona->DbValue = $row['id_persona'];
-		$this->cuil->DbValue = $row['cuil'];
-		$this->apellido->DbValue = $row['apellido'];
-		$this->nombre->DbValue = $row['nombre'];
-		$this->domicilio->DbValue = $row['domicilio'];
-		$this->telefono->DbValue = $row['telefono'];
-		$this->celular->DbValue = $row['celular'];
-		$this->localidad->DbValue = $row['localidad'];
-		$this->_email->DbValue = $row['email'];
+		$this->Id->DbValue = $row['Id'];
+		$this->fecha->DbValue = $row['fecha'];
+		$this->mensaje->DbValue = $row['mensaje'];
+		$this->escuela->DbValue = $row['escuela'];
 	}
 
 	// Render row values based on field settings
@@ -667,117 +647,49 @@ class cpersona_view extends cpersona {
 		$this->Row_Rendering();
 
 		// Common render codes for all row types
-		// id_persona
-		// cuil
-		// apellido
-		// nombre
-		// domicilio
-		// telefono
-		// celular
-		// localidad
-		// email
+		// Id
+		// fecha
+		// mensaje
+		// escuela
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
-		// id_persona
-		$this->id_persona->ViewValue = $this->id_persona->CurrentValue;
-		$this->id_persona->ViewCustomAttributes = "";
+		// Id
+		$this->Id->ViewValue = $this->Id->CurrentValue;
+		$this->Id->ViewCustomAttributes = "";
 
-		// cuil
-		$this->cuil->ViewValue = $this->cuil->CurrentValue;
-		$this->cuil->ViewCustomAttributes = "";
+		// fecha
+		$this->fecha->ViewValue = $this->fecha->CurrentValue;
+		$this->fecha->ViewValue = ew_FormatDateTime($this->fecha->ViewValue, 0);
+		$this->fecha->ViewCustomAttributes = "";
 
-		// apellido
-		$this->apellido->ViewValue = $this->apellido->CurrentValue;
-		$this->apellido->ViewCustomAttributes = "";
+		// mensaje
+		$this->mensaje->ViewValue = $this->mensaje->CurrentValue;
+		$this->mensaje->ViewCustomAttributes = "";
 
-		// nombre
-		$this->nombre->ViewValue = $this->nombre->CurrentValue;
-		$this->nombre->ViewCustomAttributes = "";
+		// escuela
+		$this->escuela->ViewValue = $this->escuela->CurrentValue;
+		$this->escuela->ViewCustomAttributes = "";
 
-		// domicilio
-		$this->domicilio->ViewValue = $this->domicilio->CurrentValue;
-		$this->domicilio->ViewCustomAttributes = "";
+			// Id
+			$this->Id->LinkCustomAttributes = "";
+			$this->Id->HrefValue = "";
+			$this->Id->TooltipValue = "";
 
-		// telefono
-		$this->telefono->ViewValue = $this->telefono->CurrentValue;
-		$this->telefono->ViewCustomAttributes = "";
+			// fecha
+			$this->fecha->LinkCustomAttributes = "";
+			$this->fecha->HrefValue = "";
+			$this->fecha->TooltipValue = "";
 
-		// celular
-		$this->celular->ViewValue = $this->celular->CurrentValue;
-		$this->celular->ViewCustomAttributes = "";
+			// mensaje
+			$this->mensaje->LinkCustomAttributes = "";
+			$this->mensaje->HrefValue = "";
+			$this->mensaje->TooltipValue = "";
 
-		// localidad
-		if (strval($this->localidad->CurrentValue) <> "") {
-			$sFilterWrk = "[idLocalidad]" . ew_SearchString("=", $this->localidad->CurrentValue, EW_DATATYPE_NUMBER, "");
-		$sSqlWrk = "SELECT [idLocalidad], [localidad_nombre] AS [DispFld], '' AS [Disp2Fld], '' AS [Disp3Fld], '' AS [Disp4Fld] FROM [localidades]";
-		$sWhereWrk = "";
-		$this->localidad->LookupFilters = array();
-		ew_AddFilter($sWhereWrk, $sFilterWrk);
-		$this->Lookup_Selecting($this->localidad, $sWhereWrk); // Call Lookup Selecting
-		if ($sWhereWrk <> "") $sSqlWrk .= " WHERE " . $sWhereWrk;
-			$rswrk = Conn()->Execute($sSqlWrk);
-			if ($rswrk && !$rswrk->EOF) { // Lookup values found
-				$arwrk = array();
-				$arwrk[1] = $rswrk->fields('DispFld');
-				$this->localidad->ViewValue = $this->localidad->DisplayValue($arwrk);
-				$rswrk->Close();
-			} else {
-				$this->localidad->ViewValue = $this->localidad->CurrentValue;
-			}
-		} else {
-			$this->localidad->ViewValue = NULL;
-		}
-		$this->localidad->ViewCustomAttributes = "";
-
-		// email
-		$this->_email->ViewValue = $this->_email->CurrentValue;
-		$this->_email->ViewCustomAttributes = "";
-
-			// id_persona
-			$this->id_persona->LinkCustomAttributes = "";
-			$this->id_persona->HrefValue = "";
-			$this->id_persona->TooltipValue = "";
-
-			// cuil
-			$this->cuil->LinkCustomAttributes = "";
-			$this->cuil->HrefValue = "";
-			$this->cuil->TooltipValue = "";
-
-			// apellido
-			$this->apellido->LinkCustomAttributes = "";
-			$this->apellido->HrefValue = "";
-			$this->apellido->TooltipValue = "";
-
-			// nombre
-			$this->nombre->LinkCustomAttributes = "";
-			$this->nombre->HrefValue = "";
-			$this->nombre->TooltipValue = "";
-
-			// domicilio
-			$this->domicilio->LinkCustomAttributes = "";
-			$this->domicilio->HrefValue = "";
-			$this->domicilio->TooltipValue = "";
-
-			// telefono
-			$this->telefono->LinkCustomAttributes = "";
-			$this->telefono->HrefValue = "";
-			$this->telefono->TooltipValue = "";
-
-			// celular
-			$this->celular->LinkCustomAttributes = "";
-			$this->celular->HrefValue = "";
-			$this->celular->TooltipValue = "";
-
-			// localidad
-			$this->localidad->LinkCustomAttributes = "";
-			$this->localidad->HrefValue = "";
-			$this->localidad->TooltipValue = "";
-
-			// email
-			$this->_email->LinkCustomAttributes = "";
-			$this->_email->HrefValue = "";
-			$this->_email->TooltipValue = "";
+			// escuela
+			$this->escuela->LinkCustomAttributes = "";
+			$this->escuela->HrefValue = "";
+			$this->escuela->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -790,7 +702,7 @@ class cpersona_view extends cpersona {
 		global $Breadcrumb, $Language;
 		$Breadcrumb = new cBreadcrumb();
 		$url = substr(ew_CurrentUrl(), strrpos(ew_CurrentUrl(), "/")+1);
-		$Breadcrumb->Add("list", $this->TableVar, $this->AddMasterUrl("personalist.php"), "", $this->TableVar, TRUE);
+		$Breadcrumb->Add("list", $this->TableVar, $this->AddMasterUrl("mesalist.php"), "", $this->TableVar, TRUE);
 		$PageId = "view";
 		$Breadcrumb->Add("view", $PageId, $url);
 	}
@@ -902,29 +814,29 @@ class cpersona_view extends cpersona {
 <?php
 
 // Create page object
-if (!isset($persona_view)) $persona_view = new cpersona_view();
+if (!isset($mesa_view)) $mesa_view = new cmesa_view();
 
 // Page init
-$persona_view->Page_Init();
+$mesa_view->Page_Init();
 
 // Page main
-$persona_view->Page_Main();
+$mesa_view->Page_Main();
 
 // Global Page Rendering event (in userfn*.php)
 Page_Rendering();
 
 // Page Rendering event
-$persona_view->Page_Render();
+$mesa_view->Page_Render();
 ?>
 <?php include_once "header.php" ?>
 <script type="text/javascript">
 
 // Form object
 var CurrentPageID = EW_PAGE_ID = "view";
-var CurrentForm = fpersonaview = new ew_Form("fpersonaview", "view");
+var CurrentForm = fmesaview = new ew_Form("fmesaview", "view");
 
 // Form_CustomValidate event
-fpersonaview.Form_CustomValidate = 
+fmesaview.Form_CustomValidate = 
  function(fobj) { // DO NOT CHANGE THIS LINE!
 
  	// Your custom validation code here, return false if invalid.
@@ -932,132 +844,75 @@ fpersonaview.Form_CustomValidate =
  }
 
 // Use JavaScript validation or not
-fpersonaview.ValidateRequired = <?php echo json_encode(EW_CLIENT_VALIDATE) ?>;
+fmesaview.ValidateRequired = <?php echo json_encode(EW_CLIENT_VALIDATE) ?>;
 
 // Dynamic selection lists
-fpersonaview.Lists["x_localidad"] = {"LinkField":"x_idLocalidad","Ajax":true,"AutoFill":false,"DisplayFields":["x_localidad_nombre","","",""],"ParentFields":[],"ChildFields":[],"FilterFields":[],"Options":[],"Template":"","LinkTable":"localidades"};
-fpersonaview.Lists["x_localidad"].Data = "<?php echo $persona_view->localidad->LookupFilterQuery(FALSE, "view") ?>";
-
 // Form object for search
+
 </script>
 <script type="text/javascript">
 
 // Write your client script here, no need to add script tags.
 </script>
 <div class="ewToolbar">
-<?php $persona_view->ExportOptions->Render("body") ?>
+<?php $mesa_view->ExportOptions->Render("body") ?>
 <?php
-	foreach ($persona_view->OtherOptions as &$option)
+	foreach ($mesa_view->OtherOptions as &$option)
 		$option->Render("body");
 ?>
 <div class="clearfix"></div>
 </div>
-<?php $persona_view->ShowPageHeader(); ?>
+<?php $mesa_view->ShowPageHeader(); ?>
 <?php
-$persona_view->ShowMessage();
+$mesa_view->ShowMessage();
 ?>
-<form name="fpersonaview" id="fpersonaview" class="form-inline ewForm ewViewForm" action="<?php echo ew_CurrentPage() ?>" method="post">
-<?php if ($persona_view->CheckToken) { ?>
-<input type="hidden" name="<?php echo EW_TOKEN_NAME ?>" value="<?php echo $persona_view->Token ?>">
+<form name="fmesaview" id="fmesaview" class="form-inline ewForm ewViewForm" action="<?php echo ew_CurrentPage() ?>" method="post">
+<?php if ($mesa_view->CheckToken) { ?>
+<input type="hidden" name="<?php echo EW_TOKEN_NAME ?>" value="<?php echo $mesa_view->Token ?>">
 <?php } ?>
-<input type="hidden" name="t" value="persona">
-<input type="hidden" name="modal" value="<?php echo intval($persona_view->IsModal) ?>">
+<input type="hidden" name="t" value="mesa">
+<input type="hidden" name="modal" value="<?php echo intval($mesa_view->IsModal) ?>">
 <table class="table table-striped table-bordered table-hover table-condensed ewViewTable">
-<?php if ($persona->id_persona->Visible) { // id_persona ?>
-	<tr id="r_id_persona">
-		<td class="col-sm-2"><span id="elh_persona_id_persona"><?php echo $persona->id_persona->FldCaption() ?></span></td>
-		<td data-name="id_persona"<?php echo $persona->id_persona->CellAttributes() ?>>
-<span id="el_persona_id_persona">
-<span<?php echo $persona->id_persona->ViewAttributes() ?>>
-<?php echo $persona->id_persona->ViewValue ?></span>
+<?php if ($mesa->Id->Visible) { // Id ?>
+	<tr id="r_Id">
+		<td class="col-sm-2"><span id="elh_mesa_Id"><?php echo $mesa->Id->FldCaption() ?></span></td>
+		<td data-name="Id"<?php echo $mesa->Id->CellAttributes() ?>>
+<span id="el_mesa_Id">
+<span<?php echo $mesa->Id->ViewAttributes() ?>>
+<?php echo $mesa->Id->ViewValue ?></span>
 </span>
 </td>
 	</tr>
 <?php } ?>
-<?php if ($persona->cuil->Visible) { // cuil ?>
-	<tr id="r_cuil">
-		<td class="col-sm-2"><span id="elh_persona_cuil"><?php echo $persona->cuil->FldCaption() ?></span></td>
-		<td data-name="cuil"<?php echo $persona->cuil->CellAttributes() ?>>
-<span id="el_persona_cuil">
-<span<?php echo $persona->cuil->ViewAttributes() ?>>
-<?php echo $persona->cuil->ViewValue ?></span>
+<?php if ($mesa->fecha->Visible) { // fecha ?>
+	<tr id="r_fecha">
+		<td class="col-sm-2"><span id="elh_mesa_fecha"><?php echo $mesa->fecha->FldCaption() ?></span></td>
+		<td data-name="fecha"<?php echo $mesa->fecha->CellAttributes() ?>>
+<span id="el_mesa_fecha">
+<span<?php echo $mesa->fecha->ViewAttributes() ?>>
+<?php echo $mesa->fecha->ViewValue ?></span>
 </span>
 </td>
 	</tr>
 <?php } ?>
-<?php if ($persona->apellido->Visible) { // apellido ?>
-	<tr id="r_apellido">
-		<td class="col-sm-2"><span id="elh_persona_apellido"><?php echo $persona->apellido->FldCaption() ?></span></td>
-		<td data-name="apellido"<?php echo $persona->apellido->CellAttributes() ?>>
-<span id="el_persona_apellido">
-<span<?php echo $persona->apellido->ViewAttributes() ?>>
-<?php echo $persona->apellido->ViewValue ?></span>
+<?php if ($mesa->mensaje->Visible) { // mensaje ?>
+	<tr id="r_mensaje">
+		<td class="col-sm-2"><span id="elh_mesa_mensaje"><?php echo $mesa->mensaje->FldCaption() ?></span></td>
+		<td data-name="mensaje"<?php echo $mesa->mensaje->CellAttributes() ?>>
+<span id="el_mesa_mensaje">
+<span<?php echo $mesa->mensaje->ViewAttributes() ?>>
+<?php echo $mesa->mensaje->ViewValue ?></span>
 </span>
 </td>
 	</tr>
 <?php } ?>
-<?php if ($persona->nombre->Visible) { // nombre ?>
-	<tr id="r_nombre">
-		<td class="col-sm-2"><span id="elh_persona_nombre"><?php echo $persona->nombre->FldCaption() ?></span></td>
-		<td data-name="nombre"<?php echo $persona->nombre->CellAttributes() ?>>
-<span id="el_persona_nombre">
-<span<?php echo $persona->nombre->ViewAttributes() ?>>
-<?php echo $persona->nombre->ViewValue ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($persona->domicilio->Visible) { // domicilio ?>
-	<tr id="r_domicilio">
-		<td class="col-sm-2"><span id="elh_persona_domicilio"><?php echo $persona->domicilio->FldCaption() ?></span></td>
-		<td data-name="domicilio"<?php echo $persona->domicilio->CellAttributes() ?>>
-<span id="el_persona_domicilio">
-<span<?php echo $persona->domicilio->ViewAttributes() ?>>
-<?php echo $persona->domicilio->ViewValue ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($persona->telefono->Visible) { // telefono ?>
-	<tr id="r_telefono">
-		<td class="col-sm-2"><span id="elh_persona_telefono"><?php echo $persona->telefono->FldCaption() ?></span></td>
-		<td data-name="telefono"<?php echo $persona->telefono->CellAttributes() ?>>
-<span id="el_persona_telefono">
-<span<?php echo $persona->telefono->ViewAttributes() ?>>
-<?php echo $persona->telefono->ViewValue ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($persona->celular->Visible) { // celular ?>
-	<tr id="r_celular">
-		<td class="col-sm-2"><span id="elh_persona_celular"><?php echo $persona->celular->FldCaption() ?></span></td>
-		<td data-name="celular"<?php echo $persona->celular->CellAttributes() ?>>
-<span id="el_persona_celular">
-<span<?php echo $persona->celular->ViewAttributes() ?>>
-<?php echo $persona->celular->ViewValue ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($persona->localidad->Visible) { // localidad ?>
-	<tr id="r_localidad">
-		<td class="col-sm-2"><span id="elh_persona_localidad"><?php echo $persona->localidad->FldCaption() ?></span></td>
-		<td data-name="localidad"<?php echo $persona->localidad->CellAttributes() ?>>
-<span id="el_persona_localidad">
-<span<?php echo $persona->localidad->ViewAttributes() ?>>
-<?php echo $persona->localidad->ViewValue ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($persona->_email->Visible) { // email ?>
-	<tr id="r__email">
-		<td class="col-sm-2"><span id="elh_persona__email"><?php echo $persona->_email->FldCaption() ?></span></td>
-		<td data-name="_email"<?php echo $persona->_email->CellAttributes() ?>>
-<span id="el_persona__email">
-<span<?php echo $persona->_email->ViewAttributes() ?>>
-<?php echo $persona->_email->ViewValue ?></span>
+<?php if ($mesa->escuela->Visible) { // escuela ?>
+	<tr id="r_escuela">
+		<td class="col-sm-2"><span id="elh_mesa_escuela"><?php echo $mesa->escuela->FldCaption() ?></span></td>
+		<td data-name="escuela"<?php echo $mesa->escuela->CellAttributes() ?>>
+<span id="el_mesa_escuela">
+<span<?php echo $mesa->escuela->ViewAttributes() ?>>
+<?php echo $mesa->escuela->ViewValue ?></span>
 </span>
 </td>
 	</tr>
@@ -1065,10 +920,10 @@ $persona_view->ShowMessage();
 </table>
 </form>
 <script type="text/javascript">
-fpersonaview.Init();
+fmesaview.Init();
 </script>
 <?php
-$persona_view->ShowPageFooter();
+$mesa_view->ShowPageFooter();
 if (EW_DEBUG_ENABLED)
 	echo ew_DebugMsg();
 ?>
@@ -1080,5 +935,5 @@ if (EW_DEBUG_ENABLED)
 </script>
 <?php include_once "footer.php" ?>
 <?php
-$persona_view->Page_Terminate();
+$mesa_view->Page_Terminate();
 ?>

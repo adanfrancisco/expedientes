@@ -289,7 +289,7 @@ class cpersona_delete extends cpersona {
 		$this->telefono->SetVisibility();
 		$this->celular->SetVisibility();
 		$this->localidad->SetVisibility();
-		$this->email->SetVisibility();
+		$this->_email->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -477,7 +477,7 @@ class cpersona_delete extends cpersona {
 		$this->telefono->setDbValue($row['telefono']);
 		$this->celular->setDbValue($row['celular']);
 		$this->localidad->setDbValue($row['localidad']);
-		$this->email->setDbValue($row['email']);
+		$this->_email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -508,7 +508,7 @@ class cpersona_delete extends cpersona {
 		$this->telefono->DbValue = $row['telefono'];
 		$this->celular->DbValue = $row['celular'];
 		$this->localidad->DbValue = $row['localidad'];
-		$this->email->DbValue = $row['email'];
+		$this->_email->DbValue = $row['email'];
 	}
 
 	// Render row values based on field settings
@@ -585,8 +585,8 @@ class cpersona_delete extends cpersona {
 		$this->localidad->ViewCustomAttributes = "";
 
 		// email
-		$this->email->ViewValue = $this->email->CurrentValue;
-		$this->email->ViewCustomAttributes = "";
+		$this->_email->ViewValue = $this->_email->CurrentValue;
+		$this->_email->ViewCustomAttributes = "";
 
 			// id_persona
 			$this->id_persona->LinkCustomAttributes = "";
@@ -629,9 +629,9 @@ class cpersona_delete extends cpersona {
 			$this->localidad->TooltipValue = "";
 
 			// email
-			$this->email->LinkCustomAttributes = "";
-			$this->email->HrefValue = "";
-			$this->email->TooltipValue = "";
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
+			$this->_email->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -891,8 +891,8 @@ $persona_delete->ShowMessage();
 <?php if ($persona->localidad->Visible) { // localidad ?>
 		<th class="<?php echo $persona->localidad->HeaderCellClass() ?>"><span id="elh_persona_localidad" class="persona_localidad"><?php echo $persona->localidad->FldCaption() ?></span></th>
 <?php } ?>
-<?php if ($persona->email->Visible) { // email ?>
-		<th class="<?php echo $persona->email->HeaderCellClass() ?>"><span id="elh_persona_email" class="persona_email"><?php echo $persona->email->FldCaption() ?></span></th>
+<?php if ($persona->_email->Visible) { // email ?>
+		<th class="<?php echo $persona->_email->HeaderCellClass() ?>"><span id="elh_persona__email" class="persona__email"><?php echo $persona->_email->FldCaption() ?></span></th>
 <?php } ?>
 	</tr>
 	</thead>
@@ -979,11 +979,11 @@ while (!$persona_delete->Recordset->EOF) {
 </span>
 </td>
 <?php } ?>
-<?php if ($persona->email->Visible) { // email ?>
-		<td<?php echo $persona->email->CellAttributes() ?>>
-<span id="el<?php echo $persona_delete->RowCnt ?>_persona_email" class="persona_email">
-<span<?php echo $persona->email->ViewAttributes() ?>>
-<?php echo $persona->email->ListViewValue() ?></span>
+<?php if ($persona->_email->Visible) { // email ?>
+		<td<?php echo $persona->_email->CellAttributes() ?>>
+<span id="el<?php echo $persona_delete->RowCnt ?>_persona__email" class="persona__email">
+<span<?php echo $persona->_email->ViewAttributes() ?>>
+<?php echo $persona->_email->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>

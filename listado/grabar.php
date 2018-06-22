@@ -3,6 +3,8 @@
     include "access_conn.php";
 
 $fecha=(string)$_POST['fecha'];
+$nivel=$_POST['nivel'];
+//echo $nivel;
 //$fecha='21-6-2018';
     #se crea instancia a clase
     $db = new database();
@@ -19,9 +21,9 @@ $anterior->modify('-1 day');
 $anterior=$anterior->format('d-m-Y');
 
    
-  $sql="SELECT * FROM mesa 
-  inner join escuela on mesa.escuela=escuela.clave
-  where mesa.fecha > #".$anterior."# and mesa.fecha < #".$posterior."#";
+  $sql="SELECT * FROM niveles INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL
+  where mesa.fecha > #".$anterior."# and mesa.fecha < #".$posterior."# and niveles.Nivel='".$nivel."'";
+
 //$sql="SELECT * FROM mesa where mesa.fecha > #20/06/2018# and mesa.fecha < #22/06/2018#";
 
 //echo '<br>'.$sql;

@@ -14,9 +14,9 @@
                     $("#modalidades").hide();
 
                     $('.inicio').click(function(){
-                            $(".servicios").toggleClass("show");});
-                    $('.modalidades').click(function(){
-                            $("#modalidades").toggleClass("show");});
+                        $(".servicios").toggleClass("show");});
+                        $('.modalidades').click(function(){
+                        $("#modalidades").toggleClass("show");});
 
             //imprimo las entradas
             $('.inicial').click(function(){
@@ -25,11 +25,155 @@
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
+                        var nivel='INICIAL';
                         $.post("grabar.php", { 
-                            fecha: fecha },
+                            fecha: fecha,
+                            nivel:nivel },
                         function(data){$("#listados").html(data);}); 
 
              });
+             $('.primaria').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='PRIMARIA';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+
+             });
+             $('.secundaria').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='SECUNDARIA';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+
+             });
+
+             $('.superior').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='SUPERIOR';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+
+             });
+
+             $('.agraria').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='AGRARIA';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+
+
+             $('.tecnica').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='TECNICA';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+
+             $('.especial').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='ESPECIAL';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+             $('.artistica').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='ARTISTICA';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+             $('.adultos').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='ADULTOS';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+             $('.fp').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='PROFESIONAL';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+             $('.cie').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='CIE';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+
+             $('.cef').click(function(){
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                        var fecha=fecha;
+                        var nivel='CEF';
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel },
+                        function(data){$("#listados").html(data);}); 
+             });
+
 
 });
 </script>
@@ -89,7 +233,8 @@
 
 
       <br/>
-        <button type="button" class="btn btn-primary inicio">LISTADOS</button>
+        <button type="button" class="btn btn-primary inicio">LISTADOS POR NIVEL</button>
+        <button type="button" class="btn btn-primary lista">LISTADOS POR FECHA</button>
         <hr>
 
 
@@ -107,9 +252,10 @@
     </div>
 <hr>
          <div id="modalidades">
-                <button type="button" class="btn btn-dark EEE501">ESPECIAL</button>
-                <button type="button" class="btn btn-secondary EEEA1">ARTISTICA</button>
-                <button type="button" class="btn btn-danger EEPA-701">ADULTOS</button>
+                <button type="button" class="btn btn-secondary cef">ED. FISICA</button>
+                <button type="button" class="btn btn-dark especial">ESPECIAL</button>
+                <button type="button" class="btn btn-secondary artistica">ARTISTICA</button>
+                <button type="button" class="btn btn-danger adultos">ADULTOS</button>
 
 
 <!--                 <button type="button" class="btn btn-danger EEPA-701">ADULTOS-EEPA-701</button>
@@ -122,8 +268,8 @@
                 <button type="button" class="btn btn-secondary CEF93">CEF93</button> -->
 
                 
-                <button type="button" class="btn btn-info CFP401">FORMACION-PROFESIONAL</button>
-                <button type="button" class="btn btn-danger CIIE200">CIE</button>
+                <button type="button" class="btn btn-info fp">FORMACION-PROFESIONAL</button>
+                <button type="button" class="btn btn-danger cie">CIE</button>
                 <hr>
          </div>
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2018/6/21" version="14.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
+<ew-language date="2018/6/22" version="14.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
   <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -634,6 +634,18 @@
     <menu id="6">
       <phrase id="menutext" value="persona" />
     </menu>
+    <menu id="7">
+      <phrase id="menutext" value="niveles Consulta" />
+    </menu>
+    <menu id="8">
+      <phrase id="menutext" value="VER FECHA NIVEL CLAVE NOMBRE" />
+    </menu>
+    <menu id="9">
+      <phrase id="menutext" value="mesa nivel" />
+    </menu>
+    <menu id="10">
+      <phrase id="menutext" value="mesa" />
+    </menu>
     <table id="cargos">
       <phrase id="tblcaption" value="cargos" />
       <field id="id_cargo">
@@ -720,7 +732,7 @@
       <field id="localidad">
         <phrase id="fldcaption" value="localidad" />
       </field>
-      <field id="email">
+      <field id="_email">
         <phrase id="fldcaption" value="email" />
       </field>
     </table>
@@ -750,6 +762,75 @@
         <phrase id="fldtagcaption1" value="Yes" />
         <phrase id="fldtagvalue2" value="0" />
         <phrase id="fldtagcaption2" value="No" />
+      </field>
+    </table>
+    <table id="mesa">
+      <phrase id="tblcaption" value="mesa" />
+      <field id="id">
+        <phrase id="fldcaption" value="Id" />
+      </field>
+      <field id="fecha">
+        <phrase id="fldcaption" value="fecha" />
+      </field>
+      <field id="mensaje">
+        <phrase id="fldcaption" value="mensaje" />
+      </field>
+      <field id="escuela">
+        <phrase id="fldcaption" value="escuela" />
+      </field>
+    </table>
+    <table id="mesa_nivel">
+      <phrase id="tblcaption" value="mesa nivel" />
+      <field id="id_nivel">
+        <phrase id="fldcaption" value="Id nivel" />
+      </field>
+      <field id="nivel">
+        <phrase id="fldcaption" value="Nivel" />
+      </field>
+      <field id="clave">
+        <phrase id="fldcaption" value="CLAVE" />
+      </field>
+      <field id="nombre">
+        <phrase id="fldcaption" value="NOMBRE" />
+      </field>
+      <field id="fecha">
+        <phrase id="fldcaption" value="fecha" />
+      </field>
+      <field id="mensaje">
+        <phrase id="fldcaption" value="mensaje" />
+      </field>
+    </table>
+    <table id="niveles_consulta">
+      <phrase id="tblcaption" value="niveles Consulta" />
+      <field id="id_nivel">
+        <phrase id="fldcaption" value="Id nivel" />
+      </field>
+      <field id="nivel">
+        <phrase id="fldcaption" value="Nivel" />
+      </field>
+      <field id="clave">
+        <phrase id="fldcaption" value="CLAVE" />
+      </field>
+      <field id="nombre">
+        <phrase id="fldcaption" value="NOMBRE" />
+      </field>
+    </table>
+    <table id="ver_fecha_nivel_clave_nombre">
+      <phrase id="tblcaption" value="VER FECHA NIVEL CLAVE NOMBRE" />
+      <field id="fecha">
+        <phrase id="fldcaption" value="fecha" />
+      </field>
+      <field id="nivel">
+        <phrase id="fldcaption" value="Nivel" />
+      </field>
+      <field id="clave">
+        <phrase id="fldcaption" value="CLAVE" />
+      </field>
+      <field id="nombre">
+        <phrase id="fldcaption" value="NOMBRE" />
+      </field>
+      <field id="mensaje">
+        <phrase id="fldcaption" value="mensaje" />
       </field>
     </table>
   </project>

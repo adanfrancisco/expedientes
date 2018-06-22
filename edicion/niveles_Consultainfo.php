@@ -1,21 +1,16 @@
 <?php
 
 // Global variable for table object
-$persona = NULL;
+$niveles_Consulta = NULL;
 
 //
-// Table class for persona
+// Table class for niveles Consulta
 //
-class cpersona extends cTable {
-	var $id_persona;
-	var $cuil;
-	var $apellido;
-	var $nombre;
-	var $domicilio;
-	var $telefono;
-	var $celular;
-	var $localidad;
-	var $_email;
+class cniveles_Consulta extends cTable {
+	var $Id_nivel;
+	var $Nivel;
+	var $CLAVE;
+	var $NOMBRE;
 
 	//
 	// Table class constructor
@@ -25,12 +20,12 @@ class cpersona extends cTable {
 
 		// Language object
 		if (!isset($Language)) $Language = new cLanguage();
-		$this->TableVar = 'persona';
-		$this->TableName = 'persona';
-		$this->TableType = 'TABLE';
+		$this->TableVar = 'niveles_Consulta';
+		$this->TableName = 'niveles Consulta';
+		$this->TableType = 'VIEW';
 
 		// Update Table
-		$this->UpdateTable = "[persona]";
+		$this->UpdateTable = "[niveles Consulta]";
 		$this->DBID = 'DB';
 		$this->ExportAll = TRUE;
 		$this->ExportPageBreakCount = 0; // Page break per every n record (PDF only)
@@ -48,54 +43,26 @@ class cpersona extends cTable {
 		$this->UserIDAllowSecurity = 0; // User ID Allow
 		$this->BasicSearch = new cBasicSearch($this->TableVar);
 
-		// id_persona
-		$this->id_persona = new cField('persona', 'persona', 'x_id_persona', 'id_persona', '[id_persona]', '[id_persona]', 3, -1, FALSE, '[id_persona]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'NO');
-		$this->id_persona->Sortable = TRUE; // Allow sort
-		$this->id_persona->FldDefaultErrMsg = $Language->Phrase("IncorrectInteger");
-		$this->fields['id_persona'] = &$this->id_persona;
+		// Id_nivel
+		$this->Id_nivel = new cField('niveles_Consulta', 'niveles Consulta', 'x_Id_nivel', 'Id_nivel', '[Id_nivel]', '[Id_nivel]', 3, -1, FALSE, '[Id_nivel]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'NO');
+		$this->Id_nivel->Sortable = TRUE; // Allow sort
+		$this->Id_nivel->FldDefaultErrMsg = $Language->Phrase("IncorrectInteger");
+		$this->fields['Id_nivel'] = &$this->Id_nivel;
 
-		// cuil
-		$this->cuil = new cField('persona', 'persona', 'x_cuil', 'cuil', '[cuil]', '[cuil]', 202, -1, FALSE, '[cuil]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->cuil->Sortable = TRUE; // Allow sort
-		$this->fields['cuil'] = &$this->cuil;
+		// Nivel
+		$this->Nivel = new cField('niveles_Consulta', 'niveles Consulta', 'x_Nivel', 'Nivel', '[Nivel]', '[Nivel]', 202, -1, FALSE, '[Nivel]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->Nivel->Sortable = TRUE; // Allow sort
+		$this->fields['Nivel'] = &$this->Nivel;
 
-		// apellido
-		$this->apellido = new cField('persona', 'persona', 'x_apellido', 'apellido', '[apellido]', '[apellido]', 202, -1, FALSE, '[apellido]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->apellido->Sortable = TRUE; // Allow sort
-		$this->fields['apellido'] = &$this->apellido;
+		// CLAVE
+		$this->CLAVE = new cField('niveles_Consulta', 'niveles Consulta', 'x_CLAVE', 'CLAVE', '[CLAVE]', '[CLAVE]', 202, -1, FALSE, '[CLAVE]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->CLAVE->Sortable = TRUE; // Allow sort
+		$this->fields['CLAVE'] = &$this->CLAVE;
 
-		// nombre
-		$this->nombre = new cField('persona', 'persona', 'x_nombre', 'nombre', '[nombre]', '[nombre]', 202, -1, FALSE, '[nombre]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->nombre->Sortable = TRUE; // Allow sort
-		$this->fields['nombre'] = &$this->nombre;
-
-		// domicilio
-		$this->domicilio = new cField('persona', 'persona', 'x_domicilio', 'domicilio', '[domicilio]', '[domicilio]', 202, -1, FALSE, '[domicilio]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->domicilio->Sortable = TRUE; // Allow sort
-		$this->fields['domicilio'] = &$this->domicilio;
-
-		// telefono
-		$this->telefono = new cField('persona', 'persona', 'x_telefono', 'telefono', '[telefono]', '[telefono]', 202, -1, FALSE, '[telefono]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->telefono->Sortable = TRUE; // Allow sort
-		$this->fields['telefono'] = &$this->telefono;
-
-		// celular
-		$this->celular = new cField('persona', 'persona', 'x_celular', 'celular', '[celular]', '[celular]', 202, -1, FALSE, '[celular]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->celular->Sortable = TRUE; // Allow sort
-		$this->fields['celular'] = &$this->celular;
-
-		// localidad
-		$this->localidad = new cField('persona', 'persona', 'x_localidad', 'localidad', '[localidad]', '[localidad]', 3, -1, FALSE, '[localidad]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'SELECT');
-		$this->localidad->Sortable = TRUE; // Allow sort
-		$this->localidad->UsePleaseSelect = TRUE; // Use PleaseSelect by default
-		$this->localidad->PleaseSelectText = $Language->Phrase("PleaseSelect"); // PleaseSelect text
-		$this->localidad->FldDefaultErrMsg = $Language->Phrase("IncorrectInteger");
-		$this->fields['localidad'] = &$this->localidad;
-
-		// email
-		$this->_email = new cField('persona', 'persona', 'x__email', 'email', '[email]', '[email]', 202, -1, FALSE, '[email]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->_email->Sortable = TRUE; // Allow sort
-		$this->fields['email'] = &$this->_email;
+		// NOMBRE
+		$this->NOMBRE = new cField('niveles_Consulta', 'niveles Consulta', 'x_NOMBRE', 'NOMBRE', '[NOMBRE]', '[NOMBRE]', 202, -1, FALSE, '[NOMBRE]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->NOMBRE->Sortable = TRUE; // Allow sort
+		$this->fields['NOMBRE'] = &$this->NOMBRE;
 	}
 
 	// Set Field Visibility
@@ -139,7 +106,7 @@ class cpersona extends cTable {
 	var $_SqlFrom = "";
 
 	function getSqlFrom() { // From
-		return ($this->_SqlFrom <> "") ? $this->_SqlFrom : "[persona]";
+		return ($this->_SqlFrom <> "") ? $this->_SqlFrom : "[niveles Consulta]";
 	}
 
 	function SqlFrom() { // For backward compatibility
@@ -365,8 +332,8 @@ class cpersona extends cTable {
 		if ($bInsert) {
 
 			// Get insert id if necessary
-			$this->id_persona->setDbValue($conn->Insert_ID());
-			$rs['id_persona'] = $this->id_persona->DbValue;
+			$this->Id_nivel->setDbValue($conn->Insert_ID());
+			$rs['Id_nivel'] = $this->Id_nivel->DbValue;
 		}
 		return $bInsert;
 	}
@@ -403,8 +370,10 @@ class cpersona extends cTable {
 		if (is_array($where))
 			$where = $this->ArrayToFilter($where);
 		if ($rs) {
-			if (array_key_exists('id_persona', $rs))
-				ew_AddFilter($where, ew_QuotedName('id_persona', $this->DBID) . '=' . ew_QuotedValue($rs['id_persona'], $this->id_persona->FldDataType, $this->DBID));
+			if (array_key_exists('Id_nivel', $rs))
+				ew_AddFilter($where, ew_QuotedName('Id_nivel', $this->DBID) . '=' . ew_QuotedValue($rs['Id_nivel'], $this->Id_nivel->FldDataType, $this->DBID));
+			if (array_key_exists('CLAVE', $rs))
+				ew_AddFilter($where, ew_QuotedName('CLAVE', $this->DBID) . '=' . ew_QuotedValue($rs['CLAVE'], $this->CLAVE->FldDataType, $this->DBID));
 		}
 		$filter = ($curfilter) ? $this->CurrentFilter : "";
 		ew_AddFilter($filter, $where);
@@ -426,18 +395,22 @@ class cpersona extends cTable {
 
 	// Key filter WHERE clause
 	function SqlKeyFilter() {
-		return "[id_persona] = @id_persona@";
+		return "[Id_nivel] = @Id_nivel@ AND [CLAVE] = '@CLAVE@'";
 	}
 
 	// Key filter
 	function KeyFilter() {
 		$sKeyFilter = $this->SqlKeyFilter();
-		if (!is_numeric($this->id_persona->CurrentValue))
+		if (!is_numeric($this->Id_nivel->CurrentValue))
 			return "0=1"; // Invalid key
-		if (is_null($this->id_persona->CurrentValue))
+		if (is_null($this->Id_nivel->CurrentValue))
 			return "0=1"; // Invalid key
 		else
-			$sKeyFilter = str_replace("@id_persona@", ew_AdjustSql($this->id_persona->CurrentValue, $this->DBID), $sKeyFilter); // Replace key value
+			$sKeyFilter = str_replace("@Id_nivel@", ew_AdjustSql($this->Id_nivel->CurrentValue, $this->DBID), $sKeyFilter); // Replace key value
+		if (is_null($this->CLAVE->CurrentValue))
+			return "0=1"; // Invalid key
+		else
+			$sKeyFilter = str_replace("@CLAVE@", ew_AdjustSql($this->CLAVE->CurrentValue, $this->DBID), $sKeyFilter); // Replace key value
 		return $sKeyFilter;
 	}
 
@@ -451,7 +424,7 @@ class cpersona extends cTable {
 		if (@$_SESSION[$name] <> "") {
 			return $_SESSION[$name];
 		} else {
-			return "personalist.php";
+			return "niveles_Consultalist.php";
 		}
 	}
 
@@ -462,11 +435,11 @@ class cpersona extends cTable {
 	// Get modal caption
 	function GetModalCaption($pageName) {
 		global $Language;
-		if ($pageName == "personaview.php")
+		if ($pageName == "niveles_Consultaview.php")
 			return $Language->Phrase("View");
-		elseif ($pageName == "personaedit.php")
+		elseif ($pageName == "niveles_Consultaedit.php")
 			return $Language->Phrase("Edit");
-		elseif ($pageName == "personaadd.php")
+		elseif ($pageName == "niveles_Consultaadd.php")
 			return $Language->Phrase("Add");
 		else
 			return "";
@@ -474,30 +447,30 @@ class cpersona extends cTable {
 
 	// List URL
 	function GetListUrl() {
-		return "personalist.php";
+		return "niveles_Consultalist.php";
 	}
 
 	// View URL
 	function GetViewUrl($parm = "") {
 		if ($parm <> "")
-			$url = $this->KeyUrl("personaview.php", $this->UrlParm($parm));
+			$url = $this->KeyUrl("niveles_Consultaview.php", $this->UrlParm($parm));
 		else
-			$url = $this->KeyUrl("personaview.php", $this->UrlParm(EW_TABLE_SHOW_DETAIL . "="));
+			$url = $this->KeyUrl("niveles_Consultaview.php", $this->UrlParm(EW_TABLE_SHOW_DETAIL . "="));
 		return $this->AddMasterUrl($url);
 	}
 
 	// Add URL
 	function GetAddUrl($parm = "") {
 		if ($parm <> "")
-			$url = "personaadd.php?" . $this->UrlParm($parm);
+			$url = "niveles_Consultaadd.php?" . $this->UrlParm($parm);
 		else
-			$url = "personaadd.php";
+			$url = "niveles_Consultaadd.php";
 		return $this->AddMasterUrl($url);
 	}
 
 	// Edit URL
 	function GetEditUrl($parm = "") {
-		$url = $this->KeyUrl("personaedit.php", $this->UrlParm($parm));
+		$url = $this->KeyUrl("niveles_Consultaedit.php", $this->UrlParm($parm));
 		return $this->AddMasterUrl($url);
 	}
 
@@ -509,7 +482,7 @@ class cpersona extends cTable {
 
 	// Copy URL
 	function GetCopyUrl($parm = "") {
-		$url = $this->KeyUrl("personaadd.php", $this->UrlParm($parm));
+		$url = $this->KeyUrl("niveles_Consultaadd.php", $this->UrlParm($parm));
 		return $this->AddMasterUrl($url);
 	}
 
@@ -521,7 +494,7 @@ class cpersona extends cTable {
 
 	// Delete URL
 	function GetDeleteUrl() {
-		return $this->KeyUrl("personadelete.php", $this->UrlParm());
+		return $this->KeyUrl("niveles_Consultadelete.php", $this->UrlParm());
 	}
 
 	// Add master url
@@ -531,7 +504,8 @@ class cpersona extends cTable {
 
 	function KeyToJson() {
 		$json = "";
-		$json .= "id_persona:" . ew_VarToJson($this->id_persona->CurrentValue, "number", "'");
+		$json .= "Id_nivel:" . ew_VarToJson($this->Id_nivel->CurrentValue, "number", "'");
+		$json .= ",CLAVE:" . ew_VarToJson($this->CLAVE->CurrentValue, "string", "'");
 		return "{" . $json . "}";
 	}
 
@@ -539,8 +513,13 @@ class cpersona extends cTable {
 	function KeyUrl($url, $parm = "") {
 		$sUrl = $url . "?";
 		if ($parm <> "") $sUrl .= $parm . "&";
-		if (!is_null($this->id_persona->CurrentValue)) {
-			$sUrl .= "id_persona=" . urlencode($this->id_persona->CurrentValue);
+		if (!is_null($this->Id_nivel->CurrentValue)) {
+			$sUrl .= "Id_nivel=" . urlencode($this->Id_nivel->CurrentValue);
+		} else {
+			return "javascript:ew_Alert(ewLanguage.Phrase('InvalidRecord'));";
+		}
+		if (!is_null($this->CLAVE->CurrentValue)) {
+			$sUrl .= "&CLAVE=" . urlencode($this->CLAVE->CurrentValue);
 		} else {
 			return "javascript:ew_Alert(ewLanguage.Phrase('InvalidRecord'));";
 		}
@@ -568,17 +547,28 @@ class cpersona extends cTable {
 		if (isset($_POST["key_m"])) {
 			$arKeys = $_POST["key_m"];
 			$cnt = count($arKeys);
+			for ($i = 0; $i < $cnt; $i++)
+				$arKeys[$i] = explode($EW_COMPOSITE_KEY_SEPARATOR, $arKeys[$i]);
 		} elseif (isset($_GET["key_m"])) {
 			$arKeys = $_GET["key_m"];
 			$cnt = count($arKeys);
+			for ($i = 0; $i < $cnt; $i++)
+				$arKeys[$i] = explode($EW_COMPOSITE_KEY_SEPARATOR, $arKeys[$i]);
 		} elseif (!empty($_GET) || !empty($_POST)) {
 			$isPost = ew_IsPost();
-			if ($isPost && isset($_POST["id_persona"]))
-				$arKeys[] = $_POST["id_persona"];
-			elseif (isset($_GET["id_persona"]))
-				$arKeys[] = $_GET["id_persona"];
+			if ($isPost && isset($_POST["Id_nivel"]))
+				$arKey[] = $_POST["Id_nivel"];
+			elseif (isset($_GET["Id_nivel"]))
+				$arKey[] = $_GET["Id_nivel"];
 			else
 				$arKeys = NULL; // Do not setup
+			if ($isPost && isset($_POST["CLAVE"]))
+				$arKey[] = $_POST["CLAVE"];
+			elseif (isset($_GET["CLAVE"]))
+				$arKey[] = $_GET["CLAVE"];
+			else
+				$arKeys = NULL; // Do not setup
+			if (is_array($arKeys)) $arKeys[] = $arKey;
 
 			//return $arKeys; // Do not return yet, so the values will also be checked by the following code
 		}
@@ -587,7 +577,9 @@ class cpersona extends cTable {
 		$ar = array();
 		if (is_array($arKeys)) {
 			foreach ($arKeys as $key) {
-				if (!is_numeric($key))
+				if (!is_array($key) || count($key) <> 2)
+					continue; // Just skip so other keys will still work
+				if (!is_numeric($key[0])) // Id_nivel
 					continue;
 				$ar[] = $key;
 			}
@@ -601,7 +593,8 @@ class cpersona extends cTable {
 		$sKeyFilter = "";
 		foreach ($arKeys as $key) {
 			if ($sKeyFilter <> "") $sKeyFilter .= " OR ";
-			$this->id_persona->CurrentValue = $key;
+			$this->Id_nivel->CurrentValue = $key[0];
+			$this->CLAVE->CurrentValue = $key[1];
 			$sKeyFilter .= "(" . $this->KeyFilter() . ")";
 		}
 		return $sKeyFilter;
@@ -622,15 +615,10 @@ class cpersona extends cTable {
 
 	// Load row values from recordset
 	function LoadListRowValues(&$rs) {
-		$this->id_persona->setDbValue($rs->fields('id_persona'));
-		$this->cuil->setDbValue($rs->fields('cuil'));
-		$this->apellido->setDbValue($rs->fields('apellido'));
-		$this->nombre->setDbValue($rs->fields('nombre'));
-		$this->domicilio->setDbValue($rs->fields('domicilio'));
-		$this->telefono->setDbValue($rs->fields('telefono'));
-		$this->celular->setDbValue($rs->fields('celular'));
-		$this->localidad->setDbValue($rs->fields('localidad'));
-		$this->_email->setDbValue($rs->fields('email'));
+		$this->Id_nivel->setDbValue($rs->fields('Id_nivel'));
+		$this->Nivel->setDbValue($rs->fields('Nivel'));
+		$this->CLAVE->setDbValue($rs->fields('CLAVE'));
+		$this->NOMBRE->setDbValue($rs->fields('NOMBRE'));
 	}
 
 	// Render list row values
@@ -641,115 +629,46 @@ class cpersona extends cTable {
 		$this->Row_Rendering();
 
 	// Common render codes
-		// id_persona
-		// cuil
-		// apellido
-		// nombre
-		// domicilio
-		// telefono
-		// celular
-		// localidad
-		// email
-		// id_persona
+		// Id_nivel
+		// Nivel
+		// CLAVE
+		// NOMBRE
+		// Id_nivel
 
-		$this->id_persona->ViewValue = $this->id_persona->CurrentValue;
-		$this->id_persona->ViewCustomAttributes = "";
+		$this->Id_nivel->ViewValue = $this->Id_nivel->CurrentValue;
+		$this->Id_nivel->ViewCustomAttributes = "";
 
-		// cuil
-		$this->cuil->ViewValue = $this->cuil->CurrentValue;
-		$this->cuil->ViewCustomAttributes = "";
+		// Nivel
+		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
+		$this->Nivel->ViewCustomAttributes = "";
 
-		// apellido
-		$this->apellido->ViewValue = $this->apellido->CurrentValue;
-		$this->apellido->ViewCustomAttributes = "";
+		// CLAVE
+		$this->CLAVE->ViewValue = $this->CLAVE->CurrentValue;
+		$this->CLAVE->ViewCustomAttributes = "";
 
-		// nombre
-		$this->nombre->ViewValue = $this->nombre->CurrentValue;
-		$this->nombre->ViewCustomAttributes = "";
+		// NOMBRE
+		$this->NOMBRE->ViewValue = $this->NOMBRE->CurrentValue;
+		$this->NOMBRE->ViewCustomAttributes = "";
 
-		// domicilio
-		$this->domicilio->ViewValue = $this->domicilio->CurrentValue;
-		$this->domicilio->ViewCustomAttributes = "";
+		// Id_nivel
+		$this->Id_nivel->LinkCustomAttributes = "";
+		$this->Id_nivel->HrefValue = "";
+		$this->Id_nivel->TooltipValue = "";
 
-		// telefono
-		$this->telefono->ViewValue = $this->telefono->CurrentValue;
-		$this->telefono->ViewCustomAttributes = "";
+		// Nivel
+		$this->Nivel->LinkCustomAttributes = "";
+		$this->Nivel->HrefValue = "";
+		$this->Nivel->TooltipValue = "";
 
-		// celular
-		$this->celular->ViewValue = $this->celular->CurrentValue;
-		$this->celular->ViewCustomAttributes = "";
+		// CLAVE
+		$this->CLAVE->LinkCustomAttributes = "";
+		$this->CLAVE->HrefValue = "";
+		$this->CLAVE->TooltipValue = "";
 
-		// localidad
-		if (strval($this->localidad->CurrentValue) <> "") {
-			$sFilterWrk = "[idLocalidad]" . ew_SearchString("=", $this->localidad->CurrentValue, EW_DATATYPE_NUMBER, "");
-		$sSqlWrk = "SELECT [idLocalidad], [localidad_nombre] AS [DispFld], '' AS [Disp2Fld], '' AS [Disp3Fld], '' AS [Disp4Fld] FROM [localidades]";
-		$sWhereWrk = "";
-		$this->localidad->LookupFilters = array();
-		ew_AddFilter($sWhereWrk, $sFilterWrk);
-		$this->Lookup_Selecting($this->localidad, $sWhereWrk); // Call Lookup Selecting
-		if ($sWhereWrk <> "") $sSqlWrk .= " WHERE " . $sWhereWrk;
-			$rswrk = Conn()->Execute($sSqlWrk);
-			if ($rswrk && !$rswrk->EOF) { // Lookup values found
-				$arwrk = array();
-				$arwrk[1] = $rswrk->fields('DispFld');
-				$this->localidad->ViewValue = $this->localidad->DisplayValue($arwrk);
-				$rswrk->Close();
-			} else {
-				$this->localidad->ViewValue = $this->localidad->CurrentValue;
-			}
-		} else {
-			$this->localidad->ViewValue = NULL;
-		}
-		$this->localidad->ViewCustomAttributes = "";
-
-		// email
-		$this->_email->ViewValue = $this->_email->CurrentValue;
-		$this->_email->ViewCustomAttributes = "";
-
-		// id_persona
-		$this->id_persona->LinkCustomAttributes = "";
-		$this->id_persona->HrefValue = "";
-		$this->id_persona->TooltipValue = "";
-
-		// cuil
-		$this->cuil->LinkCustomAttributes = "";
-		$this->cuil->HrefValue = "";
-		$this->cuil->TooltipValue = "";
-
-		// apellido
-		$this->apellido->LinkCustomAttributes = "";
-		$this->apellido->HrefValue = "";
-		$this->apellido->TooltipValue = "";
-
-		// nombre
-		$this->nombre->LinkCustomAttributes = "";
-		$this->nombre->HrefValue = "";
-		$this->nombre->TooltipValue = "";
-
-		// domicilio
-		$this->domicilio->LinkCustomAttributes = "";
-		$this->domicilio->HrefValue = "";
-		$this->domicilio->TooltipValue = "";
-
-		// telefono
-		$this->telefono->LinkCustomAttributes = "";
-		$this->telefono->HrefValue = "";
-		$this->telefono->TooltipValue = "";
-
-		// celular
-		$this->celular->LinkCustomAttributes = "";
-		$this->celular->HrefValue = "";
-		$this->celular->TooltipValue = "";
-
-		// localidad
-		$this->localidad->LinkCustomAttributes = "";
-		$this->localidad->HrefValue = "";
-		$this->localidad->TooltipValue = "";
-
-		// email
-		$this->_email->LinkCustomAttributes = "";
-		$this->_email->HrefValue = "";
-		$this->_email->TooltipValue = "";
+		// NOMBRE
+		$this->NOMBRE->LinkCustomAttributes = "";
+		$this->NOMBRE->HrefValue = "";
+		$this->NOMBRE->TooltipValue = "";
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -765,56 +684,29 @@ class cpersona extends cTable {
 		// Call Row Rendering event
 		$this->Row_Rendering();
 
-		// id_persona
-		$this->id_persona->EditAttrs["class"] = "form-control";
-		$this->id_persona->EditCustomAttributes = "";
-		$this->id_persona->EditValue = $this->id_persona->CurrentValue;
-		$this->id_persona->ViewCustomAttributes = "";
+		// Id_nivel
+		$this->Id_nivel->EditAttrs["class"] = "form-control";
+		$this->Id_nivel->EditCustomAttributes = "";
+		$this->Id_nivel->EditValue = $this->Id_nivel->CurrentValue;
+		$this->Id_nivel->ViewCustomAttributes = "";
 
-		// cuil
-		$this->cuil->EditAttrs["class"] = "form-control";
-		$this->cuil->EditCustomAttributes = "";
-		$this->cuil->EditValue = $this->cuil->CurrentValue;
-		$this->cuil->PlaceHolder = ew_RemoveHtml($this->cuil->FldCaption());
+		// Nivel
+		$this->Nivel->EditAttrs["class"] = "form-control";
+		$this->Nivel->EditCustomAttributes = "";
+		$this->Nivel->EditValue = $this->Nivel->CurrentValue;
+		$this->Nivel->PlaceHolder = ew_RemoveHtml($this->Nivel->FldCaption());
 
-		// apellido
-		$this->apellido->EditAttrs["class"] = "form-control";
-		$this->apellido->EditCustomAttributes = "";
-		$this->apellido->EditValue = $this->apellido->CurrentValue;
-		$this->apellido->PlaceHolder = ew_RemoveHtml($this->apellido->FldCaption());
+		// CLAVE
+		$this->CLAVE->EditAttrs["class"] = "form-control";
+		$this->CLAVE->EditCustomAttributes = "";
+		$this->CLAVE->EditValue = $this->CLAVE->CurrentValue;
+		$this->CLAVE->ViewCustomAttributes = "";
 
-		// nombre
-		$this->nombre->EditAttrs["class"] = "form-control";
-		$this->nombre->EditCustomAttributes = "";
-		$this->nombre->EditValue = $this->nombre->CurrentValue;
-		$this->nombre->PlaceHolder = ew_RemoveHtml($this->nombre->FldCaption());
-
-		// domicilio
-		$this->domicilio->EditAttrs["class"] = "form-control";
-		$this->domicilio->EditCustomAttributes = "";
-		$this->domicilio->EditValue = $this->domicilio->CurrentValue;
-		$this->domicilio->PlaceHolder = ew_RemoveHtml($this->domicilio->FldCaption());
-
-		// telefono
-		$this->telefono->EditAttrs["class"] = "form-control";
-		$this->telefono->EditCustomAttributes = "";
-		$this->telefono->EditValue = $this->telefono->CurrentValue;
-		$this->telefono->PlaceHolder = ew_RemoveHtml($this->telefono->FldCaption());
-
-		// celular
-		$this->celular->EditAttrs["class"] = "form-control";
-		$this->celular->EditCustomAttributes = "";
-		$this->celular->EditValue = $this->celular->CurrentValue;
-		$this->celular->PlaceHolder = ew_RemoveHtml($this->celular->FldCaption());
-
-		// localidad
-		$this->localidad->EditCustomAttributes = "";
-
-		// email
-		$this->_email->EditAttrs["class"] = "form-control";
-		$this->_email->EditCustomAttributes = "";
-		$this->_email->EditValue = $this->_email->CurrentValue;
-		$this->_email->PlaceHolder = ew_RemoveHtml($this->_email->FldCaption());
+		// NOMBRE
+		$this->NOMBRE->EditAttrs["class"] = "form-control";
+		$this->NOMBRE->EditCustomAttributes = "";
+		$this->NOMBRE->EditValue = $this->NOMBRE->CurrentValue;
+		$this->NOMBRE->PlaceHolder = ew_RemoveHtml($this->NOMBRE->FldCaption());
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -843,25 +735,15 @@ class cpersona extends cTable {
 			if ($Doc->Horizontal) { // Horizontal format, write header
 				$Doc->BeginExportRow();
 				if ($ExportPageType == "view") {
-					if ($this->id_persona->Exportable) $Doc->ExportCaption($this->id_persona);
-					if ($this->cuil->Exportable) $Doc->ExportCaption($this->cuil);
-					if ($this->apellido->Exportable) $Doc->ExportCaption($this->apellido);
-					if ($this->nombre->Exportable) $Doc->ExportCaption($this->nombre);
-					if ($this->domicilio->Exportable) $Doc->ExportCaption($this->domicilio);
-					if ($this->telefono->Exportable) $Doc->ExportCaption($this->telefono);
-					if ($this->celular->Exportable) $Doc->ExportCaption($this->celular);
-					if ($this->localidad->Exportable) $Doc->ExportCaption($this->localidad);
-					if ($this->_email->Exportable) $Doc->ExportCaption($this->_email);
+					if ($this->Id_nivel->Exportable) $Doc->ExportCaption($this->Id_nivel);
+					if ($this->Nivel->Exportable) $Doc->ExportCaption($this->Nivel);
+					if ($this->CLAVE->Exportable) $Doc->ExportCaption($this->CLAVE);
+					if ($this->NOMBRE->Exportable) $Doc->ExportCaption($this->NOMBRE);
 				} else {
-					if ($this->id_persona->Exportable) $Doc->ExportCaption($this->id_persona);
-					if ($this->cuil->Exportable) $Doc->ExportCaption($this->cuil);
-					if ($this->apellido->Exportable) $Doc->ExportCaption($this->apellido);
-					if ($this->nombre->Exportable) $Doc->ExportCaption($this->nombre);
-					if ($this->domicilio->Exportable) $Doc->ExportCaption($this->domicilio);
-					if ($this->telefono->Exportable) $Doc->ExportCaption($this->telefono);
-					if ($this->celular->Exportable) $Doc->ExportCaption($this->celular);
-					if ($this->localidad->Exportable) $Doc->ExportCaption($this->localidad);
-					if ($this->_email->Exportable) $Doc->ExportCaption($this->_email);
+					if ($this->Id_nivel->Exportable) $Doc->ExportCaption($this->Id_nivel);
+					if ($this->Nivel->Exportable) $Doc->ExportCaption($this->Nivel);
+					if ($this->CLAVE->Exportable) $Doc->ExportCaption($this->CLAVE);
+					if ($this->NOMBRE->Exportable) $Doc->ExportCaption($this->NOMBRE);
 				}
 				$Doc->EndExportRow();
 			}
@@ -893,25 +775,15 @@ class cpersona extends cTable {
 				if (!$Doc->ExportCustom) {
 					$Doc->BeginExportRow($RowCnt); // Allow CSS styles if enabled
 					if ($ExportPageType == "view") {
-						if ($this->id_persona->Exportable) $Doc->ExportField($this->id_persona);
-						if ($this->cuil->Exportable) $Doc->ExportField($this->cuil);
-						if ($this->apellido->Exportable) $Doc->ExportField($this->apellido);
-						if ($this->nombre->Exportable) $Doc->ExportField($this->nombre);
-						if ($this->domicilio->Exportable) $Doc->ExportField($this->domicilio);
-						if ($this->telefono->Exportable) $Doc->ExportField($this->telefono);
-						if ($this->celular->Exportable) $Doc->ExportField($this->celular);
-						if ($this->localidad->Exportable) $Doc->ExportField($this->localidad);
-						if ($this->_email->Exportable) $Doc->ExportField($this->_email);
+						if ($this->Id_nivel->Exportable) $Doc->ExportField($this->Id_nivel);
+						if ($this->Nivel->Exportable) $Doc->ExportField($this->Nivel);
+						if ($this->CLAVE->Exportable) $Doc->ExportField($this->CLAVE);
+						if ($this->NOMBRE->Exportable) $Doc->ExportField($this->NOMBRE);
 					} else {
-						if ($this->id_persona->Exportable) $Doc->ExportField($this->id_persona);
-						if ($this->cuil->Exportable) $Doc->ExportField($this->cuil);
-						if ($this->apellido->Exportable) $Doc->ExportField($this->apellido);
-						if ($this->nombre->Exportable) $Doc->ExportField($this->nombre);
-						if ($this->domicilio->Exportable) $Doc->ExportField($this->domicilio);
-						if ($this->telefono->Exportable) $Doc->ExportField($this->telefono);
-						if ($this->celular->Exportable) $Doc->ExportField($this->celular);
-						if ($this->localidad->Exportable) $Doc->ExportField($this->localidad);
-						if ($this->_email->Exportable) $Doc->ExportField($this->_email);
+						if ($this->Id_nivel->Exportable) $Doc->ExportField($this->Id_nivel);
+						if ($this->Nivel->Exportable) $Doc->ExportField($this->Nivel);
+						if ($this->CLAVE->Exportable) $Doc->ExportField($this->CLAVE);
+						if ($this->NOMBRE->Exportable) $Doc->ExportField($this->NOMBRE);
 					}
 					$Doc->EndExportRow($RowCnt);
 				}

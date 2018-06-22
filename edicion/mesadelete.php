@@ -5,7 +5,7 @@ ob_start(); // Turn on output buffering
 <?php include_once "ewcfg14.php" ?>
 <?php include_once ((EW_USE_ADODB) ? "adodb5/adodb.inc.php" : "ewmysql14.php") ?>
 <?php include_once "phpfn14.php" ?>
-<?php include_once "ESCUELAinfo.php" ?>
+<?php include_once "mesainfo.php" ?>
 <?php include_once "userfn14.php" ?>
 <?php
 
@@ -13,9 +13,9 @@ ob_start(); // Turn on output buffering
 // Page class
 //
 
-$ESCUELA_delete = NULL; // Initialize page object first
+$mesa_delete = NULL; // Initialize page object first
 
-class cESCUELA_delete extends cESCUELA {
+class cmesa_delete extends cmesa {
 
 	// Page ID
 	var $PageID = 'delete';
@@ -24,10 +24,10 @@ class cESCUELA_delete extends cESCUELA {
 	var $ProjectID = '{803A0725-AF43-41D4-9FF6-CD1AEBA17FEC}';
 
 	// Table name
-	var $TableName = 'ESCUELA';
+	var $TableName = 'mesa';
 
 	// Page object name
-	var $PageObjName = 'ESCUELA_delete';
+	var $PageObjName = 'mesa_delete';
 
 	// Page headings
 	var $Heading = '';
@@ -248,10 +248,10 @@ class cESCUELA_delete extends cESCUELA {
 		// Parent constuctor
 		parent::__construct();
 
-		// Table object (ESCUELA)
-		if (!isset($GLOBALS["ESCUELA"]) || get_class($GLOBALS["ESCUELA"]) == "cESCUELA") {
-			$GLOBALS["ESCUELA"] = &$this;
-			$GLOBALS["Table"] = &$GLOBALS["ESCUELA"];
+		// Table object (mesa)
+		if (!isset($GLOBALS["mesa"]) || get_class($GLOBALS["mesa"]) == "cmesa") {
+			$GLOBALS["mesa"] = &$this;
+			$GLOBALS["Table"] = &$GLOBALS["mesa"];
 		}
 
 		// Page ID
@@ -260,7 +260,7 @@ class cESCUELA_delete extends cESCUELA {
 
 		// Table name (for backward compatibility)
 		if (!defined("EW_TABLE_NAME"))
-			define("EW_TABLE_NAME", 'ESCUELA', TRUE);
+			define("EW_TABLE_NAME", 'mesa', TRUE);
 
 		// Start timer
 		if (!isset($GLOBALS["gTimer"]))
@@ -280,14 +280,11 @@ class cESCUELA_delete extends cESCUELA {
 	function Page_Init() {
 		global $gsExport, $gsCustomExport, $gsExportFile, $UserProfile, $Language, $Security, $objForm;
 		$this->CurrentAction = (@$_GET["a"] <> "") ? $_GET["a"] : @$_POST["a_list"]; // Set up current action
-		$this->CLAVE->SetVisibility();
-		$this->CUE->SetVisibility();
-		$this->NOMBRE->SetVisibility();
-		$this->DOMICILIO->SetVisibility();
-		$this->LOCALIDAD->SetVisibility();
-		$this->TELEFONO->SetVisibility();
-		$this->NIVEL->SetVisibility();
-		$this->RPV->SetVisibility();
+		$this->Id->SetVisibility();
+		$this->Id->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
+		$this->fecha->SetVisibility();
+		$this->mensaje->SetVisibility();
+		$this->escuela->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -319,13 +316,13 @@ class cESCUELA_delete extends cESCUELA {
 		Page_Unloaded();
 
 		// Export
-		global $EW_EXPORT, $ESCUELA;
+		global $EW_EXPORT, $mesa;
 		if ($this->CustomExport <> "" && $this->CustomExport == $this->Export && array_key_exists($this->CustomExport, $EW_EXPORT)) {
 				$sContent = ob_get_contents();
 			if ($gsExportFile == "") $gsExportFile = $this->TableVar;
 			$class = $EW_EXPORT[$this->CustomExport];
 			if (class_exists($class)) {
-				$doc = new $class($ESCUELA);
+				$doc = new $class($mesa);
 				$doc->Text = $sContent;
 				if ($this->Export == "email")
 					echo $this->ExportEmail($doc->Text);
@@ -372,10 +369,10 @@ class cESCUELA_delete extends cESCUELA {
 		$this->RecKeys = $this->GetRecordKeys(); // Load record keys
 		$sFilter = $this->GetKeyFilter();
 		if ($sFilter == "")
-			$this->Page_Terminate("ESCUELAlist.php"); // Prevent SQL injection, return to list
+			$this->Page_Terminate("mesalist.php"); // Prevent SQL injection, return to list
 
 		// Set up filter (SQL WHHERE clause) and get return SQL
-		// SQL constructor in ESCUELA class, ESCUELAinfo.php
+		// SQL constructor in mesa class, mesainfo.php
 
 		$this->CurrentFilter = $sFilter;
 
@@ -403,7 +400,7 @@ class cESCUELA_delete extends cESCUELA {
 			if ($this->TotalRecs <= 0) { // No record found, exit
 				if ($this->Recordset)
 					$this->Recordset->Close();
-				$this->Page_Terminate("ESCUELAlist.php"); // Return to list
+				$this->Page_Terminate("mesalist.php"); // Return to list
 			}
 		}
 	}
@@ -467,27 +464,19 @@ class cESCUELA_delete extends cESCUELA {
 		$this->Row_Selected($row);
 		if (!$rs || $rs->EOF)
 			return;
-		$this->CLAVE->setDbValue($row['CLAVE']);
-		$this->CUE->setDbValue($row['CUE']);
-		$this->NOMBRE->setDbValue($row['NOMBRE']);
-		$this->DOMICILIO->setDbValue($row['DOMICILIO']);
-		$this->LOCALIDAD->setDbValue($row['LOCALIDAD']);
-		$this->TELEFONO->setDbValue($row['TELEFONO']);
-		$this->NIVEL->setDbValue($row['NIVEL']);
-		$this->RPV->setDbValue($row['RPV']);
+		$this->Id->setDbValue($row['Id']);
+		$this->fecha->setDbValue($row['fecha']);
+		$this->mensaje->setDbValue($row['mensaje']);
+		$this->escuela->setDbValue($row['escuela']);
 	}
 
 	// Return a row with default values
 	function NewRow() {
 		$row = array();
-		$row['CLAVE'] = NULL;
-		$row['CUE'] = NULL;
-		$row['NOMBRE'] = NULL;
-		$row['DOMICILIO'] = NULL;
-		$row['LOCALIDAD'] = NULL;
-		$row['TELEFONO'] = NULL;
-		$row['NIVEL'] = NULL;
-		$row['RPV'] = NULL;
+		$row['Id'] = NULL;
+		$row['fecha'] = NULL;
+		$row['mensaje'] = NULL;
+		$row['escuela'] = NULL;
 		return $row;
 	}
 
@@ -496,14 +485,10 @@ class cESCUELA_delete extends cESCUELA {
 		if (!$rs || !is_array($rs) && $rs->EOF)
 			return;
 		$row = is_array($rs) ? $rs : $rs->fields;
-		$this->CLAVE->DbValue = $row['CLAVE'];
-		$this->CUE->DbValue = $row['CUE'];
-		$this->NOMBRE->DbValue = $row['NOMBRE'];
-		$this->DOMICILIO->DbValue = $row['DOMICILIO'];
-		$this->LOCALIDAD->DbValue = $row['LOCALIDAD'];
-		$this->TELEFONO->DbValue = $row['TELEFONO'];
-		$this->NIVEL->DbValue = $row['NIVEL'];
-		$this->RPV->DbValue = $row['RPV'];
+		$this->Id->DbValue = $row['Id'];
+		$this->fecha->DbValue = $row['fecha'];
+		$this->mensaje->DbValue = $row['mensaje'];
+		$this->escuela->DbValue = $row['escuela'];
 	}
 
 	// Render row values based on field settings
@@ -516,126 +501,49 @@ class cESCUELA_delete extends cESCUELA {
 		$this->Row_Rendering();
 
 		// Common render codes for all row types
-		// CLAVE
-		// CUE
-		// NOMBRE
-		// DOMICILIO
-		// LOCALIDAD
-		// TELEFONO
-		// NIVEL
-		// RPV
+		// Id
+		// fecha
+		// mensaje
+		// escuela
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
-		// CLAVE
-		$this->CLAVE->ViewValue = $this->CLAVE->CurrentValue;
-		$this->CLAVE->ViewCustomAttributes = "";
+		// Id
+		$this->Id->ViewValue = $this->Id->CurrentValue;
+		$this->Id->ViewCustomAttributes = "";
 
-		// CUE
-		$this->CUE->ViewValue = $this->CUE->CurrentValue;
-		$this->CUE->ViewCustomAttributes = "";
+		// fecha
+		$this->fecha->ViewValue = $this->fecha->CurrentValue;
+		$this->fecha->ViewValue = ew_FormatDateTime($this->fecha->ViewValue, 0);
+		$this->fecha->ViewCustomAttributes = "";
 
-		// NOMBRE
-		$this->NOMBRE->ViewValue = $this->NOMBRE->CurrentValue;
-		$this->NOMBRE->ViewCustomAttributes = "";
+		// mensaje
+		$this->mensaje->ViewValue = $this->mensaje->CurrentValue;
+		$this->mensaje->ViewCustomAttributes = "";
 
-		// DOMICILIO
-		$this->DOMICILIO->ViewValue = $this->DOMICILIO->CurrentValue;
-		$this->DOMICILIO->ViewCustomAttributes = "";
+		// escuela
+		$this->escuela->ViewValue = $this->escuela->CurrentValue;
+		$this->escuela->ViewCustomAttributes = "";
 
-		// LOCALIDAD
-		if (strval($this->LOCALIDAD->CurrentValue) <> "") {
-			$sFilterWrk = "[idLocalidad]" . ew_SearchString("=", $this->LOCALIDAD->CurrentValue, EW_DATATYPE_NUMBER, "");
-		$sSqlWrk = "SELECT [idLocalidad], [localidad_nombre] AS [DispFld], '' AS [Disp2Fld], '' AS [Disp3Fld], '' AS [Disp4Fld] FROM [localidades]";
-		$sWhereWrk = "";
-		$this->LOCALIDAD->LookupFilters = array();
-		ew_AddFilter($sWhereWrk, $sFilterWrk);
-		$this->Lookup_Selecting($this->LOCALIDAD, $sWhereWrk); // Call Lookup Selecting
-		if ($sWhereWrk <> "") $sSqlWrk .= " WHERE " . $sWhereWrk;
-			$rswrk = Conn()->Execute($sSqlWrk);
-			if ($rswrk && !$rswrk->EOF) { // Lookup values found
-				$arwrk = array();
-				$arwrk[1] = $rswrk->fields('DispFld');
-				$this->LOCALIDAD->ViewValue = $this->LOCALIDAD->DisplayValue($arwrk);
-				$rswrk->Close();
-			} else {
-				$this->LOCALIDAD->ViewValue = $this->LOCALIDAD->CurrentValue;
-			}
-		} else {
-			$this->LOCALIDAD->ViewValue = NULL;
-		}
-		$this->LOCALIDAD->ViewCustomAttributes = "";
+			// Id
+			$this->Id->LinkCustomAttributes = "";
+			$this->Id->HrefValue = "";
+			$this->Id->TooltipValue = "";
 
-		// TELEFONO
-		$this->TELEFONO->ViewValue = $this->TELEFONO->CurrentValue;
-		$this->TELEFONO->ViewCustomAttributes = "";
+			// fecha
+			$this->fecha->LinkCustomAttributes = "";
+			$this->fecha->HrefValue = "";
+			$this->fecha->TooltipValue = "";
 
-		// NIVEL
-		if (strval($this->NIVEL->CurrentValue) <> "") {
-			$sFilterWrk = "[Id_nivel]" . ew_SearchString("=", $this->NIVEL->CurrentValue, EW_DATATYPE_NUMBER, "");
-		$sSqlWrk = "SELECT [Id_nivel], [Nivel] AS [DispFld], '' AS [Disp2Fld], '' AS [Disp3Fld], '' AS [Disp4Fld] FROM [niveles]";
-		$sWhereWrk = "";
-		$this->NIVEL->LookupFilters = array();
-		ew_AddFilter($sWhereWrk, $sFilterWrk);
-		$this->Lookup_Selecting($this->NIVEL, $sWhereWrk); // Call Lookup Selecting
-		if ($sWhereWrk <> "") $sSqlWrk .= " WHERE " . $sWhereWrk;
-			$rswrk = Conn()->Execute($sSqlWrk);
-			if ($rswrk && !$rswrk->EOF) { // Lookup values found
-				$arwrk = array();
-				$arwrk[1] = $rswrk->fields('DispFld');
-				$this->NIVEL->ViewValue = $this->NIVEL->DisplayValue($arwrk);
-				$rswrk->Close();
-			} else {
-				$this->NIVEL->ViewValue = $this->NIVEL->CurrentValue;
-			}
-		} else {
-			$this->NIVEL->ViewValue = NULL;
-		}
-		$this->NIVEL->ViewCustomAttributes = "";
+			// mensaje
+			$this->mensaje->LinkCustomAttributes = "";
+			$this->mensaje->HrefValue = "";
+			$this->mensaje->TooltipValue = "";
 
-		// RPV
-		$this->RPV->ViewValue = $this->RPV->CurrentValue;
-		$this->RPV->ViewCustomAttributes = "";
-
-			// CLAVE
-			$this->CLAVE->LinkCustomAttributes = "";
-			$this->CLAVE->HrefValue = "";
-			$this->CLAVE->TooltipValue = "";
-
-			// CUE
-			$this->CUE->LinkCustomAttributes = "";
-			$this->CUE->HrefValue = "";
-			$this->CUE->TooltipValue = "";
-
-			// NOMBRE
-			$this->NOMBRE->LinkCustomAttributes = "";
-			$this->NOMBRE->HrefValue = "";
-			$this->NOMBRE->TooltipValue = "";
-
-			// DOMICILIO
-			$this->DOMICILIO->LinkCustomAttributes = "";
-			$this->DOMICILIO->HrefValue = "";
-			$this->DOMICILIO->TooltipValue = "";
-
-			// LOCALIDAD
-			$this->LOCALIDAD->LinkCustomAttributes = "";
-			$this->LOCALIDAD->HrefValue = "";
-			$this->LOCALIDAD->TooltipValue = "";
-
-			// TELEFONO
-			$this->TELEFONO->LinkCustomAttributes = "";
-			$this->TELEFONO->HrefValue = "";
-			$this->TELEFONO->TooltipValue = "";
-
-			// NIVEL
-			$this->NIVEL->LinkCustomAttributes = "";
-			$this->NIVEL->HrefValue = "";
-			$this->NIVEL->TooltipValue = "";
-
-			// RPV
-			$this->RPV->LinkCustomAttributes = "";
-			$this->RPV->HrefValue = "";
-			$this->RPV->TooltipValue = "";
+			// escuela
+			$this->escuela->LinkCustomAttributes = "";
+			$this->escuela->HrefValue = "";
+			$this->escuela->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -681,7 +589,7 @@ class cESCUELA_delete extends cESCUELA {
 			foreach ($rsold as $row) {
 				$sThisKey = "";
 				if ($sThisKey <> "") $sThisKey .= $GLOBALS["EW_COMPOSITE_KEY_SEPARATOR"];
-				$sThisKey .= $row['CLAVE'];
+				$sThisKey .= $row['Id'];
 				$conn->raiseErrorFn = $GLOBALS["EW_ERROR_FN"];
 				$DeleteRows = $this->Delete($row); // Delete
 				$conn->raiseErrorFn = '';
@@ -724,7 +632,7 @@ class cESCUELA_delete extends cESCUELA {
 		global $Breadcrumb, $Language;
 		$Breadcrumb = new cBreadcrumb();
 		$url = substr(ew_CurrentUrl(), strrpos(ew_CurrentUrl(), "/")+1);
-		$Breadcrumb->Add("list", $this->TableVar, $this->AddMasterUrl("ESCUELAlist.php"), "", $this->TableVar, TRUE);
+		$Breadcrumb->Add("list", $this->TableVar, $this->AddMasterUrl("mesalist.php"), "", $this->TableVar, TRUE);
 		$PageId = "delete";
 		$Breadcrumb->Add("delete", $PageId, $url);
 	}
@@ -810,29 +718,29 @@ class cESCUELA_delete extends cESCUELA {
 <?php
 
 // Create page object
-if (!isset($ESCUELA_delete)) $ESCUELA_delete = new cESCUELA_delete();
+if (!isset($mesa_delete)) $mesa_delete = new cmesa_delete();
 
 // Page init
-$ESCUELA_delete->Page_Init();
+$mesa_delete->Page_Init();
 
 // Page main
-$ESCUELA_delete->Page_Main();
+$mesa_delete->Page_Main();
 
 // Global Page Rendering event (in userfn*.php)
 Page_Rendering();
 
 // Page Rendering event
-$ESCUELA_delete->Page_Render();
+$mesa_delete->Page_Render();
 ?>
 <?php include_once "header.php" ?>
 <script type="text/javascript">
 
 // Form object
 var CurrentPageID = EW_PAGE_ID = "delete";
-var CurrentForm = fESCUELAdelete = new ew_Form("fESCUELAdelete", "delete");
+var CurrentForm = fmesadelete = new ew_Form("fmesadelete", "delete");
 
 // Form_CustomValidate event
-fESCUELAdelete.Form_CustomValidate = 
+fmesadelete.Form_CustomValidate = 
  function(fobj) { // DO NOT CHANGE THIS LINE!
 
  	// Your custom validation code here, return false if invalid.
@@ -840,31 +748,27 @@ fESCUELAdelete.Form_CustomValidate =
  }
 
 // Use JavaScript validation or not
-fESCUELAdelete.ValidateRequired = <?php echo json_encode(EW_CLIENT_VALIDATE) ?>;
+fmesadelete.ValidateRequired = <?php echo json_encode(EW_CLIENT_VALIDATE) ?>;
 
 // Dynamic selection lists
-fESCUELAdelete.Lists["x_LOCALIDAD"] = {"LinkField":"x_idLocalidad","Ajax":true,"AutoFill":false,"DisplayFields":["x_localidad_nombre","","",""],"ParentFields":[],"ChildFields":[],"FilterFields":[],"Options":[],"Template":"","LinkTable":"localidades"};
-fESCUELAdelete.Lists["x_LOCALIDAD"].Data = "<?php echo $ESCUELA_delete->LOCALIDAD->LookupFilterQuery(FALSE, "delete") ?>";
-fESCUELAdelete.Lists["x_NIVEL"] = {"LinkField":"x_Id_nivel","Ajax":true,"AutoFill":false,"DisplayFields":["x_Nivel","","",""],"ParentFields":[],"ChildFields":[],"FilterFields":[],"Options":[],"Template":"","LinkTable":"niveles"};
-fESCUELAdelete.Lists["x_NIVEL"].Data = "<?php echo $ESCUELA_delete->NIVEL->LookupFilterQuery(FALSE, "delete") ?>";
-
 // Form object for search
+
 </script>
 <script type="text/javascript">
 
 // Write your client script here, no need to add script tags.
 </script>
-<?php $ESCUELA_delete->ShowPageHeader(); ?>
+<?php $mesa_delete->ShowPageHeader(); ?>
 <?php
-$ESCUELA_delete->ShowMessage();
+$mesa_delete->ShowMessage();
 ?>
-<form name="fESCUELAdelete" id="fESCUELAdelete" class="form-inline ewForm ewDeleteForm" action="<?php echo ew_CurrentPage() ?>" method="post">
-<?php if ($ESCUELA_delete->CheckToken) { ?>
-<input type="hidden" name="<?php echo EW_TOKEN_NAME ?>" value="<?php echo $ESCUELA_delete->Token ?>">
+<form name="fmesadelete" id="fmesadelete" class="form-inline ewForm ewDeleteForm" action="<?php echo ew_CurrentPage() ?>" method="post">
+<?php if ($mesa_delete->CheckToken) { ?>
+<input type="hidden" name="<?php echo EW_TOKEN_NAME ?>" value="<?php echo $mesa_delete->Token ?>">
 <?php } ?>
-<input type="hidden" name="t" value="ESCUELA">
+<input type="hidden" name="t" value="mesa">
 <input type="hidden" name="a_delete" id="a_delete" value="D">
-<?php foreach ($ESCUELA_delete->RecKeys as $key) { ?>
+<?php foreach ($mesa_delete->RecKeys as $key) { ?>
 <?php $keyvalue = is_array($key) ? implode($EW_COMPOSITE_KEY_SEPARATOR, $key) : $key; ?>
 <input type="hidden" name="key_m[]" value="<?php echo ew_HtmlEncode($keyvalue) ?>">
 <?php } ?>
@@ -873,120 +777,76 @@ $ESCUELA_delete->ShowMessage();
 <table class="table ewTable">
 	<thead>
 	<tr class="ewTableHeader">
-<?php if ($ESCUELA->CLAVE->Visible) { // CLAVE ?>
-		<th class="<?php echo $ESCUELA->CLAVE->HeaderCellClass() ?>"><span id="elh_ESCUELA_CLAVE" class="ESCUELA_CLAVE"><?php echo $ESCUELA->CLAVE->FldCaption() ?></span></th>
+<?php if ($mesa->Id->Visible) { // Id ?>
+		<th class="<?php echo $mesa->Id->HeaderCellClass() ?>"><span id="elh_mesa_Id" class="mesa_Id"><?php echo $mesa->Id->FldCaption() ?></span></th>
 <?php } ?>
-<?php if ($ESCUELA->CUE->Visible) { // CUE ?>
-		<th class="<?php echo $ESCUELA->CUE->HeaderCellClass() ?>"><span id="elh_ESCUELA_CUE" class="ESCUELA_CUE"><?php echo $ESCUELA->CUE->FldCaption() ?></span></th>
+<?php if ($mesa->fecha->Visible) { // fecha ?>
+		<th class="<?php echo $mesa->fecha->HeaderCellClass() ?>"><span id="elh_mesa_fecha" class="mesa_fecha"><?php echo $mesa->fecha->FldCaption() ?></span></th>
 <?php } ?>
-<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
-		<th class="<?php echo $ESCUELA->NOMBRE->HeaderCellClass() ?>"><span id="elh_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE"><?php echo $ESCUELA->NOMBRE->FldCaption() ?></span></th>
+<?php if ($mesa->mensaje->Visible) { // mensaje ?>
+		<th class="<?php echo $mesa->mensaje->HeaderCellClass() ?>"><span id="elh_mesa_mensaje" class="mesa_mensaje"><?php echo $mesa->mensaje->FldCaption() ?></span></th>
 <?php } ?>
-<?php if ($ESCUELA->DOMICILIO->Visible) { // DOMICILIO ?>
-		<th class="<?php echo $ESCUELA->DOMICILIO->HeaderCellClass() ?>"><span id="elh_ESCUELA_DOMICILIO" class="ESCUELA_DOMICILIO"><?php echo $ESCUELA->DOMICILIO->FldCaption() ?></span></th>
-<?php } ?>
-<?php if ($ESCUELA->LOCALIDAD->Visible) { // LOCALIDAD ?>
-		<th class="<?php echo $ESCUELA->LOCALIDAD->HeaderCellClass() ?>"><span id="elh_ESCUELA_LOCALIDAD" class="ESCUELA_LOCALIDAD"><?php echo $ESCUELA->LOCALIDAD->FldCaption() ?></span></th>
-<?php } ?>
-<?php if ($ESCUELA->TELEFONO->Visible) { // TELEFONO ?>
-		<th class="<?php echo $ESCUELA->TELEFONO->HeaderCellClass() ?>"><span id="elh_ESCUELA_TELEFONO" class="ESCUELA_TELEFONO"><?php echo $ESCUELA->TELEFONO->FldCaption() ?></span></th>
-<?php } ?>
-<?php if ($ESCUELA->NIVEL->Visible) { // NIVEL ?>
-		<th class="<?php echo $ESCUELA->NIVEL->HeaderCellClass() ?>"><span id="elh_ESCUELA_NIVEL" class="ESCUELA_NIVEL"><?php echo $ESCUELA->NIVEL->FldCaption() ?></span></th>
-<?php } ?>
-<?php if ($ESCUELA->RPV->Visible) { // RPV ?>
-		<th class="<?php echo $ESCUELA->RPV->HeaderCellClass() ?>"><span id="elh_ESCUELA_RPV" class="ESCUELA_RPV"><?php echo $ESCUELA->RPV->FldCaption() ?></span></th>
+<?php if ($mesa->escuela->Visible) { // escuela ?>
+		<th class="<?php echo $mesa->escuela->HeaderCellClass() ?>"><span id="elh_mesa_escuela" class="mesa_escuela"><?php echo $mesa->escuela->FldCaption() ?></span></th>
 <?php } ?>
 	</tr>
 	</thead>
 	<tbody>
 <?php
-$ESCUELA_delete->RecCnt = 0;
+$mesa_delete->RecCnt = 0;
 $i = 0;
-while (!$ESCUELA_delete->Recordset->EOF) {
-	$ESCUELA_delete->RecCnt++;
-	$ESCUELA_delete->RowCnt++;
+while (!$mesa_delete->Recordset->EOF) {
+	$mesa_delete->RecCnt++;
+	$mesa_delete->RowCnt++;
 
 	// Set row properties
-	$ESCUELA->ResetAttrs();
-	$ESCUELA->RowType = EW_ROWTYPE_VIEW; // View
+	$mesa->ResetAttrs();
+	$mesa->RowType = EW_ROWTYPE_VIEW; // View
 
 	// Get the field contents
-	$ESCUELA_delete->LoadRowValues($ESCUELA_delete->Recordset);
+	$mesa_delete->LoadRowValues($mesa_delete->Recordset);
 
 	// Render row
-	$ESCUELA_delete->RenderRow();
+	$mesa_delete->RenderRow();
 ?>
-	<tr<?php echo $ESCUELA->RowAttributes() ?>>
-<?php if ($ESCUELA->CLAVE->Visible) { // CLAVE ?>
-		<td<?php echo $ESCUELA->CLAVE->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_CLAVE" class="ESCUELA_CLAVE">
-<span<?php echo $ESCUELA->CLAVE->ViewAttributes() ?>>
-<?php echo $ESCUELA->CLAVE->ListViewValue() ?></span>
+	<tr<?php echo $mesa->RowAttributes() ?>>
+<?php if ($mesa->Id->Visible) { // Id ?>
+		<td<?php echo $mesa->Id->CellAttributes() ?>>
+<span id="el<?php echo $mesa_delete->RowCnt ?>_mesa_Id" class="mesa_Id">
+<span<?php echo $mesa->Id->ViewAttributes() ?>>
+<?php echo $mesa->Id->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>
-<?php if ($ESCUELA->CUE->Visible) { // CUE ?>
-		<td<?php echo $ESCUELA->CUE->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_CUE" class="ESCUELA_CUE">
-<span<?php echo $ESCUELA->CUE->ViewAttributes() ?>>
-<?php echo $ESCUELA->CUE->ListViewValue() ?></span>
+<?php if ($mesa->fecha->Visible) { // fecha ?>
+		<td<?php echo $mesa->fecha->CellAttributes() ?>>
+<span id="el<?php echo $mesa_delete->RowCnt ?>_mesa_fecha" class="mesa_fecha">
+<span<?php echo $mesa->fecha->ViewAttributes() ?>>
+<?php echo $mesa->fecha->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>
-<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
-		<td<?php echo $ESCUELA->NOMBRE->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE">
-<span<?php echo $ESCUELA->NOMBRE->ViewAttributes() ?>>
-<?php echo $ESCUELA->NOMBRE->ListViewValue() ?></span>
+<?php if ($mesa->mensaje->Visible) { // mensaje ?>
+		<td<?php echo $mesa->mensaje->CellAttributes() ?>>
+<span id="el<?php echo $mesa_delete->RowCnt ?>_mesa_mensaje" class="mesa_mensaje">
+<span<?php echo $mesa->mensaje->ViewAttributes() ?>>
+<?php echo $mesa->mensaje->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>
-<?php if ($ESCUELA->DOMICILIO->Visible) { // DOMICILIO ?>
-		<td<?php echo $ESCUELA->DOMICILIO->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_DOMICILIO" class="ESCUELA_DOMICILIO">
-<span<?php echo $ESCUELA->DOMICILIO->ViewAttributes() ?>>
-<?php echo $ESCUELA->DOMICILIO->ListViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
-<?php if ($ESCUELA->LOCALIDAD->Visible) { // LOCALIDAD ?>
-		<td<?php echo $ESCUELA->LOCALIDAD->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_LOCALIDAD" class="ESCUELA_LOCALIDAD">
-<span<?php echo $ESCUELA->LOCALIDAD->ViewAttributes() ?>>
-<?php echo $ESCUELA->LOCALIDAD->ListViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
-<?php if ($ESCUELA->TELEFONO->Visible) { // TELEFONO ?>
-		<td<?php echo $ESCUELA->TELEFONO->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_TELEFONO" class="ESCUELA_TELEFONO">
-<span<?php echo $ESCUELA->TELEFONO->ViewAttributes() ?>>
-<?php echo $ESCUELA->TELEFONO->ListViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
-<?php if ($ESCUELA->NIVEL->Visible) { // NIVEL ?>
-		<td<?php echo $ESCUELA->NIVEL->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_NIVEL" class="ESCUELA_NIVEL">
-<span<?php echo $ESCUELA->NIVEL->ViewAttributes() ?>>
-<?php echo $ESCUELA->NIVEL->ListViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
-<?php if ($ESCUELA->RPV->Visible) { // RPV ?>
-		<td<?php echo $ESCUELA->RPV->CellAttributes() ?>>
-<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_RPV" class="ESCUELA_RPV">
-<span<?php echo $ESCUELA->RPV->ViewAttributes() ?>>
-<?php echo $ESCUELA->RPV->ListViewValue() ?></span>
+<?php if ($mesa->escuela->Visible) { // escuela ?>
+		<td<?php echo $mesa->escuela->CellAttributes() ?>>
+<span id="el<?php echo $mesa_delete->RowCnt ?>_mesa_escuela" class="mesa_escuela">
+<span<?php echo $mesa->escuela->ViewAttributes() ?>>
+<?php echo $mesa->escuela->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>
 	</tr>
 <?php
-	$ESCUELA_delete->Recordset->MoveNext();
+	$mesa_delete->Recordset->MoveNext();
 }
-$ESCUELA_delete->Recordset->Close();
+$mesa_delete->Recordset->Close();
 ?>
 </tbody>
 </table>
@@ -994,14 +854,14 @@ $ESCUELA_delete->Recordset->Close();
 </div>
 <div>
 <button class="btn btn-primary ewButton" name="btnAction" id="btnAction" type="submit"><?php echo $Language->Phrase("DeleteBtn") ?></button>
-<button class="btn btn-default ewButton" name="btnCancel" id="btnCancel" type="button" data-href="<?php echo $ESCUELA_delete->getReturnUrl() ?>"><?php echo $Language->Phrase("CancelBtn") ?></button>
+<button class="btn btn-default ewButton" name="btnCancel" id="btnCancel" type="button" data-href="<?php echo $mesa_delete->getReturnUrl() ?>"><?php echo $Language->Phrase("CancelBtn") ?></button>
 </div>
 </form>
 <script type="text/javascript">
-fESCUELAdelete.Init();
+fmesadelete.Init();
 </script>
 <?php
-$ESCUELA_delete->ShowPageFooter();
+$mesa_delete->ShowPageFooter();
 if (EW_DEBUG_ENABLED)
 	echo ew_DebugMsg();
 ?>
@@ -1013,5 +873,5 @@ if (EW_DEBUG_ENABLED)
 </script>
 <?php include_once "footer.php" ?>
 <?php
-$ESCUELA_delete->Page_Terminate();
+$mesa_delete->Page_Terminate();
 ?>
