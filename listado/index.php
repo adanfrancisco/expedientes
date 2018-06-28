@@ -13,15 +13,15 @@
                     $(".servicios").hide();
                     $("#modalidades").hide();
 
-                    $('.inicio').click(function(){
-                        $(".servicios").toggleClass("show");});
-                        $('.modalidades').click(function(){
-                        $("#modalidades").toggleClass("show");});
+                    
 
             //imprimo las entradas
             $('.inicial').click(function(){
+                if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -33,8 +33,11 @@
 
              });
              $('.primaria').click(function(){
+                if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -46,8 +49,11 @@
 
              });
              $('.secundaria').click(function(){
+                if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -60,8 +66,11 @@
              });
 
              $('.superior').click(function(){
+                if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -74,8 +83,11 @@
              });
 
              $('.agraria').click(function(){
+                if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -88,8 +100,13 @@
 
 
              $('.tecnica').click(function(){
+
+                    if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
+
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -102,7 +119,7 @@
 
              $('.especial').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -114,7 +131,7 @@
              });
              $('.artistica').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -124,12 +141,9 @@
                             nivel:nivel },
                         function(data){$("#listados").html(data);}); 
              });
-             
-
-
              $('.adultos').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -141,7 +155,7 @@
              });
              $('.fp').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                         var fecha=fecha;
@@ -153,7 +167,7 @@
              });
              $('.cie').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                 
@@ -168,7 +182,7 @@
 
              $('.cef').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
-                
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
                 
@@ -180,6 +194,38 @@
                         function(data){$("#listados").html(data);}); 
              });
 
+             $('.lista').click(function(){
+
+                
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
+                
+                //envio la fecha al post    
+                console.log(fecha);
+                
+                        var fecha=fecha;
+                        var nivel='CEF';
+                        $.post("grabar2.php", { 
+                            fecha: fecha,
+                            fecha2:fecha2 },
+                        function(data){$("#listados").html(data);}); 
+             });
+
+        $('.inicio').click(function(){
+
+                    if( $("#modalidades").is(":visible") ){
+                         $("#modalidades").toggleClass("show");
+                    }
+
+                        $(".lista").toggleClass("hide");
+                        $(".servicios").toggleClass("show");
+                        
+                       
+                        });
+
+                        $('.modalidades').click(function(){
+                            $("#modalidades").toggleClass("show");
+                        });
 
 });
 </script>
@@ -235,8 +281,48 @@
 
 
                             </select>
-                            </div>          
+            </div>          
 
+
+
+
+
+      <div class="col-lg-20">
+                            <div id="fecha_inicio2">
+                                <select name="dia" id="dia_inicio2">
+                                    <?php
+                                    for ($i=1; $i<=31; $i++) {
+                                        if ($i == date('j'))
+                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                        else
+                                            echo '<option value="'.$i.'">'.$i.'</option>';
+                                    }
+                                    ?>
+                            </select>
+                            <select name="mes" id="mes_inicio2">
+                                    <?php
+                                    for ($i=1; $i<=12; $i++) {
+                                        if ($i == date('m'))
+
+                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                        else
+                                            echo '<option value="'.$i.'">'.$i.'</option>';
+                                    }
+                                    ?>
+                            </select>
+                            <select name="ano" id="anio_inicio2">
+                                    <?php
+                                    for($i=date('o'); $i>=1910; $i--){
+                                        if ($i == date('o'))
+                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                        else
+                                            echo '<option value="'.$i.'">'.$i.'</option>';
+                                    }
+                                    ?>
+
+
+                            </select>
+            </div>
 
       <br/>
         <button type="button" class="btn btn-primary inicio">LISTADOS POR NIVEL</button>

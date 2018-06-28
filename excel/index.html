@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exportar a Excel con PHP</title>
+  <style>
+    body{
+      padding:10px;
+      font: 13px/150% Arial, Helvetica, sans-serif;
+      color: #040404;
+    }
+
+    a{
+      text-decoration: none;
+      color:blue;
+    }
+
+    a:hover{
+    }
+
+    table{
+      margin:20px 0;
+      width:50%;
+    }
+
+    th{
+      text-align: center;
+    }
+
+    td, th{
+      padding:5px;
+      border-bottom:solid 1px #ccc;
+      margin:0;
+    }
+
+    a.btn{
+      border:solid 1px #c7c7c7;
+      padding:3px 7px;
+      text-decoration: none;
+      color: #040404;
+      font-size:12px;
+      background: #e3e3e3;
+    }
+
+    a.btn:hover{
+      background: #dbdbdb;
+    }
+
+    .btn-success{
+      background: #00BF00 !important;
+      border: solid 1px #00BF00 !important;
+      color:#FFF !important;
+    }
+
+
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th style='background:#CCC; color:#000'>
+      Fecha
+      </th>
+      <th style='background:#CCC; color:#000'>
+      Clave
+      </th>
+      <th style='background:#CCC; color:#000'>
+      Escuela
+      </th style='background:#CCC; color:#000'>
+      <th style='background:#CCC; color:#000'>Mensaje</th>
+</tr>
+    </tr>
+    <tr>
+      <td>
+      Jose
+      </td>
+      <td>
+      Perez
+      </td>
+      <td>
+      jose.perez@correo.com
+      </td>
+      <td>ll</td>
+    </tr>
+    <tr>
+      <td>
+      Maria
+      </td>
+      <td>
+      Sanchez
+      </td>
+      <td style="background:yellow">
+      maria.sanchez@correo.com
+      </td>
+    </tr>
+    <tr>
+      <td>
+      Juan
+      </td>
+      <td>
+      Lopez
+      </td>
+      <td>
+      juan.lopez@correo.com
+      </td>
+    </tr>
+    <tr>
+      <td>
+      Carmen
+      </td>
+      <td>
+      Gonzales
+      </td>
+      <td>
+      carmen.gonzales@correo.com
+      </td>
+    </tr>
+    </table> 
+  <a class="btn btn-success" href="exportarXLS.php">Exportar a Excel</a>
+</body>
+</html>
