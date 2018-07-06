@@ -6,16 +6,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
- 
+
         <script type="text/javascript">
+
+
            $(document).ready(function(e)
            {  
-                    $(".servicios").hide();
-                    $("#modalidades").hide();
 
-                    
+            $(".servicios").hide();
+            $("#modalidades").hide();
+var exporta;            
+exporta=0;
+$("input[type=radio]").change(function(){
+    exporta=($("input[name="+ this.name + "]:checked").val());
+    //alert( $("input[type=radio][name="+ this.name + "]").val() );
+});
 
-            //imprimo las entradas
+
+            $('.inicial').click(function(){
+            
+
+             });
             $('.inicial').click(function(){
                 if( $("#modalidades").is(":visible") ){
                          $("#modalidades").toggleClass("show");
@@ -23,7 +34,8 @@
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
                 var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
-                console.log(fecha);
+                
+                console.log(fecha+' ' +exporta);
                         var fecha=fecha;
                         var nivel='INICIAL';
                         $.post("grabar.php", { 
@@ -32,6 +44,7 @@
                         function(data){$("#listados").html(data);}); 
 
              });
+
              $('.primaria').click(function(){
                 if( $("#modalidades").is(":visible") ){
                          $("#modalidades").toggleClass("show");
@@ -240,8 +253,20 @@
     font-size: 20pt; 
     }
     
-.btn{font-family: Arial; font-size: 18pt; }
+.btn{font-family: Arial; font-size: 14pt; }
 
+
+fieldset
+{
+  background-color:#CCC;
+  max-width:100px;
+  padding:1px;	
+}
+.legend1
+{
+  margin-bottom:0px;
+  margin-left:16px;
+}
 </style>
 
     </head>
@@ -284,10 +309,10 @@
             </div>          
 
 
+      
 
 
-
-      <div class="col-lg-20">
+      <div class="col-lg-20 fechaa">
                             <div id="fecha_inicio2">
                                 <select name="dia" id="dia_inicio2">
                                     <?php
@@ -325,6 +350,15 @@
             </div>
 
       <br/>
+      
+
+<div class="legend1">¿EXPORTA?</div>
+    <fieldset>
+        <input type="radio" name="exporta" value="1" id="exporta" > SI
+        <input type="radio" name="exporta" value="0" id="exporta" checked="checked" > NO<br>
+    </fieldset>
+</div>
+      <div id="cuerpo">
         <button type="button" class="btn btn-primary inicio">LISTADOS POR NIVEL</button>
         <button type="button" class="btn btn-primary lista">LISTADOS POR FECHA</button>
         <hr>
@@ -369,6 +403,6 @@
 
 
 </div>
-
+</div>
     </body>
 </html>

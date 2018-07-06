@@ -22,7 +22,7 @@ $anterior=$anterior->format('d-m-Y');
 
    
   $sql="SELECT * FROM niveles INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL
-  where mesa.fecha > #".$anterior."# and mesa.fecha < #".$posterior."# and niveles.Nivel='".$nivel."'";
+  where mesa.fecha >#".$anterior."# and mesa.fecha < #".$posterior."# and niveles.Nivel='".$nivel."'";
 
 //echo $sql;
 //$sql="SELECT * FROM mesa where mesa.fecha > #20/06/2018# and mesa.fecha < #22/06/2018#";
@@ -37,13 +37,13 @@ $anterior=$anterior->format('d-m-Y');
     ?>
 
     <table border="1" ALIGN="CENTER">
-        <th>Fecha - Hora</th> <th>CLAVE-ESC</th><th>ESCUELA</th><th>-------------MENSAJE-----------</th>
+        <th>Fecha</th> <th>CLAVE</th><th>ESCUELA</th><th>MENSAJE</th>
     <?php
     while ( odbc_fetch_row($rs) )
 
     echo '<tr><td> '.(date('d-m-Y', strtotime(odbc_result($rs,"fecha")))).' </td>
-    <td> ----'.odbc_result($rs,"escuela").' ----  </td>
-    <td> ----'.odbc_result($rs,"nombre").' ----</td>
+    <td> '.odbc_result($rs,"escuela").'   </td>
+    <td> '.odbc_result($rs,"nombre").'</td>
     <td> '.odbc_result($rs,"mensaje").' </td>
     </tr>';
 

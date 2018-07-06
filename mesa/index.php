@@ -938,6 +938,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES4').click(function(){
@@ -955,6 +956,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES5').click(function(){
@@ -971,6 +973,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES5-A').click(function(){
