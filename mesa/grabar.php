@@ -4,6 +4,8 @@
 
 $carrera=$_POST['servicio'];
 $mensaje=$_POST['mensaje'];
+$atendio=$_POST['atendio'];
+$derivado=$_POST['derivado'];
 
 echo 'HA CARGADO: ' .$mensaje .' <br> EN LA ESCUELA:-->'.$carrera;
 
@@ -13,7 +15,7 @@ echo 'HA CARGADO: ' .$mensaje .' <br> EN LA ESCUELA:-->'.$carrera;
     $db->conectar();
 
     #Se realiza consulta
-   $rs = $db->consulta( "INSERT INTO MESA(mensaje,escuela) VALUES('$mensaje','$carrera')" );
+   $rs = $db->consulta( "INSERT INTO MESA(mensaje,escuela,atiende,derivado) VALUES('$mensaje','$carrera','$atendio','$derivado')" );
 
     $db->desconectar();
     ?>

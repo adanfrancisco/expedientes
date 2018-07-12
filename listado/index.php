@@ -1,3 +1,6 @@
+<?php
+date_default_timezone_set('America/Buenos_Aires');
+?>
 <!DOCTYPE HTML>
 <html lang="es">
     <head>
@@ -8,17 +11,16 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
         <script type="text/javascript">
-
-
-           $(document).ready(function(e)
+          $(document).ready(function(e)
            {  
-
             $(".servicios").hide();
+            $(".exportacion").hide();
             $("#modalidades").hide();
-var exporta;            
-exporta=0;
+            
+var Xexporta;            
+Xexporta=0;
 $("input[type=radio]").change(function(){
-    exporta=($("input[name="+ this.name + "]:checked").val());
+    Xexporta=($("input[name="+ this.name + "]:checked").val());
     //alert( $("input[type=radio][name="+ this.name + "]").val() );
 });
 
@@ -38,9 +40,13 @@ $("input[type=radio]").change(function(){
                 console.log(fecha+' ' +exporta);
                         var fecha=fecha;
                         var nivel='INICIAL';
+                        var exporta=Xexporta
+
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta
+                             },
                         function(data){$("#listados").html(data);}); 
 
              });
@@ -55,9 +61,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='PRIMARIA';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
 
              });
@@ -71,9 +79,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='SECUNDARIA';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
 
              });
@@ -88,9 +98,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='SUPERIOR';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
 
              });
@@ -105,9 +117,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='AGRARIA';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta},
                         function(data){$("#listados").html(data);}); 
              });
 
@@ -124,9 +138,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='TECNICA';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
              });
 
@@ -137,9 +153,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='ESPECIAL';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
              });
              $('.artistica').click(function(){
@@ -149,9 +167,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='ARTISTICA';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
              });
              $('.adultos').click(function(){
@@ -161,9 +181,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='ADULTOS';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
              });
              $('.fp').click(function(){
@@ -173,9 +195,11 @@ $("input[type=radio]").change(function(){
                 console.log(fecha);
                         var fecha=fecha;
                         var nivel='PROFESIONAL';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta },
                         function(data){$("#listados").html(data);}); 
              });
              $('.cie').click(function(){
@@ -186,9 +210,11 @@ $("input[type=radio]").change(function(){
                 
                         var fecha=fecha;
                         var nivel='CIE';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta},
                         function(data){$("#listados").html(data);}); 
              });
 
@@ -201,9 +227,11 @@ $("input[type=radio]").change(function(){
                 
                         var fecha=fecha;
                         var nivel='CEF';
+                        var exporta=Xexporta
                         $.post("grabar.php", { 
                             fecha: fecha,
-                            nivel:nivel },
+                            nivel:nivel,
+                            exporta:exporta},
                         function(data){$("#listados").html(data);}); 
              });
 
@@ -218,9 +246,12 @@ $("input[type=radio]").change(function(){
                 
                         var fecha=fecha;
                         var nivel='CEF';
+                        
                         $.post("grabar2.php", { 
                             fecha: fecha,
-                            fecha2:fecha2 },
+                            fecha2:fecha2,
+                            nivel:nivel
+                        },
                         function(data){$("#listados").html(data);}); 
              });
 
@@ -271,7 +302,7 @@ fieldset
 
     </head>
     <body>
-      <div class="col-lg-10">
+      <div class="col-lg-10 fecha">
                             <div id="fecha_inicio">
                                 <select name="dia" id="dia_inicio">
                                     <?php
@@ -352,7 +383,7 @@ fieldset
       <br/>
       
 
-<div class="legend1">¿EXPORTA?</div>
+<div class="exportacion" >¿EXPORTA?
     <fieldset>
         <input type="radio" name="exporta" value="1" id="exporta" > SI
         <input type="radio" name="exporta" value="0" id="exporta" checked="checked" > NO<br>

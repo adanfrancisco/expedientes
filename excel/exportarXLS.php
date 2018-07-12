@@ -3,7 +3,7 @@
 date_default_timezone_set('America/Buenos_Aires');
 
 //la fecha de exportación sera parte del nombre del archivo Excel
-$fecha = date("d-m-Y");
+//$fecha = date("d-m-Y");
 $nivel=$_POST['nivel'];
 $contenido=$_POST['contenido'];
 //$nivel='adan';

@@ -54,7 +54,7 @@ $anterior=$anterior->format('m/d/Y');
  INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL 
  WHERE ((mesa.fecha)>#".$posterior."# And (mesa.fecha)<#".$anterior."#)";
 
-
+//echo $sql;
 
 
     $rs = $db->consulta($sql);

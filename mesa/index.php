@@ -1461,17 +1461,26 @@ $('.carga').click(function(){
 $('.grabar').click(function(){
     
     console.log($servicio+'  ' +$('input:text[name=detalle]').val());
+
     $mensaje=$('input:text[name=detalle]').val();
+    $atendio=$('input:text[name=atendio]').val();
+    $derivado=$('input:text[name=derivado]').val();
                         var servicio='';
                         var mensaje='';
+                        var atendio='';
+                        var derivado='';
                         var servicio=$servicio;
                         var mensaje=$mensaje;
+                        var atendio=$atendio;
+                        var derivado=$derivado;
 
 //alert(mensaje);
                         //$('#licencia').text(ddni);
                         $.post("grabar.php", { 
                             servicio: servicio, 
-                            mensaje: mensaje },
+                            mensaje: mensaje,
+                            atendio:atendio,
+                            derivado:derivado },
                         function(data){$("#resultado").html(data);}); 
         //limpio variables
         $servicio='';$('input:text[name=detalle]').val("")
@@ -1597,17 +1606,19 @@ $('.grabar').click(function(){
     <hr>
 
    <button type="button" class="btn btn-dark carga">CARGAR</button>
- 
-    <div id="carrga">
+
+<div id="carrga">
 
 
-    <input type="text" name="detalle" id="detalle "  maxlength="604" size="60" class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
+<input type="text" name="detalle" id="detalle "  maxlength="604" size="60" class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
 required="">
-    <button type="button" class="btn btn-dark-secondary grabar">GRABAR</button>
-    </div>
+<input type="text" name="atendio" id="atendio" maxlength="150" size="50" class="inputstyle" placeholder="ATENDIO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
+<input type="text" name="derivado" id="derivado" maxlength="150" size="50" class="inputstyle" placeholder="DERIVADO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
+<button type="button" class="btn btn-dark-secondary grabar">GRABAR</button>
+</div>
 
-    <div id="resultado" class="inputstyle">
-    
-    </div>
+<div id="resultado" class="inputstyle">
+
+</div>
     </body>
 </html>
