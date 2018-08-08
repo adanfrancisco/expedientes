@@ -1496,11 +1496,13 @@ $('.carga').click(function(){
                
 $("#combo").change(function () {$("#combo option:selected").each( function () { combo=$(this).val();});});
                
-$('.grabar').on('click', function () {
-    var mensaje=$('input:text[name=detalle]').val();
-    var atendio=$('input:text[name=atendio]').val();
-    var derivado=combo;
-    var servicio=$servicio;
+$('.grabar').on('click', function () 
+    {
+        var mensaje=$('input:text[name=detalle]').val();
+        var atendio=$('input:text[name=atendio]').val();
+        var derivado=combo;
+        var servicio=$servicio;
+
             $.confirm({
                 title: 'Confirme!',
                 content: '<b>LO TRAJO:</b> '
@@ -1515,16 +1517,16 @@ $('.grabar').on('click', function () {
                 buttons: {
                     SI: function () {
                         $.alert('GUARDADO!');
-//****************************************************************************/
+            //****************************************************************************/
                         $.post("grabar.php", { 
                             servicio: servicio, 
                             mensaje: mensaje,
                             atendio:atendio,
                             derivado:derivado },
                         function(data){$("#resultado").html(data);});
-//****************************************************************************/
-//                      Limpio las variables, excepto el servicio que queda activo
-//                      por si trajo mas de una cosa para cargar
+            //****************************************************************************/
+            //          Limpio las variables, excepto el servicio que queda activo
+            //          por si trajo mas de una cosa para cargar
                         $('input:text[name=detalle]').val("")
                         $("#carrga").hide();
                         console.log('se guardo..'+mensaje+' '+atendio+' ' +derivado);
@@ -1535,7 +1537,8 @@ $('.grabar').on('click', function () {
                     },
                 }
             });
-        });
+
+    });
         
 
 
