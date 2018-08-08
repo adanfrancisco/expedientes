@@ -6,13 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="popup/bundled.css">
-    <script src="popup/bundled.js"></script>
-    <link rel="stylesheet" type="text/css" href="popup/jquery-confirm.css"/>     
-    <script type="text/javascript"  src="popup/jquery-confirm.js"></script>
-
-            
+ 
         <script type="text/javascript">
            $(document).ready(function(e) {  
                $("#inicial").hide();
@@ -1494,68 +1488,50 @@ $('.carga').click(function(){
     $('input:text[name=detalle]').val("");
 })
                
-$("#combo").change(function () {$("#combo option:selected").each( function () { combo=$(this).val();});});
-               
-$('.grabar').on('click', function () {
-    var mensaje=$('input:text[name=detalle]').val();
-    var atendio=$('input:text[name=atendio]').val();
-    var derivado=combo;
-    var servicio=$servicio;
-            $.confirm({
-                title: 'Confirme!',
-                content: '<b>LO TRAJO:</b> '
-                + servicio
-                +'<br><b>VA A GUARDAR:</b>'
-                +mensaje
-                +'<BR> <b>ATENDIO:</b> '
-                +atendio
-                +'<BR> <b>LO DERIVA A:</b>' 
-                +derivado,
+$("#combo").change(function () {
+                    $("#combo option:selected").each(
+                        function () {
+                        combo=$(this).val();
+                        //console.log('envio --> '+ combo);
 
-                buttons: {
-                    SI: function () {
-                        $.alert('GUARDADO!');
-//****************************************************************************/
+                        });});
+               
+
+$('.grabar').click(function(){
+
+    //console.log($servicio+'  ' +$('input:text[name=detalle]').val());
+
+    $mensaje=$('input:text[name=detalle]').val();
+    $atendio=$('input:text[name=atendio]').val();
+    $derivado=combo;
+
+
+
+                        var servicio='';
+                        var mensaje='';
+                        var atendio='';
+                        var derivado='';
+                        var servicio=$servicio;
+                        var mensaje=$mensaje;
+                        var atendio=$atendio;
+                        var derivado=$derivado;
+
+//alert(mensaje);
+    // console.log(derivado + servicio)
+                        //$('#licencia').text(ddni);
                         $.post("grabar.php", { 
                             servicio: servicio, 
                             mensaje: mensaje,
                             atendio:atendio,
                             derivado:derivado },
-                        function(data){$("#resultado").html(data);});
-//****************************************************************************/
-//                      Limpio las variables, excepto el servicio que queda activo
-//                      por si trajo mas de una cosa para cargar
-                        $('input:text[name=detalle]').val("")
-                        $("#carrga").hide();
-                        console.log('se guardo..'+mensaje+' '+atendio+' ' +derivado);
-                    },
-                    NO: function () {
-                        $.alert('No se guardo!');
-                        console.log('NO SE HA ALMACENADO....');
-                    },
-                }
-            });
-        });
-        
-
-
-// RUTINA QUE GRABA..
-/*                         $.post("grabar.php", { 
-                            servicio: servicio, 
-                            mensaje: mensaje,
-                            atendio:atendio,
-                            derivado:derivado },
-                        function(data){$("#resultado").html(data);});  */
-
-   /*  $('input:text[name=detalle]').val("")
-        $("#carrga").hide();  */
-
-//limpio variables
-// $servicio='';
-   
+                        function(data){$("#resultado").html(data);}); 
+        //limpio variables
+       // $servicio='';
+    $('input:text[name=detalle]').val("")
+        $("#carrga").hide();    
     //location.reload();
 
-   /*  }); */
+    });
 
 });
 
