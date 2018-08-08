@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>MESA</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <style type="text/css">
+.btnx{
+        font-size:15px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        float:none;
+	    text-align:center;
+        color:#638cb5;
+        background:#aaff00;
+        border:0px;
+        width:80px;
+        height:19px;
+       }
+
+.centerbtn{ 
+    position:relative; 
+    width:100%; left:0;
+    text-align:center;
+    margin:auto;
+    /*position: relative; top: 50%; transform: translateY(-50%) translateX(30%); width: 100%;*/
+}
+</style>
+        
+<?php
+    include "adodb5/adodb.inc.php";
+    include "access_conn.php";
+
+$fecha=(string)$_POST['fecha'];
+$fecha2=$_POST['fecha2'];
+
+    $db = new database();
+    $db->conectar();
+
+
+$fechaFFase="$fecha";
+$posterior = new DateTime($fechaFFase);
+$posterior->modify('-1 day');
+$posterior= $posterior->format('m/d/Y');
+
+$fechaFFase2="$fecha2";
+$anterior = new DateTime($fechaFFase2);
+$anterior->modify('+1 day');
+$anterior=$anterior->format('m/d/Y');
+
+
+ $sql="SELECT * FROM niveles 
+ INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL 
+ WHERE ((mesa.fecha)>#".$posterior."# And (mesa.fecha)<#".$anterior."#) order by mesa.fecha";
+
+//echo $sql;
+
+
+    $rs = $db->consulta($sql);
+
+    ?>
+
+<!-- <button type="button" class="btnx btn-primary btn-xs centerbtn">IMPRIMIR</button> -->
+
+    <table border="1" ALIGN="CENTER">
+        <th width=10% >Fecha</th> <th width=13%>CLAVE</th><th width=11%>ESCUELA</th><th width=65%>MENSAJE</th>
+        <th width=10%>CARGO</th><th width=10%>DERIVADO</th>
+    <?php
+    while ( odbc_fetch_row($rs) )
+
+    echo '<tr><td> '.(date('d-m-Y H:mm', strtotime(odbc_result($rs,"fecha")))).' </td>
+    <td> '.odbc_result($rs,"escuela").'   </td>
+    <td> '.odbc_result($rs,"nombre").' </td>
+    <td> '.odbc_result($rs,"mensaje").' </td>
+    <td> '.odbc_result($rs,"atiende").' </td>
+    <td> '.odbc_result($rs,"derivado").' </td>
+    </tr>';
+
+
+    ?>
+
+    </table>
+    <br><br><br><br>
+    <?php
+
+
+    $db->desconectar();
+    ?>
+    

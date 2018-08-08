@@ -1,0 +1,28 @@
+<?php
+
+    include "../mesa/adodb5/adodb.inc.php";
+    include "../mesa/access_conn.php";
+
+#se crea instancia a clase
+    $db = new database();
+    $db->conectar();
+
+if($_POST)
+    {
+
+   $name = strip_tags($_POST['name']);
+   $stmt=$db->consulta("SELECT apellido FROM persona WHERE apellido='".$name."');
+   $stmt->execute(array(':name'=>$name));
+   $count=$stmt->rowCount();
+
+/*    if($count>0)
+   {
+    echo 'Ya existe';
+   }
+   else
+   {
+    echo 'Disponible';
+   } */
+}
+    $db->desconectar();
+?>

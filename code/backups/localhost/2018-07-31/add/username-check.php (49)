@@ -1,0 +1,38 @@
+<?php
+
+    include "../mesa/adodb5/adodb.inc.php";
+    include "../mesa/access_conn.php";
+
+#se crea instancia a clase
+    $db = new database();
+    $db->conectar();
+
+if($_POST)
+    {
+
+$name = strip_tags($_POST['name']);
+$sql="SELECT COUNT(apellido) as counter FROM persona WHERE apellido='".$name."'";
+echo '<BR>'.$sql;
+    $stmt=$db->consulta($sql);
+
+
+//    $stmt->execute(array(':name'=>$name));
+        $arr = odbc_fetch_array($stmt);
+    echo '<BR>hay: '.$arr['counter'];
+    $count=$arr['counter'];
+
+//    $count=$stmt->rowCount();
+
+   if($count>0)
+   {
+    echo    '<BR>
+             Ya existe';
+   }
+   else
+   {
+    echo    '<BR>
+            Disponible';
+   }
+ }
+    $db->desconectar();
+?>

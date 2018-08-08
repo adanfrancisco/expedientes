@@ -1,0 +1,54 @@
+<?php
+
+    include "../mesa/adodb5/adodb.inc.php";
+    include "../mesa/access_conn.php";
+
+#se crea instancia a clase
+    $db = new database();
+    $db->conectar();
+
+if($_POST)
+    {
+
+$name = strip_tags($_POST['name']);
+$sql="SELECT COUNT(apellido) as counter FROM persona WHERE apellido='".$name."'";
+echo '<BR>'.$sql;
+    $stmt=$db->consulta($sql);
+
+
+//    $stmt->execute(array(':name'=>$name));
+        $arr = odbc_fetch_array($stmt);
+    echo '<BR>hay: '.$arr['counter'];
+    $count=$arr['counter'];
+
+//    $count=$stmt->rowCount();
+
+   if($count>0)
+   {
+    echo    '<BR>
+             Ya existe';
+
+    $rs = $db->consulta($sql);
+    echo '<br/>';
+echo '    <table border="1" ALIGN="CENTER">
+        <th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th><th>DOMICILIO</th>';
+    while ( odbc_fetch_row($rs) )
+
+    echo '<tr>
+    <td> '.odbc_result($rs,"escuela").'   </td>
+    <td> '.odbc_result($rs,"nombre").'</td>
+    <td> '.odbc_result($rs,"mensaje").' </td>
+    </tr>';
+
+echo '</table>';
+
+
+   }
+   else
+   {
+    echo    '<BR>
+            Disponible';
+   }
+ }
+    $db->desconectar();
+?>
