@@ -49,29 +49,32 @@ $anterior = new DateTime($fechaFFase2);
 $anterior->modify('+1 day');
 $anterior=$anterior->format('m/d/Y');
 
- 
+
  $sql="SELECT * FROM niveles 
  INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL 
- WHERE ((mesa.fecha)>#".$posterior."# And (mesa.fecha)<#".$anterior."#)";
+ WHERE ((mesa.fecha)>#".$posterior."# And (mesa.fecha)<#".$anterior."#) order by mesa.fecha";
 
 //echo $sql;
 
 
     $rs = $db->consulta($sql);
-   
+
     ?>
 
 <!-- <button type="button" class="btnx btn-primary btn-xs centerbtn">IMPRIMIR</button> -->
 
     <table border="1" ALIGN="CENTER">
         <th width=10% >Fecha</th> <th width=13%>CLAVE</th><th width=11%>ESCUELA</th><th width=65%>MENSAJE</th>
+        <th width=10%>CARGO</th><th width=10%>DERIVADO</th>
     <?php
     while ( odbc_fetch_row($rs) )
 
-    echo '<tr><td> '.(date('d-m-Y', strtotime(odbc_result($rs,"fecha")))).' </td>
+    echo '<tr><td> '.odbc_result($rs,"fecha").' </td>
     <td> '.odbc_result($rs,"escuela").'   </td>
     <td> '.odbc_result($rs,"nombre").' </td>
     <td> '.odbc_result($rs,"mensaje").' </td>
+    <td> '.odbc_result($rs,"atiende").' </td>
+    <td> '.odbc_result($rs,"derivado").' </td>
     </tr>';
 
 

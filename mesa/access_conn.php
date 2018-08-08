@@ -34,6 +34,9 @@ class database {
         $resultado = odbc_exec( $this->conexion, $q) or die( odbc_errormsg() );
         return $resultado;
     }
+
+
+
     /*METODO PARA HACER UN INSERT
     * INPUT:
     * $tabla -> Nombre tabla

@@ -16,8 +16,7 @@ date_default_timezone_set('America/Buenos_Aires');
             $(".servicios").hide();
             $(".exportacion").hide();
             $("#modalidades").hide();
-            
-var Xexporta;            
+var Xexporta;
 Xexporta=0;
 $("input[type=radio]").change(function(){
     Xexporta=($("input[name="+ this.name + "]:checked").val());
@@ -26,7 +25,6 @@ $("input[type=radio]").change(function(){
 
 
             $('.inicial').click(function(){
-            
 
              });
             $('.inicial').click(function(){
@@ -207,7 +205,7 @@ $("input[type=radio]").change(function(){
                 var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
-                
+
                         var fecha=fecha;
                         var nivel='CIE';
                         var exporta=Xexporta
@@ -224,7 +222,7 @@ $("input[type=radio]").change(function(){
                 var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
                 //envio la fecha al post    
                 console.log(fecha);
-                
+
                         var fecha=fecha;
                         var nivel='CEF';
                         var exporta=Xexporta
@@ -234,19 +232,33 @@ $("input[type=radio]").change(function(){
                             exporta:exporta},
                         function(data){$("#listados").html(data);}); 
              });
-
-             $('.lista').click(function(){
-
-                
+$('.psicologia').click(function(){
                 var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
                 var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
-                
                 //envio la fecha al post    
                 console.log(fecha);
-                
+
+                        var fecha=fecha;
+                        var nivel='PSICOLOGIA';
+                        var exporta=Xexporta
+                        $.post("grabar.php", { 
+                            fecha: fecha,
+                            nivel:nivel,
+                            exporta:exporta},
+                        function(data){$("#listados").html(data);}); 
+             });
+             $('.lista').click(function(){
+
+
+                var fecha=$("#dia_inicio").val()+"-"+$("#mes_inicio").val()+"-"+$("#anio_inicio").val();
+                var fecha2=$("#dia_inicio2").val()+"-"+$("#mes_inicio2").val()+"-"+$("#anio_inicio2").val();
+
+                //envio la fecha al post    
+                console.log(fecha);
+
                         var fecha=fecha;
                         var nivel='CEF';
-                        
+
                         $.post("grabar2.php", { 
                             fecha: fecha,
                             fecha2:fecha2,
@@ -263,8 +275,8 @@ $("input[type=radio]").change(function(){
 
                         $(".lista").toggleClass("hide");
                         $(".servicios").toggleClass("show");
-                        
-                       
+
+
                         });
 
                         $('.modalidades').click(function(){
@@ -303,7 +315,10 @@ fieldset
     </head>
     <body>
       <div class="col-lg-10 fecha">
-                            <div id="fecha_inicio">
+<table>
+    <tr><td> FECHA - DESDE: </td>
+        <td>
+                                       <div id="fecha_inicio">
                                 <select name="dia" id="dia_inicio">
                                     <?php
                                     for ($i=1; $i<=31; $i++) {
@@ -337,51 +352,59 @@ fieldset
 
 
                             </select>
-            </div>          
-
-
-      
-
-
-      <div class="col-lg-20 fechaa">
-                            <div id="fecha_inicio2">
-                                <select name="dia" id="dia_inicio2">
-                                    <?php
-                                    for ($i=1; $i<=31; $i++) {
-                                        if ($i == date('j'))
-                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
-                                        else
-                                            echo '<option value="'.$i.'">'.$i.'</option>';
-                                    }
-                                    ?>
-                            </select>
-                            <select name="mes" id="mes_inicio2">
-                                    <?php
-                                    for ($i=1; $i<=12; $i++) {
-                                        if ($i == date('m'))
-
-                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
-                                        else
-                                            echo '<option value="'.$i.'">'.$i.'</option>';
-                                    }
-                                    ?>
-                            </select>
-                            <select name="ano" id="anio_inicio2">
-                                    <?php
-                                    for($i=date('o'); $i>=1910; $i--){
-                                        if ($i == date('o'))
-                                            echo '<option value="'.$i.'" selected>'.$i.'</option>';
-                                        else
-                                            echo '<option value="'.$i.'">'.$i.'</option>';
-                                    }
-                                    ?>
-
-
-                            </select>
             </div>
+        </td>
+    </tr>
+</table>
+
+
+<table>
+<tr>
+<td>FECHA - HASTA   :</td>
+<td>
+<div class="col-lg-20 fechaa">
+<div id="fecha_inicio2">
+    <select name="dia" id="dia_inicio2">
+        <?php
+        for ($i=1; $i<=31; $i++) {
+            if ($i == date('j'))
+                echo '<option value="'.$i.'" selected>'.$i.'</option>';
+            else
+                echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+        ?>
+    </select>
+    <select name="mes" id="mes_inicio2">
+                        <?php
+                        for ($i=1; $i<=12; $i++) {
+                            if ($i == date('m'))
+
+                                echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                            else
+                                echo '<option value="'.$i.'">'.$i.'</option>';
+                        }
+                        ?>
+    </select>
+    <select name="ano" id="anio_inicio2">
+                        <?php
+                        for($i=date('o'); $i>=1910; $i--){
+                            if ($i == date('o'))
+                                echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                            else
+                                echo '<option value="'.$i.'">'.$i.'</option>';
+                        }
+                        ?>
+
+
+                </select>
+</div>
+
+</td>
+</tr>
+</table>
+
 
       <br/>
-      
 
 <div class="exportacion" >¿EXPORTA?
     <fieldset>
@@ -390,15 +413,15 @@ fieldset
     </fieldset>
 </div>
       <div id="cuerpo">
-        <button type="button" class="btn btn-primary inicio">LISTADOS POR NIVEL</button>
-        <button type="button" class="btn btn-primary lista">LISTADOS POR FECHA</button>
+        <button type="button" class="btn btn-primary inicio">LISTADOS POR NIVEL(DESDE)</button>
+        <button type="button" class="btn btn-primary lista">LISTADOS POR FECHA(DESDE - HASTA)</button>
         <hr>
 
 
 
 
        <div class="col-lg-20 servicios">
-  
+
         <button type="button" class="btn btn-primary inicial">INICIAL</button>
         <button type="button" class="btn btn-secondary primaria">PRIMARIA</button>
         <button type="button" class="btn btn-success secundaria">SECUNDARIA</button>
@@ -410,9 +433,10 @@ fieldset
 <hr>
          <div id="modalidades">
                 <button type="button" class="btn btn-secondary cef">ED. FISICA</button>
-                <button type="button" class="btn btn-dark especial">ESPECIAL</button>
+                <button type="button" class="btn btn-dark">ESPECIAL</button>
                 <button type="button" class="btn btn-secondary artistica">ARTISTICA</button>
                 <button type="button" class="btn btn-danger adultos">ADULTOS</button>
+             <button type="button" class="btn btn-danger psicologia">PSICOLOGIA</button>
 
 
 <!--                 <button type="button" class="btn btn-danger EEPA-701">ADULTOS-EEPA-701</button>
