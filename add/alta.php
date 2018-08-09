@@ -57,7 +57,7 @@ ul li:hover p.ayuda {  display: block;  margin: 0.3em;  position: absolute;  top
 
 <h2>Formulario de alta</h2>
 
-<form method="post" action="#">
+<!-- <form method="post" action="#"> -->
 <ul>
 <li class="izquierda">
   <label class="titulo" for="nombre">Nombre y apellidos <span class="requerido">*</span></label>
@@ -138,11 +138,12 @@ ul li:hover p.ayuda {  display: block;  margin: 0.3em;  position: absolute;  top
 </li>
 
 <li class="botones">
-  <input id="grabar" type="submit" onclick="grabar();" value="Darme de alta &rarr;" />
+  
+  <button class="input-submit-blue" id="alta_profe">Guardar</button>	
 </li>
 
 </ul>
-</form>
+<!-- </form> -->
 
 </div>
 <?php

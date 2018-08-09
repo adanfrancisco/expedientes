@@ -9,7 +9,7 @@ $derivado=$_POST['derivado'];
 
 echo 'HA CARGADO: ' .$mensaje .' <br> EN LA ESCUELA:-->'.$carrera;
 echo '<br><b>'.date('Y-m-d').'</b>';
-echo '<br><b>'.date('G:i').'</b>';
+
 
 
     #se crea instancia a clase

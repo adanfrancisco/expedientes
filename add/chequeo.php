@@ -55,15 +55,21 @@ echo '    <table border="1">
     </tr>';
 
 echo '</table>';
-
-
+?>
+<script>mostrar();</script>
+<?php
 
    }
    else
    {
+    ?>
 
-    echo "<script> console.log('Hay q dar el alta');</script>";
-    
+    <script>
+        console.log('Hay q dar el alta');
+        mostrar_alta();
+    </script>
+
+    <?php
    }
  }
 

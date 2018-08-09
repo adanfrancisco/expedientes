@@ -27,6 +27,7 @@ $("#usar").click(function()
     });
 
 $('#botones').hide();
+$('#btn_alta').hide();
 
     $("#name").keyup(function()
         {  var name = $(this).val();
@@ -34,12 +35,12 @@ $('#botones').hide();
         {   $("#result").html('buscando...');
         $.ajax({
             type : 'POST',
-            url  : 'username-check.php',
+            url  : 'chequeo.php',
             data : $(this).serialize(),
             success : function(data)
                 { 
                     $("#result").html(data);
-                     console.log('encontre');
+                     //console.log('encontre');
                  }
             });
            // return false;
@@ -62,11 +63,12 @@ $('#botones').hide();
                 <button type="button" id="usar" class="btn btn-primary usar">USAR</button>
                 <button type="button" id="editar" class="btn btn-secondary editar">EDITAR</button>
             </div>
+            <button type="button" id="btn_alta" class="btn btn-primary alta">AGREGAR</button>
         </fieldset>
     </form>
 
 </div>
 <?php
-			include 'funciones_js.php';?>
+			include ('funciones_js.php');?>
 </body>
 </html>
