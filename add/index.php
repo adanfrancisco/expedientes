@@ -10,34 +10,42 @@
 <script type="text/javascript">
 $(document).ready(function()
 {
- $("#name").keyup(function()
- {
-  var name = $(this).val();
+   
 
-  if(name.length > 2)
-  {
-   $("#result").html('buscando...');
-
-   $.ajax({
-
-    type : 'POST',
-    url  : 'username-check.php',
-    data : $(this).serialize(),
-    success : function(data)
-        {
-              $("#result").html(data);
-           }
+$("#editar").click(function() 
+    {
+        console.log("editar");
+        //ingresar();
+        //location.reload();
     });
-    return false;
 
-  }
-  else
-  {
-   $("#result").html('');
-  }
- });
+$("#usar").click(function() 
+    {
+        console.log("usar");
+        //ingresar();
+        //location.reload();
+    });
 
-});
+$('#botones').hide();
+
+    $("#name").keyup(function()
+        {  var name = $(this).val();
+        if(name.length > 2)
+        {   $("#result").html('buscando...');
+        $.ajax({
+            type : 'POST',
+            url  : 'username-check.php',
+            data : $(this).serialize(),
+            success : function(data)
+                { 
+                    $("#result").html(data);
+                     console.log('encontre');
+                 }
+            });
+           // return false;
+        }
+
+});});
 </script>
 </head>
 
@@ -48,11 +56,17 @@ $(document).ready(function()
         <fieldset>
             <div>
                 <input type="text" name="name" id="name" maxlength="150" size="20" class="inputstyle" placeholder="APELLIDO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
-                <span id="result"></span>
+                <span class="retorno" id="result"></span>
+            </div>
+            <div id="botones">
+                <button type="button" id="usar" class="btn btn-primary usar">USAR</button>
+                <button type="button" id="editar" class="btn btn-secondary editar">EDITAR</button>
             </div>
         </fieldset>
     </form>
 
 </div>
+<?php
+			include 'funciones_js.php';?>
 </body>
 </html>

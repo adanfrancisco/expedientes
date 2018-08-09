@@ -1530,6 +1530,7 @@ $('.grabar').on('click', function ()
                         $('input:text[name=detalle]').val("")
                         $("#carrga").hide();
                         console.log('se guardo..'+mensaje+' '+atendio+' ' +derivado);
+
                     },
                     NO: function () {
                         $.alert('No se guardo!');
