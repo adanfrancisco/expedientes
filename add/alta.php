@@ -70,7 +70,7 @@ ul li:hover p.ayuda {  display: block;  margin: 0.3em;  position: absolute;  top
     </span>
       <input id="apellido" name="apellido" value="';
 
-            echo $_POST['name'].'" />
+            echo $_POST['nombre'].'" />
       <label for="apellido">Apellido</label>
     </span>
     <span class="completo">

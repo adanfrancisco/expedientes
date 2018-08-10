@@ -1,7 +1,24 @@
 <script>
     $("#alta_frm").on( "click", function() {  
 alert('si');});
+function ingresar_nuevo_docente(){
+    var nombre=$('#name').val();
 
+      $.post("alta.php", { nombre: nombre },
+    function(data){$("#result").html(data);});
+/*     var ddni=0;
+    var xclave_nueva=$("#clave_nueva").val();
+    var ddni=$("#dddni").val();
+    console.log('si'+ddni);
+    //$('#clave').text('quiere cambiar clave a: '+ ddni + '-'+clave_nueva);
+    
+    $.post("buscar/cambia_clave.php", { xclave_nueva: xclave_nueva, ddni: ddni },
+    function(data){$("#clave").html(data);});
+    });    
+    */
+    
+    console.log('nuevo docente'+nombre);
+}
 function mostrar(){
     $('#botones').show();
     $('#btn_alta').hide();

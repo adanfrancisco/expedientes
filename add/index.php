@@ -11,15 +11,21 @@
 $(document).ready(function()
 {
    
+$("#btn_alta").click(function() 
+{
+    ingresar_nuevo_docente();
+    console.log("altaaa");
+    //location.reload();
+});
 
-$("#editar").click(function() 
+$("#btn_editar").click(function() 
     {
         console.log("editar");
         //ingresar();
         //location.reload();
     });
 
-$("#usar").click(function() 
+$("#btn_usar").click(function() 
     {
         console.log("usar");
         //ingresar();
@@ -60,8 +66,8 @@ $('#btn_alta').hide();
                 <span class="retorno" id="result"></span>
             </div>
             <div id="botones">
-                <button type="button" id="usar" class="btn btn-primary usar">USAR</button>
-                <button type="button" id="editar" class="btn btn-secondary editar">EDITAR</button>
+                <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
+                <button type="button" id="btn_editar" class="btn btn-secondary editar">EDITAR</button>
             </div>
             <button type="button" id="btn_alta" class="btn btn-primary alta">AGREGAR</button>
         </fieldset>
