@@ -6,7 +6,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
- 
+
+    <link rel="stylesheet" href="popup/bundled.css">
+    <script src="popup/bundled.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup/jquery-confirm.css"/>     
+    <script type="text/javascript"  src="popup/jquery-confirm.js"></script>
+
+            
         <script type="text/javascript">
            $(document).ready(function(e) {  
                $("#inicial").hide();
@@ -938,6 +944,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES4').click(function(){
@@ -955,6 +962,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES5').click(function(){
@@ -971,6 +979,7 @@
                         $(".EES10").toggleClass("hide"); 
                         $(".EES10-A").toggleClass("hide");
                         $(".EES11").toggleClass("hide"); 
+                        $(".EES12").toggleClass("hide");
                         $(".EES13").toggleClass("hide");
                          })
                 $('.EES5-A').click(function(){
@@ -1214,7 +1223,7 @@
                     console.log($servicio);
                     $(".ISFD99").toggleClass("hide"); 
                 })
- 
+
                 $('.superior').click(function(){
                     $(".inicio").toggleClass("hide"); 
                     $(".primaria").toggleClass("hide");
@@ -1268,6 +1277,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.EEEA1').click(function(){
                     $servicio='0099AE0001';
@@ -1284,6 +1294,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.EEPA-701').click(function(){
                     $servicio='0099DE0701';
@@ -1300,6 +1311,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
 
                 $('.CEA702').click(function(){
@@ -1317,6 +1329,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CEA703').click(function(){
                     $servicio='0099DC0703';
@@ -1333,6 +1346,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CEA704').click(function(){
                     $servicio='0099DC0704';
@@ -1349,6 +1363,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CENS451').click(function(){
                     $servicio='0099DM0451';
@@ -1365,6 +1380,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CENS452').click(function(){
                     $servicio='';
@@ -1380,7 +1396,8 @@
                     $(".CENS453").toggleClass("hide"); 
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
-                    $(".CIIE200").toggleClass("hide");   
+                    $(".CIIE200").toggleClass("hide");
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CENS453').click(function(){
                     $servicio='';
@@ -1397,6 +1414,7 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CEF93').click(function(){
                     $servicio='0099FC0093';
@@ -1413,6 +1431,7 @@
                     $(".CENS453").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CFP401').click(function(){
                     $servicio='0099DF0401';
@@ -1429,6 +1448,7 @@
                     $(".CENS453").toggleClass("hide"); 
                     $(".CEF93").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CIIE200').click(function(){
                     $servicio='0099IC0200';
@@ -1445,6 +1465,24 @@
                     $(".CENS453").toggleClass("hide"); 
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide");   
+                    $(".PSICO").toggleClass("hide"); 
+                })
+                    $('.PSICO').click(function(){
+                    $servicio='1000000000';
+                    console.log($servicio);
+                    $(".EEE501").toggleClass("hide"); 
+                    $(".EEEA1").toggleClass("hide"); 
+                    $(".EEPA-701").toggleClass("hide"); 
+                    $(".CEA701").toggleClass("hide"); 
+                    $(".CEA702").toggleClass("hide"); 
+                    $(".CEA703").toggleClass("hide"); 
+                    $(".CEA704").toggleClass("hide"); 
+                    $(".CENS451").toggleClass("hide"); 
+                    $(".CENS452").toggleClass("hide"); 
+                    $(".CENS453").toggleClass("hide"); 
+                    $(".CEF93").toggleClass("hide"); 
+                    $(".CFP401").toggleClass("hide");   
+                    $(".CIIE200").toggleClass("hide"); 
                 })
 
 $('.carga').click(function(){
@@ -1455,26 +1493,73 @@ $('.carga').click(function(){
                     }
     $('input:text[name=detalle]').val("");
 })
-$('.grabar').click(function(){
-    
-    console.log($servicio+'  ' +$('input:text[name=detalle]').val());
-    $mensaje=$('input:text[name=detalle]').val();
-                        var servicio='';
-                        var mensaje='';
-                        var servicio=$servicio;
-                        var mensaje=$mensaje;
+               
+$("#combo").change(function () {$("#combo option:selected").each( function () { combo=$(this).val();});});
+               
+$('.grabar').on('click', function () 
+    {
+        var mensaje=$('input:text[name=detalle]').val();
+        var atendio=$('input:text[name=atendio]').val();
+        var derivado=combo;
+        var servicio=$servicio;
 
-//alert(mensaje);
-                        //$('#licencia').text(ddni);
+            $.confirm({
+                title: 'Confirme!',
+                content: '<b>LO TRAJO:</b> '
+                + servicio
+                +'<br><b>VA A GUARDAR:</b>'
+                +mensaje
+                +'<BR> <b>ATENDIO:</b> '
+                +atendio
+                +'<BR> <b>LO DERIVA A:</b>' 
+                +derivado,
+
+                buttons: {
+                    SI: function () {
+                        $.alert('GUARDADO!');
+            //****************************************************************************/
                         $.post("grabar.php", { 
                             servicio: servicio, 
-                            mensaje: mensaje },
-                        function(data){$("#resultado").html(data);}); 
-        //limpio variables
-        $servicio='';$('input:text[name=detalle]').val("")
-        $("#carrga").hide();    
-                  
+                            mensaje: mensaje,
+                            atendio:atendio,
+                            derivado:derivado },
+                        function(data){$("#resultado").html(data);});
+            //****************************************************************************/
+            //          Limpio las variables, excepto el servicio que queda activo
+            //          por si trajo mas de una cosa para cargar
+                        $('input:text[name=detalle]').val("")
+                        $("#carrga").hide();
+                        console.log('se guardo..'+mensaje+' '+atendio+' ' +derivado);
+
+                    },
+                    NO: function () {
+                        $.alert('No se guardo!');
+                        console.log('NO SE HA ALMACENADO....');
+                    },
+                }
+            });
+
     });
+        
+
+
+// RUTINA QUE GRABA..
+/*                         $.post("grabar.php", { 
+                            servicio: servicio, 
+                            mensaje: mensaje,
+                            atendio:atendio,
+                            derivado:derivado },
+                        function(data){$("#resultado").html(data);});  */
+
+   /*  $('input:text[name=detalle]').val("")
+        $("#carrga").hide();  */
+
+//limpio variables
+// $servicio='';
+   
+    //location.reload();
+
+   /*  }); */
 
 });
 
@@ -1524,9 +1609,9 @@ $('.grabar').click(function(){
             <button type="button" class="btn btn-primary 913">913</button>
             <button type="button" class="btn btn-primary 914">914</button>
             <button type="button" class="btn btn-primary 915">915</button>
-            <button type="button" class="btn btn-primary JIRIM1">JIRIM1</button>
-            <button type="button" class="btn btn-primary JIRIM2">JIRIM2</button>
-            <button type="button" class="btn btn-primary JIRIM3">JIRIM3</button>
+            <button type="button" class="btn btn-primary JIRIM1">JIRIMM1</button>
+            <button type="button" class="btn btn-primary JIRIM2">JIRIMM2</button>
+            <button type="button" class="btn btn-primary JIRIM3">JIRIMM3</button>
         </div>
         <div id="primaria">
             <button type="button" class="btn btn-primary EP1">EP1</button>
@@ -1589,22 +1674,40 @@ $('.grabar').click(function(){
                 <button type="button" class="btn btn-secondary CEF93">CEF93</button>
                 <button type="button" class="btn btn-info CFP401">FORMACION-PROFESIONAL</button>
                 <button type="button" class="btn btn-danger CIIE200">CIE</button>
+            <button type="button" class="btn btn-danger PSICO">PSICOLOGIA</button>
          </div>
 
     <hr>
 
    <button type="button" class="btn btn-dark carga">CARGAR</button>
- 
-    <div id="carrga">
+
+<div id="carrga">
 
 
-    <input type="text" name="detalle" id="detalle "  maxlength="604" size="60" class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
+<input type="text" name="detalle" id="detalle "  maxlength="604" size="60" class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
 required="">
-    <button type="button" class="btn btn-dark-secondary grabar">GRABAR</button>
-    </div>
+<input type="text" name="atendio" id="atendio" maxlength="150" size="50" class="inputstyle" placeholder="ATENDIO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
+<BR>
+    <select name="derivado" id="combo" >
+    <option>seleccione..</option>
+        <option>INICIAL</option>
+        <option>PRIMARIA</option>
+        <option>SECUNDARIA</option>
+        <option>SECUNDARIA TECNICA</option>
+        <option>PSICOLOGIA - (PC Y PS)</option>
+        <option>ED. FISICA</option>
+        <option>ESPECIAL</option>
+        <option>ADULTOS</option>
+        <option>POL. SOCIOEDUCATIVAS</option>
+        <option>JEFATURA DISTRITAL</option>
+        <option>OTROS</option>
+    </select>
+<!--    <input type="text" name="derivado" id="derivado" maxlength="150" size="50" class="inputstyle" placeholder="DERIVADO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">//-->
+<button type="button" class="btn btn-dark-secondary grabar">GRABAR</button>
+</div>
 
-    <div id="resultado" class="inputstyle">
-    
-    </div>
+<div id="resultado" class="inputstyle">
+
+</div>
     </body>
 </html>

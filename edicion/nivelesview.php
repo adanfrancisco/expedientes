@@ -343,6 +343,7 @@ class cniveles_view extends cniveles {
 		$this->Id_nivel->SetVisibility();
 		$this->Id_nivel->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
 		$this->Nivel->SetVisibility();
+		$this->INSPECTOR->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -604,6 +605,7 @@ class cniveles_view extends cniveles {
 			return;
 		$this->Id_nivel->setDbValue($row['Id_nivel']);
 		$this->Nivel->setDbValue($row['Nivel']);
+		$this->INSPECTOR->setDbValue($row['INSPECTOR']);
 	}
 
 	// Return a row with default values
@@ -611,6 +613,7 @@ class cniveles_view extends cniveles {
 		$row = array();
 		$row['Id_nivel'] = NULL;
 		$row['Nivel'] = NULL;
+		$row['INSPECTOR'] = NULL;
 		return $row;
 	}
 
@@ -621,6 +624,7 @@ class cniveles_view extends cniveles {
 		$row = is_array($rs) ? $rs : $rs->fields;
 		$this->Id_nivel->DbValue = $row['Id_nivel'];
 		$this->Nivel->DbValue = $row['Nivel'];
+		$this->INSPECTOR->DbValue = $row['INSPECTOR'];
 	}
 
 	// Render row values based on field settings
@@ -641,6 +645,7 @@ class cniveles_view extends cniveles {
 		// Common render codes for all row types
 		// Id_nivel
 		// Nivel
+		// INSPECTOR
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -652,6 +657,10 @@ class cniveles_view extends cniveles {
 		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
 		$this->Nivel->ViewCustomAttributes = "";
 
+		// INSPECTOR
+		$this->INSPECTOR->ViewValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->ViewCustomAttributes = "";
+
 			// Id_nivel
 			$this->Id_nivel->LinkCustomAttributes = "";
 			$this->Id_nivel->HrefValue = "";
@@ -661,6 +670,11 @@ class cniveles_view extends cniveles {
 			$this->Nivel->LinkCustomAttributes = "";
 			$this->Nivel->HrefValue = "";
 			$this->Nivel->TooltipValue = "";
+
+			// INSPECTOR
+			$this->INSPECTOR->LinkCustomAttributes = "";
+			$this->INSPECTOR->HrefValue = "";
+			$this->INSPECTOR->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -862,6 +876,17 @@ $niveles_view->ShowMessage();
 <span id="el_niveles_Nivel">
 <span<?php echo $niveles->Nivel->ViewAttributes() ?>>
 <?php echo $niveles->Nivel->ViewValue ?></span>
+</span>
+</td>
+	</tr>
+<?php } ?>
+<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+	<tr id="r_INSPECTOR">
+		<td class="col-sm-2"><span id="elh_niveles_INSPECTOR"><?php echo $niveles->INSPECTOR->FldCaption() ?></span></td>
+		<td data-name="INSPECTOR"<?php echo $niveles->INSPECTOR->CellAttributes() ?>>
+<span id="el_niveles_INSPECTOR">
+<span<?php echo $niveles->INSPECTOR->ViewAttributes() ?>>
+<?php echo $niveles->INSPECTOR->ViewValue ?></span>
 </span>
 </td>
 	</tr>

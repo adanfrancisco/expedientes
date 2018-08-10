@@ -380,6 +380,7 @@ class cpersona_list extends cpersona {
 		$this->telefono->SetVisibility();
 		$this->celular->SetVisibility();
 		$this->localidad->SetVisibility();
+		$this->_email->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -713,6 +714,7 @@ class cpersona_list extends cpersona {
 		$sFilterList = ew_Concat($sFilterList, $this->telefono->AdvancedSearch->ToJson(), ","); // Field telefono
 		$sFilterList = ew_Concat($sFilterList, $this->celular->AdvancedSearch->ToJson(), ","); // Field celular
 		$sFilterList = ew_Concat($sFilterList, $this->localidad->AdvancedSearch->ToJson(), ","); // Field localidad
+		$sFilterList = ew_Concat($sFilterList, $this->_email->AdvancedSearch->ToJson(), ","); // Field email
 		if ($this->BasicSearch->Keyword <> "") {
 			$sWrk = "\"" . EW_TABLE_BASIC_SEARCH . "\":\"" . ew_JsEncode2($this->BasicSearch->Keyword) . "\",\"" . EW_TABLE_BASIC_SEARCH_TYPE . "\":\"" . ew_JsEncode2($this->BasicSearch->Type) . "\"";
 			$sFilterList = ew_Concat($sFilterList, $sWrk, ",");
@@ -820,6 +822,14 @@ class cpersona_list extends cpersona {
 		$this->localidad->AdvancedSearch->SearchValue2 = @$filter["y_localidad"];
 		$this->localidad->AdvancedSearch->SearchOperator2 = @$filter["w_localidad"];
 		$this->localidad->AdvancedSearch->Save();
+
+		// Field email
+		$this->_email->AdvancedSearch->SearchValue = @$filter["x__email"];
+		$this->_email->AdvancedSearch->SearchOperator = @$filter["z__email"];
+		$this->_email->AdvancedSearch->SearchCondition = @$filter["v__email"];
+		$this->_email->AdvancedSearch->SearchValue2 = @$filter["y__email"];
+		$this->_email->AdvancedSearch->SearchOperator2 = @$filter["w__email"];
+		$this->_email->AdvancedSearch->Save();
 		$this->BasicSearch->setKeyword(@$filter[EW_TABLE_BASIC_SEARCH]);
 		$this->BasicSearch->setType(@$filter[EW_TABLE_BASIC_SEARCH_TYPE]);
 	}
@@ -833,6 +843,7 @@ class cpersona_list extends cpersona {
 		$this->BuildBasicSearchSQL($sWhere, $this->domicilio, $arKeywords, $type);
 		$this->BuildBasicSearchSQL($sWhere, $this->telefono, $arKeywords, $type);
 		$this->BuildBasicSearchSQL($sWhere, $this->celular, $arKeywords, $type);
+		$this->BuildBasicSearchSQL($sWhere, $this->_email, $arKeywords, $type);
 		return $sWhere;
 	}
 
@@ -986,6 +997,7 @@ class cpersona_list extends cpersona {
 			$this->UpdateSort($this->telefono); // telefono
 			$this->UpdateSort($this->celular); // celular
 			$this->UpdateSort($this->localidad); // localidad
+			$this->UpdateSort($this->_email); // email
 			$this->setStartRecordNumber(1); // Reset start position
 		}
 	}
@@ -1026,6 +1038,7 @@ class cpersona_list extends cpersona {
 				$this->telefono->setSort("");
 				$this->celular->setSort("");
 				$this->localidad->setSort("");
+				$this->_email->setSort("");
 			}
 
 			// Reset start position
@@ -1482,6 +1495,7 @@ class cpersona_list extends cpersona {
 		$this->telefono->setDbValue($row['telefono']);
 		$this->celular->setDbValue($row['celular']);
 		$this->localidad->setDbValue($row['localidad']);
+		$this->_email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -1495,6 +1509,7 @@ class cpersona_list extends cpersona {
 		$row['telefono'] = NULL;
 		$row['celular'] = NULL;
 		$row['localidad'] = NULL;
+		$row['email'] = NULL;
 		return $row;
 	}
 
@@ -1511,6 +1526,7 @@ class cpersona_list extends cpersona {
 		$this->telefono->DbValue = $row['telefono'];
 		$this->celular->DbValue = $row['celular'];
 		$this->localidad->DbValue = $row['localidad'];
+		$this->_email->DbValue = $row['email'];
 	}
 
 	// Load old record
@@ -1559,6 +1575,7 @@ class cpersona_list extends cpersona {
 		// telefono
 		// celular
 		// localidad
+		// email
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -1613,6 +1630,10 @@ class cpersona_list extends cpersona {
 		}
 		$this->localidad->ViewCustomAttributes = "";
 
+		// email
+		$this->_email->ViewValue = $this->_email->CurrentValue;
+		$this->_email->ViewCustomAttributes = "";
+
 			// id_persona
 			$this->id_persona->LinkCustomAttributes = "";
 			$this->id_persona->HrefValue = "";
@@ -1652,6 +1673,11 @@ class cpersona_list extends cpersona {
 			$this->localidad->LinkCustomAttributes = "";
 			$this->localidad->HrefValue = "";
 			$this->localidad->TooltipValue = "";
+
+			// email
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
+			$this->_email->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -2025,6 +2051,15 @@ $persona_list->ListOptions->Render("header", "left");
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
+<?php if ($persona->_email->Visible) { // email ?>
+	<?php if ($persona->SortUrl($persona->_email) == "") { ?>
+		<th data-name="_email" class="<?php echo $persona->_email->HeaderCellClass() ?>"><div id="elh_persona__email" class="persona__email"><div class="ewTableHeaderCaption"><?php echo $persona->_email->FldCaption() ?></div></div></th>
+	<?php } else { ?>
+		<th data-name="_email" class="<?php echo $persona->_email->HeaderCellClass() ?>"><div class="ewPointer" onclick="ew_Sort(event,'<?php echo $persona->SortUrl($persona->_email) ?>',1);"><div id="elh_persona__email" class="persona__email">
+			<div class="ewTableHeaderBtn"><span class="ewTableHeaderCaption"><?php echo $persona->_email->FldCaption() ?><?php echo $Language->Phrase("SrchLegend") ?></span><span class="ewTableHeaderSort"><?php if ($persona->_email->getSort() == "ASC") { ?><span class="caret ewSortUp"></span><?php } elseif ($persona->_email->getSort() == "DESC") { ?><span class="caret"></span><?php } ?></span></div>
+		</div></div></th>
+	<?php } ?>
+<?php } ?>
 <?php
 
 // Render list options (header, right)
@@ -2151,6 +2186,14 @@ $persona_list->ListOptions->Render("body", "left", $persona_list->RowCnt);
 <span id="el<?php echo $persona_list->RowCnt ?>_persona_localidad" class="persona_localidad">
 <span<?php echo $persona->localidad->ViewAttributes() ?>>
 <?php echo $persona->localidad->ListViewValue() ?></span>
+</span>
+</td>
+	<?php } ?>
+	<?php if ($persona->_email->Visible) { // email ?>
+		<td data-name="_email"<?php echo $persona->_email->CellAttributes() ?>>
+<span id="el<?php echo $persona_list->RowCnt ?>_persona__email" class="persona__email">
+<span<?php echo $persona->_email->ViewAttributes() ?>>
+<?php echo $persona->_email->ListViewValue() ?></span>
 </span>
 </td>
 	<?php } ?>

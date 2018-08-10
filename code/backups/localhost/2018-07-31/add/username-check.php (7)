@@ -1,0 +1,31 @@
+<?php
+echo 'hola';
+    include "../mesa/adodb5/adodb.inc.php";
+    include "../mesa/access_conn.php";
+
+#se crea instancia a clase
+    $db = new database();
+    $db->conectar();
+
+if($_POST)
+  {
+      $name     = strip_tags($_POST['name']);
+
+     #Se realiza consulta
+//    $rs = $db->consulta( "INSERT INTO MESA(mensaje,escuela,atiende,derivado) VALUES('$mensaje','$carrera','$atendio','$derivado')" );
+
+   $stmt=$db->prepare("SELECT user_name FROM users WHERE user_name=:name");
+   $stmt->execute(array(':name'=>$name));
+   $count=$stmt->rowCount();
+
+   if($count>0)
+   {
+    echo "<span style='color:brown;'>Sorry username already taken !!!</span>";
+   }
+   else
+   {
+    echo "<span style='color:green;'>available</span>";
+   }
+  }
+    $db->desconectar();
+?>

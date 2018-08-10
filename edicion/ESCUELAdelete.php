@@ -282,6 +282,7 @@ class cESCUELA_delete extends cESCUELA {
 		$this->CurrentAction = (@$_GET["a"] <> "") ? $_GET["a"] : @$_POST["a_list"]; // Set up current action
 		$this->CLAVE->SetVisibility();
 		$this->CUE->SetVisibility();
+		$this->NOMBRE->SetVisibility();
 		$this->DOMICILIO->SetVisibility();
 		$this->LOCALIDAD->SetVisibility();
 		$this->TELEFONO->SetVisibility();
@@ -534,6 +535,10 @@ class cESCUELA_delete extends cESCUELA {
 		$this->CUE->ViewValue = $this->CUE->CurrentValue;
 		$this->CUE->ViewCustomAttributes = "";
 
+		// NOMBRE
+		$this->NOMBRE->ViewValue = $this->NOMBRE->CurrentValue;
+		$this->NOMBRE->ViewCustomAttributes = "";
+
 		// DOMICILIO
 		$this->DOMICILIO->ViewValue = $this->DOMICILIO->CurrentValue;
 		$this->DOMICILIO->ViewCustomAttributes = "";
@@ -601,6 +606,11 @@ class cESCUELA_delete extends cESCUELA {
 			$this->CUE->LinkCustomAttributes = "";
 			$this->CUE->HrefValue = "";
 			$this->CUE->TooltipValue = "";
+
+			// NOMBRE
+			$this->NOMBRE->LinkCustomAttributes = "";
+			$this->NOMBRE->HrefValue = "";
+			$this->NOMBRE->TooltipValue = "";
 
 			// DOMICILIO
 			$this->DOMICILIO->LinkCustomAttributes = "";
@@ -869,6 +879,9 @@ $ESCUELA_delete->ShowMessage();
 <?php if ($ESCUELA->CUE->Visible) { // CUE ?>
 		<th class="<?php echo $ESCUELA->CUE->HeaderCellClass() ?>"><span id="elh_ESCUELA_CUE" class="ESCUELA_CUE"><?php echo $ESCUELA->CUE->FldCaption() ?></span></th>
 <?php } ?>
+<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
+		<th class="<?php echo $ESCUELA->NOMBRE->HeaderCellClass() ?>"><span id="elh_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE"><?php echo $ESCUELA->NOMBRE->FldCaption() ?></span></th>
+<?php } ?>
 <?php if ($ESCUELA->DOMICILIO->Visible) { // DOMICILIO ?>
 		<th class="<?php echo $ESCUELA->DOMICILIO->HeaderCellClass() ?>"><span id="elh_ESCUELA_DOMICILIO" class="ESCUELA_DOMICILIO"><?php echo $ESCUELA->DOMICILIO->FldCaption() ?></span></th>
 <?php } ?>
@@ -918,6 +931,14 @@ while (!$ESCUELA_delete->Recordset->EOF) {
 <span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_CUE" class="ESCUELA_CUE">
 <span<?php echo $ESCUELA->CUE->ViewAttributes() ?>>
 <?php echo $ESCUELA->CUE->ListViewValue() ?></span>
+</span>
+</td>
+<?php } ?>
+<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
+		<td<?php echo $ESCUELA->NOMBRE->CellAttributes() ?>>
+<span id="el<?php echo $ESCUELA_delete->RowCnt ?>_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE">
+<span<?php echo $ESCUELA->NOMBRE->ViewAttributes() ?>>
+<?php echo $ESCUELA->NOMBRE->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>

@@ -283,6 +283,7 @@ class cniveles_delete extends cniveles {
 		$this->Id_nivel->SetVisibility();
 		$this->Id_nivel->Visible = !$this->IsAdd() && !$this->IsCopy() && !$this->IsGridAdd();
 		$this->Nivel->SetVisibility();
+		$this->INSPECTOR->SetVisibility();
 
 		// Global Page Loading event (in userfn*.php)
 		Page_Loading();
@@ -464,6 +465,7 @@ class cniveles_delete extends cniveles {
 			return;
 		$this->Id_nivel->setDbValue($row['Id_nivel']);
 		$this->Nivel->setDbValue($row['Nivel']);
+		$this->INSPECTOR->setDbValue($row['INSPECTOR']);
 	}
 
 	// Return a row with default values
@@ -471,6 +473,7 @@ class cniveles_delete extends cniveles {
 		$row = array();
 		$row['Id_nivel'] = NULL;
 		$row['Nivel'] = NULL;
+		$row['INSPECTOR'] = NULL;
 		return $row;
 	}
 
@@ -481,6 +484,7 @@ class cniveles_delete extends cniveles {
 		$row = is_array($rs) ? $rs : $rs->fields;
 		$this->Id_nivel->DbValue = $row['Id_nivel'];
 		$this->Nivel->DbValue = $row['Nivel'];
+		$this->INSPECTOR->DbValue = $row['INSPECTOR'];
 	}
 
 	// Render row values based on field settings
@@ -495,6 +499,7 @@ class cniveles_delete extends cniveles {
 		// Common render codes for all row types
 		// Id_nivel
 		// Nivel
+		// INSPECTOR
 
 		if ($this->RowType == EW_ROWTYPE_VIEW) { // View row
 
@@ -506,6 +511,10 @@ class cniveles_delete extends cniveles {
 		$this->Nivel->ViewValue = $this->Nivel->CurrentValue;
 		$this->Nivel->ViewCustomAttributes = "";
 
+		// INSPECTOR
+		$this->INSPECTOR->ViewValue = $this->INSPECTOR->CurrentValue;
+		$this->INSPECTOR->ViewCustomAttributes = "";
+
 			// Id_nivel
 			$this->Id_nivel->LinkCustomAttributes = "";
 			$this->Id_nivel->HrefValue = "";
@@ -515,6 +524,11 @@ class cniveles_delete extends cniveles {
 			$this->Nivel->LinkCustomAttributes = "";
 			$this->Nivel->HrefValue = "";
 			$this->Nivel->TooltipValue = "";
+
+			// INSPECTOR
+			$this->INSPECTOR->LinkCustomAttributes = "";
+			$this->INSPECTOR->HrefValue = "";
+			$this->INSPECTOR->TooltipValue = "";
 		}
 
 		// Call Row Rendered event
@@ -754,6 +768,9 @@ $niveles_delete->ShowMessage();
 <?php if ($niveles->Nivel->Visible) { // Nivel ?>
 		<th class="<?php echo $niveles->Nivel->HeaderCellClass() ?>"><span id="elh_niveles_Nivel" class="niveles_Nivel"><?php echo $niveles->Nivel->FldCaption() ?></span></th>
 <?php } ?>
+<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+		<th class="<?php echo $niveles->INSPECTOR->HeaderCellClass() ?>"><span id="elh_niveles_INSPECTOR" class="niveles_INSPECTOR"><?php echo $niveles->INSPECTOR->FldCaption() ?></span></th>
+<?php } ?>
 	</tr>
 	</thead>
 	<tbody>
@@ -788,6 +805,14 @@ while (!$niveles_delete->Recordset->EOF) {
 <span id="el<?php echo $niveles_delete->RowCnt ?>_niveles_Nivel" class="niveles_Nivel">
 <span<?php echo $niveles->Nivel->ViewAttributes() ?>>
 <?php echo $niveles->Nivel->ListViewValue() ?></span>
+</span>
+</td>
+<?php } ?>
+<?php if ($niveles->INSPECTOR->Visible) { // INSPECTOR ?>
+		<td<?php echo $niveles->INSPECTOR->CellAttributes() ?>>
+<span id="el<?php echo $niveles_delete->RowCnt ?>_niveles_INSPECTOR" class="niveles_INSPECTOR">
+<span<?php echo $niveles->INSPECTOR->ViewAttributes() ?>>
+<?php echo $niveles->INSPECTOR->ListViewValue() ?></span>
 </span>
 </td>
 <?php } ?>

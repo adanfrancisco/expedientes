@@ -1,0 +1,1543 @@
+[11-Jul-2018 17:08:02 UTC] PHP Notice:  Undefined index: checkUpdates in C:\wamp\www\code\lib\settings.php on line 240
+[11-Jul-2018 17:08:02 UTC] PHP Stack trace:
+[11-Jul-2018 17:08:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\login.php:0
+[11-Jul-2018 17:08:02 UTC] PHP   2. include() C:\wamp\www\code\lib\login.php:3
+[11-Jul-2018 17:08:16 UTC] PHP Warning:  scandir(C:/wamp/www/code/lib/../backups/localhost,C:/wamp/www/code/lib/../backups/localhost): El sistema no puede encontrar el archivo especificado. (code: 2) in C:\wamp\www\code\lib\settings-screen.php on line 168
+[11-Jul-2018 17:08:16 UTC] PHP Stack trace:
+[11-Jul-2018 17:08:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\settings-screen.php:0
+[11-Jul-2018 17:08:16 UTC] PHP   2. scandir() C:\wamp\www\code\lib\settings-screen.php:168
+[11-Jul-2018 17:08:16 UTC] PHP Warning:  scandir(C:/wamp/www/code/lib/../backups/localhost): failed to open dir: No such file or directory in C:\wamp\www\code\lib\settings-screen.php on line 168
+[11-Jul-2018 17:08:16 UTC] PHP Stack trace:
+[11-Jul-2018 17:08:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\settings-screen.php:0
+[11-Jul-2018 17:08:16 UTC] PHP   2. scandir() C:\wamp\www\code\lib\settings-screen.php:168
+[11-Jul-2018 17:08:16 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\wamp\www\code\lib\settings-screen.php on line 168
+[11-Jul-2018 17:08:16 UTC] PHP Stack trace:
+[11-Jul-2018 17:08:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\settings-screen.php:0
+[11-Jul-2018 17:08:16 UTC] PHP   2. scandir() C:\wamp\www\code\lib\settings-screen.php:168
+[11-Jul-2018 17:09:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:09:56 UTC] PHP Stack trace:
+[11-Jul-2018 17:09:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:10:18 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:10:18 UTC] PHP Stack trace:
+[11-Jul-2018 17:10:18 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:12:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:12:09 UTC] PHP Stack trace:
+[11-Jul-2018 17:12:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:14:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:14:17 UTC] PHP Stack trace:
+[11-Jul-2018 17:14:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:14:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:14:58 UTC] PHP Stack trace:
+[11-Jul-2018 17:14:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:15:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:15:06 UTC] PHP Stack trace:
+[11-Jul-2018 17:15:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:15:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:15:20 UTC] PHP Stack trace:
+[11-Jul-2018 17:15:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:15:40 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:15:40 UTC] PHP Stack trace:
+[11-Jul-2018 17:15:40 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:17:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:17:02 UTC] PHP Stack trace:
+[11-Jul-2018 17:17:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:17:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:17:11 UTC] PHP Stack trace:
+[11-Jul-2018 17:17:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:18:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:18:56 UTC] PHP Stack trace:
+[11-Jul-2018 17:18:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:19:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:19:11 UTC] PHP Stack trace:
+[11-Jul-2018 17:19:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:19:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:19:42 UTC] PHP Stack trace:
+[11-Jul-2018 17:19:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:55:49 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:55:49 UTC] PHP Stack trace:
+[11-Jul-2018 17:55:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:57:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:57:25 UTC] PHP Stack trace:
+[11-Jul-2018 17:57:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[11-Jul-2018 17:57:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[11-Jul-2018 17:57:32 UTC] PHP Stack trace:
+[11-Jul-2018 17:57:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:16:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:16:59 UTC] PHP Stack trace:
+[12-Jul-2018 13:16:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:19:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:19:50 UTC] PHP Stack trace:
+[12-Jul-2018 13:19:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:19:57 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:19:57 UTC] PHP Stack trace:
+[12-Jul-2018 13:19:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:20:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:20:29 UTC] PHP Stack trace:
+[12-Jul-2018 13:20:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:20:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:20:32 UTC] PHP Stack trace:
+[12-Jul-2018 13:20:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:20:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:20:35 UTC] PHP Stack trace:
+[12-Jul-2018 13:20:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:23:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:23:25 UTC] PHP Stack trace:
+[12-Jul-2018 13:23:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:32:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:32:28 UTC] PHP Stack trace:
+[12-Jul-2018 13:32:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:33:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:33:21 UTC] PHP Stack trace:
+[12-Jul-2018 13:33:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:34:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:34:17 UTC] PHP Stack trace:
+[12-Jul-2018 13:34:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 13:34:46 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 13:34:46 UTC] PHP Stack trace:
+[12-Jul-2018 13:34:46 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:10:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:10:30 UTC] PHP Stack trace:
+[12-Jul-2018 14:10:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:13:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:13:52 UTC] PHP Stack trace:
+[12-Jul-2018 14:13:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:41:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:41:29 UTC] PHP Stack trace:
+[12-Jul-2018 14:41:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:41:34 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:41:34 UTC] PHP Stack trace:
+[12-Jul-2018 14:41:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:43:19 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:43:19 UTC] PHP Stack trace:
+[12-Jul-2018 14:43:19 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:45:00 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:45:00 UTC] PHP Stack trace:
+[12-Jul-2018 14:45:00 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:45:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:45:25 UTC] PHP Stack trace:
+[12-Jul-2018 14:45:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:46:51 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:46:51 UTC] PHP Stack trace:
+[12-Jul-2018 14:46:51 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:48:40 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:48:40 UTC] PHP Stack trace:
+[12-Jul-2018 14:48:40 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:49:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:49:50 UTC] PHP Stack trace:
+[12-Jul-2018 14:49:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:51:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:51:35 UTC] PHP Stack trace:
+[12-Jul-2018 14:51:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:53:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:53:36 UTC] PHP Stack trace:
+[12-Jul-2018 14:53:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:54:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:54:36 UTC] PHP Stack trace:
+[12-Jul-2018 14:54:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:55:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:55:02 UTC] PHP Stack trace:
+[12-Jul-2018 14:55:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 14:55:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 14:55:12 UTC] PHP Stack trace:
+[12-Jul-2018 14:55:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 15:10:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 15:10:30 UTC] PHP Stack trace:
+[12-Jul-2018 15:10:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 15:10:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 15:10:41 UTC] PHP Stack trace:
+[12-Jul-2018 15:10:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 17:58:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 17:58:41 UTC] PHP Stack trace:
+[12-Jul-2018 17:58:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 17:58:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 17:58:55 UTC] PHP Stack trace:
+[12-Jul-2018 17:58:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 17:59:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 17:59:02 UTC] PHP Stack trace:
+[12-Jul-2018 17:59:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[12-Jul-2018 17:59:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[12-Jul-2018 17:59:06 UTC] PHP Stack trace:
+[12-Jul-2018 17:59:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 14:52:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 14:52:43 UTC] PHP Stack trace:
+[13-Jul-2018 14:52:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:18:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:18:11 UTC] PHP Stack trace:
+[13-Jul-2018 15:18:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:22:57 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:22:57 UTC] PHP Stack trace:
+[13-Jul-2018 15:22:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:23:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:23:12 UTC] PHP Stack trace:
+[13-Jul-2018 15:23:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:23:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:23:28 UTC] PHP Stack trace:
+[13-Jul-2018 15:23:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:24:00 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:24:00 UTC] PHP Stack trace:
+[13-Jul-2018 15:24:00 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:25:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:25:02 UTC] PHP Stack trace:
+[13-Jul-2018 15:25:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:25:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:25:32 UTC] PHP Stack trace:
+[13-Jul-2018 15:25:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:25:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:25:33 UTC] PHP Stack trace:
+[13-Jul-2018 15:25:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:25:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:25:58 UTC] PHP Stack trace:
+[13-Jul-2018 15:25:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:26:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:26:25 UTC] PHP Stack trace:
+[13-Jul-2018 15:26:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:27:39 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:27:39 UTC] PHP Stack trace:
+[13-Jul-2018 15:27:39 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:28:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:28:56 UTC] PHP Stack trace:
+[13-Jul-2018 15:28:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:29:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:29:12 UTC] PHP Stack trace:
+[13-Jul-2018 15:29:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:29:18 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:29:18 UTC] PHP Stack trace:
+[13-Jul-2018 15:29:18 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:29:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:29:27 UTC] PHP Stack trace:
+[13-Jul-2018 15:29:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:29:51 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:29:51 UTC] PHP Stack trace:
+[13-Jul-2018 15:29:51 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:29:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:29:59 UTC] PHP Stack trace:
+[13-Jul-2018 15:29:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:30:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:30:06 UTC] PHP Stack trace:
+[13-Jul-2018 15:30:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:30:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:30:42 UTC] PHP Stack trace:
+[13-Jul-2018 15:30:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:30:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:30:55 UTC] PHP Stack trace:
+[13-Jul-2018 15:30:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:32:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:32:22 UTC] PHP Stack trace:
+[13-Jul-2018 15:32:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Jul-2018 15:34:53 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Jul-2018 15:34:53 UTC] PHP Stack trace:
+[13-Jul-2018 15:34:53 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/.versions-index,C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/.versions-index): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (10),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (10)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (11),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (11)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (12),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (12)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (6)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (7),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (7)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (8),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (8)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/index.php (9),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11/index.php (9)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/mesa/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11_mesa/index.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-11/mesa/index.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-11_mesa/index.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/.versions-index,C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12/.versions-index): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar2.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar2.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar2.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar2.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar2.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar2.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar2.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar2.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/listado/grabar2.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_listado/grabar2.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/grabar.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/grabar.php (6)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (10),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (10)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (11),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (11)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (12),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (12)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (13),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (13)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (14),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (14)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (15),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (15)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (16),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (16)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (17),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (17)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (18),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (18)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (19),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (19)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (6)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (7),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (7)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (8),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (8)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-12/mesa/index.php (9),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-12_mesa/index.php (9)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/.versions-index,C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13/.versions-index): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (6)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/grabar.php (7),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/grabar.php (7)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (1)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (10),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (10)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (11),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (11)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (12),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (12)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (13),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (13)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (14),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (14)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (15),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (15)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (16),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (16)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (2)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (3)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (4)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (5)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (6)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (7),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (7)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (8),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (8)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:45 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-07-13/listado/index.php (9),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-07-13_listado/index.php (9)): El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[30-Jul-2018 16:48:45 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:45 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[30-Jul-2018 16:48:45 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[30-Jul-2018 16:48:45 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[30-Jul-2018 16:48:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[30-Jul-2018 16:48:55 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:55 UTC] PHP Notice:  Undefined variable: fileLoc in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[30-Jul-2018 16:48:55 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:55 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[30-Jul-2018 16:48:55 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:48:55 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 990
+[30-Jul-2018 16:48:55 UTC] PHP Stack trace:
+[30-Jul-2018 16:48:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[30-Jul-2018 16:50:21 UTC] PHP Warning:  readfile(C:\wamp\www\mesa): failed to open stream: Permission denied in C:\wamp\www\code\lib\download.php on line 24
+[30-Jul-2018 16:50:21 UTC] PHP Stack trace:
+[30-Jul-2018 16:50:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\download.php:0
+[30-Jul-2018 16:50:21 UTC] PHP   2. readfile() C:\wamp\www\code\lib\download.php:24
+[31-Jul-2018 11:24:44 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:24:44 UTC] PHP Stack trace:
+[31-Jul-2018 11:24:44 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:24:44 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[31-Jul-2018 11:24:44 UTC] PHP Stack trace:
+[31-Jul-2018 11:24:44 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:24:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:24:58 UTC] PHP Stack trace:
+[31-Jul-2018 11:24:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:24:58 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[31-Jul-2018 11:24:58 UTC] PHP Stack trace:
+[31-Jul-2018 11:24:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:03 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/index.html in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[31-Jul-2018 11:25:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:03 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[31-Jul-2018 11:25:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:03 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[31-Jul-2018 11:25:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:08 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 134
+[31-Jul-2018 11:25:08 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:08 UTC] PHP   2. stitchChanges() C:\wamp\www\code\lib\file-control-xhr.php:317
+[31-Jul-2018 11:25:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:43 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:43 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[31-Jul-2018 11:25:43 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:49 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:49 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:49 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/username-check.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[31-Jul-2018 11:25:49 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:49 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[31-Jul-2018 11:25:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:25:50 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:25:50 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[31-Jul-2018 11:25:50 UTC] PHP Stack trace:
+[31-Jul-2018 11:25:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:26:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:26:20 UTC] PHP Stack trace:
+[31-Jul-2018 11:26:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:27:07 UTC] PHP Notice:  Undefined variable: fileLoc in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[31-Jul-2018 11:27:07 UTC] PHP Stack trace:
+[31-Jul-2018 11:27:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:27:07 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[31-Jul-2018 11:27:07 UTC] PHP Stack trace:
+[31-Jul-2018 11:27:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:27:07 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 990
+[31-Jul-2018 11:27:07 UTC] PHP Stack trace:
+[31-Jul-2018 11:27:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:27:48 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:27:48 UTC] PHP Stack trace:
+[31-Jul-2018 11:27:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:28:23 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:28:23 UTC] PHP Stack trace:
+[31-Jul-2018 11:28:23 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:28:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:28:30 UTC] PHP Stack trace:
+[31-Jul-2018 11:28:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:28:30 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/jquery-3.2.1.js in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[31-Jul-2018 11:28:30 UTC] PHP Stack trace:
+[31-Jul-2018 11:28:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:28:30 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[31-Jul-2018 11:29:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:29:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:29:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:30:19 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:30:19 UTC] PHP Stack trace:
+[31-Jul-2018 11:30:19 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:30:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:30:30 UTC] PHP Stack trace:
+[31-Jul-2018 11:30:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:30:30 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//addjquery-3.2.1.js in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[31-Jul-2018 11:30:30 UTC] PHP Stack trace:
+[31-Jul-2018 11:30:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:30:30 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[31-Jul-2018 11:31:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:31:20 UTC] PHP Stack trace:
+[31-Jul-2018 11:31:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:31:37 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:31:37 UTC] PHP Stack trace:
+[31-Jul-2018 11:31:37 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:31:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:31:50 UTC] PHP Stack trace:
+[31-Jul-2018 11:31:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:33:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:33:20 UTC] PHP Stack trace:
+[31-Jul-2018 11:33:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:35:46 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:35:46 UTC] PHP Stack trace:
+[31-Jul-2018 11:35:46 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:38:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:38:47 UTC] PHP Stack trace:
+[31-Jul-2018 11:38:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:39:07 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:39:07 UTC] PHP Stack trace:
+[31-Jul-2018 11:39:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:39:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:39:22 UTC] PHP Stack trace:
+[31-Jul-2018 11:39:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:51:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:51:50 UTC] PHP Stack trace:
+[31-Jul-2018 11:51:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:52:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:52:35 UTC] PHP Stack trace:
+[31-Jul-2018 11:52:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:52:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:52:59 UTC] PHP Stack trace:
+[31-Jul-2018 11:52:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:53:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:53:27 UTC] PHP Stack trace:
+[31-Jul-2018 11:53:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:53:37 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:53:37 UTC] PHP Stack trace:
+[31-Jul-2018 11:53:37 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:54:04 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:54:04 UTC] PHP Stack trace:
+[31-Jul-2018 11:54:04 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:54:23 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:54:23 UTC] PHP Stack trace:
+[31-Jul-2018 11:54:23 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:54:51 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:54:51 UTC] PHP Stack trace:
+[31-Jul-2018 11:54:51 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:55:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:55:22 UTC] PHP Stack trace:
+[31-Jul-2018 11:55:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:56:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:56:03 UTC] PHP Stack trace:
+[31-Jul-2018 11:56:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:56:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:56:28 UTC] PHP Stack trace:
+[31-Jul-2018 11:56:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:57:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:57:01 UTC] PHP Stack trace:
+[31-Jul-2018 11:57:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:57:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:57:28 UTC] PHP Stack trace:
+[31-Jul-2018 11:57:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 11:57:48 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 11:57:48 UTC] PHP Stack trace:
+[31-Jul-2018 11:57:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:44:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:44:59 UTC] PHP Stack trace:
+[31-Jul-2018 12:44:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:45:24 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:45:24 UTC] PHP Stack trace:
+[31-Jul-2018 12:45:24 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:46:24 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:46:24 UTC] PHP Stack trace:
+[31-Jul-2018 12:46:24 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:56:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:56:36 UTC] PHP Stack trace:
+[31-Jul-2018 12:56:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:58:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:58:21 UTC] PHP Stack trace:
+[31-Jul-2018 12:58:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 12:58:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 12:58:28 UTC] PHP Stack trace:
+[31-Jul-2018 12:58:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:00:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:00:08 UTC] PHP Stack trace:
+[31-Jul-2018 13:00:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:00:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:00:47 UTC] PHP Stack trace:
+[31-Jul-2018 13:00:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:02:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:02:02 UTC] PHP Stack trace:
+[31-Jul-2018 13:02:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:24:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:24:17 UTC] PHP Stack trace:
+[31-Jul-2018 13:24:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:24:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:24:30 UTC] PHP Stack trace:
+[31-Jul-2018 13:24:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:25:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:25:01 UTC] PHP Stack trace:
+[31-Jul-2018 13:25:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:25:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:25:06 UTC] PHP Stack trace:
+[31-Jul-2018 13:25:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:25:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:25:25 UTC] PHP Stack trace:
+[31-Jul-2018 13:25:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:33:54 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:33:54 UTC] PHP Stack trace:
+[31-Jul-2018 13:33:54 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:34:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:34:11 UTC] PHP Stack trace:
+[31-Jul-2018 13:34:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:34:16 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:34:16 UTC] PHP Stack trace:
+[31-Jul-2018 13:34:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:34:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:34:50 UTC] PHP Stack trace:
+[31-Jul-2018 13:34:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:35:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:35:08 UTC] PHP Stack trace:
+[31-Jul-2018 13:35:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:35:46 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:35:46 UTC] PHP Stack trace:
+[31-Jul-2018 13:35:46 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:43:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:43:30 UTC] PHP Stack trace:
+[31-Jul-2018 13:43:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:43:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:43:52 UTC] PHP Stack trace:
+[31-Jul-2018 13:43:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:44:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:44:12 UTC] PHP Stack trace:
+[31-Jul-2018 13:44:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:45:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:45:35 UTC] PHP Stack trace:
+[31-Jul-2018 13:45:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:46:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:46:20 UTC] PHP Stack trace:
+[31-Jul-2018 13:46:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:46:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:46:31 UTC] PHP Stack trace:
+[31-Jul-2018 13:46:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:46:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:46:47 UTC] PHP Stack trace:
+[31-Jul-2018 13:46:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:47:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:47:08 UTC] PHP Stack trace:
+[31-Jul-2018 13:47:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:48:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:48:05 UTC] PHP Stack trace:
+[31-Jul-2018 13:48:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:48:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:48:43 UTC] PHP Stack trace:
+[31-Jul-2018 13:48:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:49:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:49:05 UTC] PHP Stack trace:
+[31-Jul-2018 13:49:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:49:19 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:49:19 UTC] PHP Stack trace:
+[31-Jul-2018 13:49:19 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:49:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:49:41 UTC] PHP Stack trace:
+[31-Jul-2018 13:49:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:52:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:52:12 UTC] PHP Stack trace:
+[31-Jul-2018 13:52:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 13:52:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 13:52:31 UTC] PHP Stack trace:
+[31-Jul-2018 13:52:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:03:26 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:03:26 UTC] PHP Stack trace:
+[31-Jul-2018 14:03:26 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:04:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:04:42 UTC] PHP Stack trace:
+[31-Jul-2018 14:04:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:05:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:05:11 UTC] PHP Stack trace:
+[31-Jul-2018 14:05:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:06:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:06:05 UTC] PHP Stack trace:
+[31-Jul-2018 14:06:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:06:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:06:33 UTC] PHP Stack trace:
+[31-Jul-2018 14:06:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:07:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:07:21 UTC] PHP Stack trace:
+[31-Jul-2018 14:07:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:07:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:07:43 UTC] PHP Stack trace:
+[31-Jul-2018 14:07:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:08:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:08:11 UTC] PHP Stack trace:
+[31-Jul-2018 14:08:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:08:51 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:08:51 UTC] PHP Stack trace:
+[31-Jul-2018 14:08:51 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:09:04 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:09:04 UTC] PHP Stack trace:
+[31-Jul-2018 14:09:04 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:09:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:09:42 UTC] PHP Stack trace:
+[31-Jul-2018 14:09:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:14:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:14:36 UTC] PHP Stack trace:
+[31-Jul-2018 14:14:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:15:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:15:02 UTC] PHP Stack trace:
+[31-Jul-2018 14:15:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:46:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:46:25 UTC] PHP Stack trace:
+[31-Jul-2018 14:46:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:46:39 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:46:39 UTC] PHP Stack trace:
+[31-Jul-2018 14:46:39 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:47:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:47:08 UTC] PHP Stack trace:
+[31-Jul-2018 14:47:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:48:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:48:09 UTC] PHP Stack trace:
+[31-Jul-2018 14:48:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:48:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:48:27 UTC] PHP Stack trace:
+[31-Jul-2018 14:48:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:48:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:48:31 UTC] PHP Stack trace:
+[31-Jul-2018 14:48:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 14:49:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 14:49:31 UTC] PHP Stack trace:
+[31-Jul-2018 14:49:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:01:15 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:01:15 UTC] PHP Stack trace:
+[31-Jul-2018 15:01:15 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:01:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:01:41 UTC] PHP Stack trace:
+[31-Jul-2018 15:01:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:06:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:06:02 UTC] PHP Stack trace:
+[31-Jul-2018 15:06:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:06:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:06:41 UTC] PHP Stack trace:
+[31-Jul-2018 15:06:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:09:19 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:09:19 UTC] PHP Stack trace:
+[31-Jul-2018 15:09:19 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:09:48 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:09:48 UTC] PHP Stack trace:
+[31-Jul-2018 15:09:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:10:23 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:10:23 UTC] PHP Stack trace:
+[31-Jul-2018 15:10:23 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:10:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:10:32 UTC] PHP Stack trace:
+[31-Jul-2018 15:10:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:12:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:12:42 UTC] PHP Stack trace:
+[31-Jul-2018 15:12:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:14:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:14:35 UTC] PHP Stack trace:
+[31-Jul-2018 15:14:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:14:53 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:14:53 UTC] PHP Stack trace:
+[31-Jul-2018 15:14:53 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:15:25 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:15:25 UTC] PHP Stack trace:
+[31-Jul-2018 15:15:25 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:15:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:15:33 UTC] PHP Stack trace:
+[31-Jul-2018 15:15:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:15:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:15:47 UTC] PHP Stack trace:
+[31-Jul-2018 15:15:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:16:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:16:11 UTC] PHP Stack trace:
+[31-Jul-2018 15:16:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:16:24 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:16:24 UTC] PHP Stack trace:
+[31-Jul-2018 15:16:24 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:16:53 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:16:53 UTC] PHP Stack trace:
+[31-Jul-2018 15:16:53 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:17:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:17:32 UTC] PHP Stack trace:
+[31-Jul-2018 15:17:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:18:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:18:05 UTC] PHP Stack trace:
+[31-Jul-2018 15:18:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:25:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:25:30 UTC] PHP Stack trace:
+[31-Jul-2018 15:25:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:25:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:25:59 UTC] PHP Stack trace:
+[31-Jul-2018 15:25:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:26:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:26:42 UTC] PHP Stack trace:
+[31-Jul-2018 15:26:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:26:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:26:56 UTC] PHP Stack trace:
+[31-Jul-2018 15:26:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:27:16 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:27:16 UTC] PHP Stack trace:
+[31-Jul-2018 15:27:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:27:34 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:27:34 UTC] PHP Stack trace:
+[31-Jul-2018 15:27:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:28:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:28:01 UTC] PHP Stack trace:
+[31-Jul-2018 15:28:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:28:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:28:21 UTC] PHP Stack trace:
+[31-Jul-2018 15:28:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:41:37 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:41:37 UTC] PHP Stack trace:
+[31-Jul-2018 15:41:37 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:52:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:52:21 UTC] PHP Stack trace:
+[31-Jul-2018 15:52:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[31-Jul-2018 15:54:53 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[31-Jul-2018 15:54:53 UTC] PHP Stack trace:
+[31-Jul-2018 15:54:53 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:36:51 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:36:51 UTC] PHP Stack trace:
+[01-Aug-2018 17:36:51 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:37:15 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:37:15 UTC] PHP Stack trace:
+[01-Aug-2018 17:37:15 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:37:45 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:37:45 UTC] PHP Stack trace:
+[01-Aug-2018 17:37:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:39:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:39:31 UTC] PHP Stack trace:
+[01-Aug-2018 17:39:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:40:14 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:40:14 UTC] PHP Stack trace:
+[01-Aug-2018 17:40:14 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:46:41 UTC] PHP Notice:  Undefined variable: fileLoc in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[01-Aug-2018 17:46:41 UTC] PHP Stack trace:
+[01-Aug-2018 17:46:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:46:41 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 989
+[01-Aug-2018 17:46:41 UTC] PHP Stack trace:
+[01-Aug-2018 17:46:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:46:41 UTC] PHP Notice:  Undefined variable: fileName in C:\wamp\www\code\lib\file-control-xhr.php on line 990
+[01-Aug-2018 17:46:41 UTC] PHP Stack trace:
+[01-Aug-2018 17:46:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:47:16 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:47:16 UTC] PHP Stack trace:
+[01-Aug-2018 17:47:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:47:46 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:47:46 UTC] PHP Stack trace:
+[01-Aug-2018 17:47:46 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:48:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:48:13 UTC] PHP Stack trace:
+[01-Aug-2018 17:48:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:49:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:49:28 UTC] PHP Stack trace:
+[01-Aug-2018 17:49:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:49:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:49:43 UTC] PHP Stack trace:
+[01-Aug-2018 17:49:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:50:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:50:17 UTC] PHP Stack trace:
+[01-Aug-2018 17:50:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:52:14 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:52:14 UTC] PHP Stack trace:
+[01-Aug-2018 17:52:14 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:52:38 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:52:38 UTC] PHP Stack trace:
+[01-Aug-2018 17:52:38 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:53:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:53:56 UTC] PHP Stack trace:
+[01-Aug-2018 17:53:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:54:37 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:54:37 UTC] PHP Stack trace:
+[01-Aug-2018 17:54:37 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:54:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:54:59 UTC] PHP Stack trace:
+[01-Aug-2018 17:54:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 17:56:37 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 17:56:37 UTC] PHP Stack trace:
+[01-Aug-2018 17:56:37 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:09:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:09:58 UTC] PHP Stack trace:
+[01-Aug-2018 18:09:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:10:26 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:10:26 UTC] PHP Stack trace:
+[01-Aug-2018 18:10:26 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:11:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:11:41 UTC] PHP Stack trace:
+[01-Aug-2018 18:11:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:12:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:12:33 UTC] PHP Stack trace:
+[01-Aug-2018 18:12:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:12:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:12:43 UTC] PHP Stack trace:
+[01-Aug-2018 18:12:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:12:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:12:47 UTC] PHP Stack trace:
+[01-Aug-2018 18:12:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:13:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:13:29 UTC] PHP Stack trace:
+[01-Aug-2018 18:13:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:14:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:14:30 UTC] PHP Stack trace:
+[01-Aug-2018 18:14:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:14:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:14:58 UTC] PHP Stack trace:
+[01-Aug-2018 18:14:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:15:39 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:15:39 UTC] PHP Stack trace:
+[01-Aug-2018 18:15:39 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:16:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:16:09 UTC] PHP Stack trace:
+[01-Aug-2018 18:16:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Aug-2018 18:16:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Aug-2018 18:16:29 UTC] PHP Stack trace:
+[01-Aug-2018 18:16:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[03-Aug-2018 12:15:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[03-Aug-2018 12:15:01 UTC] PHP Stack trace:
+[03-Aug-2018 12:15:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[03-Aug-2018 12:15:14 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[03-Aug-2018 12:15:14 UTC] PHP Stack trace:
+[03-Aug-2018 12:15:14 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[03-Aug-2018 12:23:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[03-Aug-2018 12:23:30 UTC] PHP Stack trace:
+[03-Aug-2018 12:23:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:19:18 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:19:18 UTC] PHP Stack trace:
+[06-Aug-2018 15:19:18 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:20:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:20:41 UTC] PHP Stack trace:
+[06-Aug-2018 15:20:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:22:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:22:13 UTC] PHP Stack trace:
+[06-Aug-2018 15:22:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:22:45 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:22:45 UTC] PHP Stack trace:
+[06-Aug-2018 15:22:45 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:29:49 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:29:49 UTC] PHP Stack trace:
+[06-Aug-2018 15:29:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 15:30:34 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 15:30:34 UTC] PHP Stack trace:
+[06-Aug-2018 15:30:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:07:04 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:07:04 UTC] PHP Stack trace:
+[06-Aug-2018 17:07:04 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:08:15 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:08:15 UTC] PHP Stack trace:
+[06-Aug-2018 17:08:15 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:09:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:09:09 UTC] PHP Stack trace:
+[06-Aug-2018 17:09:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:09:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:09:27 UTC] PHP Stack trace:
+[06-Aug-2018 17:09:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:38:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:38:02 UTC] PHP Stack trace:
+[06-Aug-2018 17:38:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:38:49 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:38:49 UTC] PHP Stack trace:
+[06-Aug-2018 17:38:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:39:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:39:09 UTC] PHP Stack trace:
+[06-Aug-2018 17:39:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:41:00 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:41:00 UTC] PHP Stack trace:
+[06-Aug-2018 17:41:00 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:41:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:41:29 UTC] PHP Stack trace:
+[06-Aug-2018 17:41:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 17:42:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 17:42:05 UTC] PHP Stack trace:
+[06-Aug-2018 17:42:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:04:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:04:11 UTC] PHP Stack trace:
+[06-Aug-2018 18:04:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:04:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:04:35 UTC] PHP Stack trace:
+[06-Aug-2018 18:04:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:05:12 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:05:12 UTC] PHP Stack trace:
+[06-Aug-2018 18:05:12 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:05:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:05:41 UTC] PHP Stack trace:
+[06-Aug-2018 18:05:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:06:44 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:06:44 UTC] PHP Stack trace:
+[06-Aug-2018 18:06:44 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:06:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:06:55 UTC] PHP Stack trace:
+[06-Aug-2018 18:06:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[06-Aug-2018 18:09:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[06-Aug-2018 18:09:41 UTC] PHP Stack trace:
+[06-Aug-2018 18:09:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 11:51:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 11:51:55 UTC] PHP Stack trace:
+[08-Aug-2018 11:51:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 11:52:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 11:52:42 UTC] PHP Stack trace:
+[08-Aug-2018 11:52:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:01:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:01:52 UTC] PHP Stack trace:
+[08-Aug-2018 12:01:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:03:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:03:36 UTC] PHP Stack trace:
+[08-Aug-2018 12:03:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:03:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:03:50 UTC] PHP Stack trace:
+[08-Aug-2018 12:03:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:12:39 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:12:39 UTC] PHP Stack trace:
+[08-Aug-2018 12:12:39 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:12:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:12:56 UTC] PHP Stack trace:
+[08-Aug-2018 12:12:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:13:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:13:06 UTC] PHP Stack trace:
+[08-Aug-2018 12:13:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:13:21 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:13:21 UTC] PHP Stack trace:
+[08-Aug-2018 12:13:21 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:19:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:19:08 UTC] PHP Stack trace:
+[08-Aug-2018 12:19:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:19:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:19:33 UTC] PHP Stack trace:
+[08-Aug-2018 12:19:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:22:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:22:05 UTC] PHP Stack trace:
+[08-Aug-2018 12:22:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:22:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:22:35 UTC] PHP Stack trace:
+[08-Aug-2018 12:22:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:23:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:23:42 UTC] PHP Stack trace:
+[08-Aug-2018 12:23:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:29:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:29:03 UTC] PHP Stack trace:
+[08-Aug-2018 12:29:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:30:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:30:11 UTC] PHP Stack trace:
+[08-Aug-2018 12:30:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:30:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:30:52 UTC] PHP Stack trace:
+[08-Aug-2018 12:30:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:33:36 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:33:36 UTC] PHP Stack trace:
+[08-Aug-2018 12:33:36 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:33:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:33:50 UTC] PHP Stack trace:
+[08-Aug-2018 12:33:50 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:35:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:35:59 UTC] PHP Stack trace:
+[08-Aug-2018 12:35:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:36:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:36:09 UTC] PHP Stack trace:
+[08-Aug-2018 12:36:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:36:39 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:36:39 UTC] PHP Stack trace:
+[08-Aug-2018 12:36:39 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:38:49 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:38:49 UTC] PHP Stack trace:
+[08-Aug-2018 12:38:49 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:40:15 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:40:15 UTC] PHP Stack trace:
+[08-Aug-2018 12:40:15 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:40:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:40:22 UTC] PHP Stack trace:
+[08-Aug-2018 12:40:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:41:18 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:41:18 UTC] PHP Stack trace:
+[08-Aug-2018 12:41:18 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:42:10 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:42:10 UTC] PHP Stack trace:
+[08-Aug-2018 12:42:10 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:44:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:44:35 UTC] PHP Stack trace:
+[08-Aug-2018 12:44:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:45:34 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:45:34 UTC] PHP Stack trace:
+[08-Aug-2018 12:45:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:45:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:45:52 UTC] PHP Stack trace:
+[08-Aug-2018 12:45:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:45:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:45:56 UTC] PHP Stack trace:
+[08-Aug-2018 12:45:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:46:09 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:46:09 UTC] PHP Stack trace:
+[08-Aug-2018 12:46:09 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:46:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:46:35 UTC] PHP Stack trace:
+[08-Aug-2018 12:46:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:47:16 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:47:16 UTC] PHP Stack trace:
+[08-Aug-2018 12:47:16 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:51:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:51:05 UTC] PHP Stack trace:
+[08-Aug-2018 12:51:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:51:32 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:51:32 UTC] PHP Stack trace:
+[08-Aug-2018 12:51:32 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:52:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:52:52 UTC] PHP Stack trace:
+[08-Aug-2018 12:52:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:53:29 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:53:29 UTC] PHP Stack trace:
+[08-Aug-2018 12:53:29 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:54:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:54:35 UTC] PHP Stack trace:
+[08-Aug-2018 12:54:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:54:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:54:43 UTC] PHP Stack trace:
+[08-Aug-2018 12:54:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:55:05 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:55:05 UTC] PHP Stack trace:
+[08-Aug-2018 12:55:05 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 12:56:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 12:56:33 UTC] PHP Stack trace:
+[08-Aug-2018 12:56:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:00:34 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:00:34 UTC] PHP Stack trace:
+[08-Aug-2018 13:00:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:00:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:00:58 UTC] PHP Stack trace:
+[08-Aug-2018 13:00:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:02:54 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:02:54 UTC] PHP Stack trace:
+[08-Aug-2018 13:02:54 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:46:47 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:46:47 UTC] PHP Stack trace:
+[08-Aug-2018 13:46:47 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:47:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:47:01 UTC] PHP Stack trace:
+[08-Aug-2018 13:47:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:47:57 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:47:57 UTC] PHP Stack trace:
+[08-Aug-2018 13:47:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:48:10 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:48:10 UTC] PHP Stack trace:
+[08-Aug-2018 13:48:10 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 13:50:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 13:50:13 UTC] PHP Stack trace:
+[08-Aug-2018 13:50:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:02:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:02:27 UTC] PHP Stack trace:
+[08-Aug-2018 14:02:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:02:38 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:02:38 UTC] PHP Stack trace:
+[08-Aug-2018 14:02:38 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:18 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:04:18 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:18 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:24 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:04:24 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:24 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:24 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[08-Aug-2018 14:04:24 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:24 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:04:27 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:27 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/alta.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[08-Aug-2018 14:04:27 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:27 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[08-Aug-2018 14:04:27 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:04:27 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:27 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[08-Aug-2018 14:04:27 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:27 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:04:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:04:41 UTC] PHP Stack trace:
+[08-Aug-2018 14:04:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:05:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:05:01 UTC] PHP Stack trace:
+[08-Aug-2018 14:05:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:05:07 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:05:07 UTC] PHP Stack trace:
+[08-Aug-2018 14:05:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:05:19 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:05:19 UTC] PHP Stack trace:
+[08-Aug-2018 14:05:19 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:05:57 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:05:57 UTC] PHP Stack trace:
+[08-Aug-2018 14:05:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:06:07 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:06:07 UTC] PHP Stack trace:
+[08-Aug-2018 14:06:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:06:07 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/alta.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[08-Aug-2018 14:06:07 UTC] PHP Stack trace:
+[08-Aug-2018 14:06:07 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:06:07 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[08-Aug-2018 14:20:41 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:20:41 UTC] PHP Stack trace:
+[08-Aug-2018 14:20:41 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:22:03 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:22:03 UTC] PHP Stack trace:
+[08-Aug-2018 14:22:03 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:22:40 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:22:40 UTC] PHP Stack trace:
+[08-Aug-2018 14:22:40 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:23:26 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:23:26 UTC] PHP Stack trace:
+[08-Aug-2018 14:23:26 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:23:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:23:42 UTC] PHP Stack trace:
+[08-Aug-2018 14:23:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:24:54 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:24:54 UTC] PHP Stack trace:
+[08-Aug-2018 14:24:54 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:24:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:24:58 UTC] PHP Stack trace:
+[08-Aug-2018 14:24:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:24:58 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[08-Aug-2018 14:24:58 UTC] PHP Stack trace:
+[08-Aug-2018 14:24:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:25:22 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:22 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/script.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[08-Aug-2018 14:25:22 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:22 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[08-Aug-2018 14:25:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:25:22 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:22 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[08-Aug-2018 14:25:22 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:22 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:25:33 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:33 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 134
+[08-Aug-2018 14:25:33 UTC] PHP Stack trace:
+[08-Aug-2018 14:25:33 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:25:33 UTC] PHP   2. stitchChanges() C:\wamp\www\code\lib\file-control-xhr.php:317
+[08-Aug-2018 14:37:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:37:35 UTC] PHP Stack trace:
+[08-Aug-2018 14:37:35 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:38:23 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:38:23 UTC] PHP Stack trace:
+[08-Aug-2018 14:38:23 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:38:30 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:38:30 UTC] PHP Stack trace:
+[08-Aug-2018 14:38:30 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:40:40 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:40:40 UTC] PHP Stack trace:
+[08-Aug-2018 14:40:40 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:41:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:41:17 UTC] PHP Stack trace:
+[08-Aug-2018 14:41:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:41:43 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:41:43 UTC] PHP Stack trace:
+[08-Aug-2018 14:41:43 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:42:06 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:42:06 UTC] PHP Stack trace:
+[08-Aug-2018 14:42:06 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:43:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:43:02 UTC] PHP Stack trace:
+[08-Aug-2018 14:43:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:58:38 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 14:58:38 UTC] PHP Stack trace:
+[08-Aug-2018 14:58:38 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:58:38 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/script.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[08-Aug-2018 14:58:38 UTC] PHP Stack trace:
+[08-Aug-2018 14:58:38 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 14:58:38 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[08-Aug-2018 15:38:57 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 15:38:57 UTC] PHP Stack trace:
+[08-Aug-2018 15:38:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 15:38:57 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[08-Aug-2018 15:38:57 UTC] PHP Stack trace:
+[08-Aug-2018 15:38:57 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 15:39:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 15:39:02 UTC] PHP Stack trace:
+[08-Aug-2018 15:39:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 15:39:02 UTC] PHP Warning:  filesize(): stat failed for C:/wamp/www//add/popup.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[08-Aug-2018 15:39:02 UTC] PHP Stack trace:
+[08-Aug-2018 15:39:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 15:39:02 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[08-Aug-2018 15:39:02 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[08-Aug-2018 15:39:02 UTC] PHP Stack trace:
+[08-Aug-2018 15:39:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[08-Aug-2018 15:39:02 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[08-Aug-2018 15:39:02 UTC] PHP Stack trace:
+[08-Aug-2018 15:39:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0

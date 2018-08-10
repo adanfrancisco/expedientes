@@ -58,7 +58,7 @@ class cESCUELA extends cTable {
 		$this->fields['CUE'] = &$this->CUE;
 
 		// NOMBRE
-		$this->NOMBRE = new cField('ESCUELA', 'ESCUELA', 'x_NOMBRE', 'NOMBRE', '[NOMBRE]', '[NOMBRE]', 203, -1, FALSE, '[NOMBRE]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXTAREA');
+		$this->NOMBRE = new cField('ESCUELA', 'ESCUELA', 'x_NOMBRE', 'NOMBRE', '[NOMBRE]', '[NOMBRE]', 202, -1, FALSE, '[NOMBRE]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXTAREA');
 		$this->NOMBRE->Sortable = TRUE; // Allow sort
 		$this->fields['NOMBRE'] = &$this->NOMBRE;
 
@@ -68,7 +68,7 @@ class cESCUELA extends cTable {
 		$this->fields['DOMICILIO'] = &$this->DOMICILIO;
 
 		// LOCALIDAD
-		$this->LOCALIDAD = new cField('ESCUELA', 'ESCUELA', 'x_LOCALIDAD', 'LOCALIDAD', '[LOCALIDAD]', '[LOCALIDAD]', 3, -1, FALSE, '[LOCALIDAD]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'SELECT');
+		$this->LOCALIDAD = new cField('ESCUELA', 'ESCUELA', 'x_LOCALIDAD', 'LOCALIDAD', '[LOCALIDAD]', '[LOCALIDAD]', 5, -1, FALSE, '[LOCALIDAD]', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'SELECT');
 		$this->LOCALIDAD->Sortable = TRUE; // Allow sort
 		$this->LOCALIDAD->UsePleaseSelect = TRUE; // Use PleaseSelect by default
 		$this->LOCALIDAD->PleaseSelectText = $Language->Phrase("PleaseSelect"); // PleaseSelect text

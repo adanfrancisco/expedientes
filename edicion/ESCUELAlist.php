@@ -373,6 +373,7 @@ class cESCUELA_list extends cESCUELA {
 		$this->SetupListOptions();
 		$this->CLAVE->SetVisibility();
 		$this->CUE->SetVisibility();
+		$this->NOMBRE->SetVisibility();
 		$this->DOMICILIO->SetVisibility();
 		$this->LOCALIDAD->SetVisibility();
 		$this->TELEFONO->SetVisibility();
@@ -976,6 +977,7 @@ class cESCUELA_list extends cESCUELA {
 			$this->CurrentOrderType = @$_GET["ordertype"];
 			$this->UpdateSort($this->CLAVE); // CLAVE
 			$this->UpdateSort($this->CUE); // CUE
+			$this->UpdateSort($this->NOMBRE); // NOMBRE
 			$this->UpdateSort($this->DOMICILIO); // DOMICILIO
 			$this->UpdateSort($this->LOCALIDAD); // LOCALIDAD
 			$this->UpdateSort($this->TELEFONO); // TELEFONO
@@ -1015,6 +1017,7 @@ class cESCUELA_list extends cESCUELA {
 				$this->setSessionOrderBy($sOrderBy);
 				$this->CLAVE->setSort("");
 				$this->CUE->setSort("");
+				$this->NOMBRE->setSort("");
 				$this->DOMICILIO->setSort("");
 				$this->LOCALIDAD->setSort("");
 				$this->TELEFONO->setSort("");
@@ -1564,6 +1567,10 @@ class cESCUELA_list extends cESCUELA {
 		$this->CUE->ViewValue = $this->CUE->CurrentValue;
 		$this->CUE->ViewCustomAttributes = "";
 
+		// NOMBRE
+		$this->NOMBRE->ViewValue = $this->NOMBRE->CurrentValue;
+		$this->NOMBRE->ViewCustomAttributes = "";
+
 		// DOMICILIO
 		$this->DOMICILIO->ViewValue = $this->DOMICILIO->CurrentValue;
 		$this->DOMICILIO->ViewCustomAttributes = "";
@@ -1631,6 +1638,11 @@ class cESCUELA_list extends cESCUELA {
 			$this->CUE->LinkCustomAttributes = "";
 			$this->CUE->HrefValue = "";
 			$this->CUE->TooltipValue = "";
+
+			// NOMBRE
+			$this->NOMBRE->LinkCustomAttributes = "";
+			$this->NOMBRE->HrefValue = "";
+			$this->NOMBRE->TooltipValue = "";
 
 			// DOMICILIO
 			$this->DOMICILIO->LinkCustomAttributes = "";
@@ -1977,6 +1989,15 @@ $ESCUELA_list->ListOptions->Render("header", "left");
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
+<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
+	<?php if ($ESCUELA->SortUrl($ESCUELA->NOMBRE) == "") { ?>
+		<th data-name="NOMBRE" class="<?php echo $ESCUELA->NOMBRE->HeaderCellClass() ?>"><div id="elh_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE"><div class="ewTableHeaderCaption"><?php echo $ESCUELA->NOMBRE->FldCaption() ?></div></div></th>
+	<?php } else { ?>
+		<th data-name="NOMBRE" class="<?php echo $ESCUELA->NOMBRE->HeaderCellClass() ?>"><div class="ewPointer" onclick="ew_Sort(event,'<?php echo $ESCUELA->SortUrl($ESCUELA->NOMBRE) ?>',1);"><div id="elh_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE">
+			<div class="ewTableHeaderBtn"><span class="ewTableHeaderCaption"><?php echo $ESCUELA->NOMBRE->FldCaption() ?><?php echo $Language->Phrase("SrchLegend") ?></span><span class="ewTableHeaderSort"><?php if ($ESCUELA->NOMBRE->getSort() == "ASC") { ?><span class="caret ewSortUp"></span><?php } elseif ($ESCUELA->NOMBRE->getSort() == "DESC") { ?><span class="caret"></span><?php } ?></span></div>
+		</div></div></th>
+	<?php } ?>
+<?php } ?>
 <?php if ($ESCUELA->DOMICILIO->Visible) { // DOMICILIO ?>
 	<?php if ($ESCUELA->SortUrl($ESCUELA->DOMICILIO) == "") { ?>
 		<th data-name="DOMICILIO" class="<?php echo $ESCUELA->DOMICILIO->HeaderCellClass() ?>"><div id="elh_ESCUELA_DOMICILIO" class="ESCUELA_DOMICILIO"><div class="ewTableHeaderCaption"><?php echo $ESCUELA->DOMICILIO->FldCaption() ?></div></div></th>
@@ -2100,6 +2121,14 @@ $ESCUELA_list->ListOptions->Render("body", "left", $ESCUELA_list->RowCnt);
 <span id="el<?php echo $ESCUELA_list->RowCnt ?>_ESCUELA_CUE" class="ESCUELA_CUE">
 <span<?php echo $ESCUELA->CUE->ViewAttributes() ?>>
 <?php echo $ESCUELA->CUE->ListViewValue() ?></span>
+</span>
+</td>
+	<?php } ?>
+	<?php if ($ESCUELA->NOMBRE->Visible) { // NOMBRE ?>
+		<td data-name="NOMBRE"<?php echo $ESCUELA->NOMBRE->CellAttributes() ?>>
+<span id="el<?php echo $ESCUELA_list->RowCnt ?>_ESCUELA_NOMBRE" class="ESCUELA_NOMBRE">
+<span<?php echo $ESCUELA->NOMBRE->ViewAttributes() ?>>
+<?php echo $ESCUELA->NOMBRE->ListViewValue() ?></span>
 </span>
 </td>
 	<?php } ?>
