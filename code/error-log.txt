@@ -1541,3 +1541,9 @@
 [08-Aug-2018 15:39:02 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
 [08-Aug-2018 15:39:02 UTC] PHP Stack trace:
 [08-Aug-2018 15:39:02 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Aug-2018 15:50:01 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Aug-2018 15:50:01 UTC] PHP Stack trace:
+[13-Aug-2018 15:50:01 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[13-Aug-2018 15:57:17 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[13-Aug-2018 15:57:17 UTC] PHP Stack trace:
+[13-Aug-2018 15:57:17 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0

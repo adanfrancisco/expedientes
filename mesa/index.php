@@ -1383,7 +1383,7 @@
                     $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CENS452').click(function(){
-                    $servicio='';
+                    $servicio='0099DM0452';
                     console.log($servicio);
                     $(".EEE501").toggleClass("hide"); 
                     $(".EEEA1").toggleClass("hide"); 
@@ -1400,7 +1400,7 @@
                     $(".PSICO").toggleClass("hide"); 
                 })
                 $('.CENS453').click(function(){
-                    $servicio='';
+                    $servicio='0099DM0453';
                     console.log($servicio);
                     $(".EEE501").toggleClass("hide"); 
                     $(".EEEA1").toggleClass("hide"); 
