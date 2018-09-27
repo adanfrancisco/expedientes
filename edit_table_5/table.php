@@ -1,49 +1,23 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
     <head>
-
-        <script src="js/jquery.min.js"></script>
-
-
-		<link href="/css/bootstrap.min.css" rel="stylesheet" >
-<script type="text/javascript" src="js/edit.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/edit.js"></script>
 		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
 		<script src="js/examples.js"></script>
 
-		<script>
-			$(document).ready(function () {
-			$('#entradafilter').keyup(function () {
-				//console.log(this.value);
-				var rex = new RegExp($(this).val(), 'i');
-					$('.contenidobusqueda tr').hide();
-					$('.contenidobusqueda tr').filter(function () {
-						return rex.test($(this).text());
-					}).show();
-					})
-			});
-		</script>
-
-
 	<meta charset="utf-8">
-	<link rel="stylesheet"
-	 media="screen and (max-device-width: 799px)"  />
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>Editar Datos</title>
+    	<title>Editable Tables with jQuery</title>
     </head>
     <body>
-    	<?php 
+		<?php 
+		date_default_timezone_set('America/Los_Angeles');
 			include 'db.php';
 			$sql = 'SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad';
 			$rs = $db->consulta($sql);
-		?>
-
-
-<div class="input-group"> <span class="input-group-addon">Filtrado</span>
-    <input id="entradafilter" type="text" class="form-control">
-</div>
-
-
-    	<table id="tabla" class="contenidobusqueda" border ="1">
+    	?>
+    	<table id="tabla" border ="1">
     		<thead>
 			<tr>
 				<th class='
@@ -152,21 +126,15 @@ echo '<td class="'.odbc_result($rs,"email").'" name="'.odbc_field_name($rs,"8").
 
 $fecha = '';
 if(odbc_result($rs,"fech_nac") != '')
-//echo odbc_result($rs,"fech_nac");
-$fecha =odbc_result($rs,"fech_nac");
-//echo $fecha;
-/* $fecha = date_format(odbc_result($rs,"fech_nac"), 'd-m-Y'); */
-	 //$fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'd-m-Y'); 
+$fecha=odbc_result($rs,"fech_nac");
+	//$fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'Y-m-d');
 
-echo '<td class="'.$fecha.' " type=text name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
+echo '<td class="'.$fecha.'" name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
 
 echo '</tr>';
 						}	
 				?>
     		</tbody>
     	</table>
-	</body>
-	
-
-	
+    </body>
 </html>

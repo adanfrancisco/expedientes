@@ -1,7 +1,7 @@
 var localidades = {};
 
 $(function() {
-	
+
 	//when a td element within tbody is clicked
 	$('tbody').on('click','td',function() {
 		//call displayform, passing td jQuery element
@@ -80,73 +80,18 @@ function displayForm( cell ) {
 		//form action prevents page refresh when enter pressed.  hidden fields pass primary key and column name
 
 		var tipo = "text";
-
-	/* 	if(campo == 'fech_nac')tipo = "date";
-		if(campo == 'email')tipo = "email";
-		if(campo == 'celular')tipo = "tel";
-		if(campo == 'telefono')tipo = "tel";
-		if(campo == 'cuil')tipo = "tel"; */
-switch(campo)
-{
-	case 'telefono':
-
-	{
+		
+		if(campo == 'fech_nac')
+			tipo = "date";
+		
 		form = '<form action="javascript: this.preventDefault">' +
-		'<input  type="' + tipo + '"  class="ttelefono" size="'+cellWidth+'" name="newValue" value="'+
-	   prevContent+'">'+
-	   '<input type="hidden" name="id" value="'+id+'" />'+
-	   '<input type="hidden"  name="column"  value="'+campo+
-	   '" ></form>';
-	   break;
-	}	
-	case 'celular':
-	{
-		form = '<form action="javascript: this.preventDefault">' +
-		'<input  type="' + tipo + '"  class="ttelefono" size="'+cellWidth+'" name="newValue" value="'+
-	   prevContent+'">'+
-	   '<input type="hidden" name="id" value="'+id+'" />'+
-	   '<input type="hidden"  name="column"  value="'+campo+
-	   '" ></form>';
-	   break;
-	}	
-
-	case 'cuil':
-	{
-		form = '<form action="javascript: this.preventDefault">' +
-		'<input  type="' + tipo + '"  class="cuilt" size="'+cellWidth+'" name="newValue" value="'+
-	   prevContent+'">'+
-	   '<input type="hidden" name="id" value="'+id+'" />'+
-	   '<input type="hidden"  name="column"  value="'+campo+
-	   '" </form>';		
-	   //alert('cuil');
-		break;
-	}
-	case 'fech_nac':
-	{
-		form = '<form action="javascript: this.preventDefault">' +
-		'<input  type="' + tipo + '"   size="'+cellWidth+'" name="newValue" value="'+
-	   prevContent+'">'+
-	   '<input type="hidden" name="id" value="'+id+'" />'+
-	   '<input type="hidden"  name="column"  value="'+campo+
-	   '" </form>';		
-	   //alert('cuil');
-		break;
-	}
-	default:
-		form = '<form action="javascript: this.preventDefault">' +
-		'<input  type="' + tipo + '"   size="'+cellWidth+'" name="newValue" value="'+
-		prevContent+'" PLACEHOLDER="ESCRIBA">'+
-		'<input type="hidden" name="id" value="'+id+'" />'+
-		'<input type="hidden"  name="column"  value="'+campo+
-		'" ></form>';
-
-}
-
-			   //" onKeyUp = "this.value=formateafecha(this.value);
+				'<input  type="' + tipo + '" size="4" name="newValue" value="'+
+			   prevContent+'" /><input type="hidden" name="id" value="'+id+'" />'+
+			   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
 			   //alert($(this).closest('td').attr('name'));
 //MUESTRO LOS VALORES PARA SABER CON QUE TRABAJO
 console.log( 
-	'ACA ESTOY TRABAJANDO \nFila=' + row +' columna:'+col+  
+	'Fila=' + row +' columna:'+col+  
 	' \nID='+id +' VALOR= '+column + '  CAMPO:'+campo+'\nAncho:'+ cellWidth+
 	'\nValorPrevio='+prevContent
 );			   
@@ -200,6 +145,24 @@ function changeField( cell, prevContent ) {
 		}
 	});
 
+
+/* //send ajax request
+ 	$.getJSON(url+input, function(data) {//data argument is used to retrieve response from processing script
+console.log('envio ajax');
+
+	//On success, update cell to new value
+		if (data.success){
+			cell.html(data.value);
+			console.log('fue exitoso');
+		}else {
+			console.log('algo fallo');
+			//On failure, revert to original value and alert
+			cell.html(prevContent);
+		}
+
+	}); */
+
+	//remove click handler to allow tbody handler to make field editable again
 	cell.off('click');
 
 }
