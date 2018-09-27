@@ -1743,6 +1743,7 @@ required="">
 placeholder="ATENDIO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" 
 onfocus="javascript:this.value='';" required="">
 
+
 <BR>
     <label class="inputstyle">DERIVADO A:</label>
     <select name="derivado" id="combo" class="inputstyle" >
