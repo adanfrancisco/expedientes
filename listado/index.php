@@ -9,7 +9,22 @@ date_default_timezone_set('America/Buenos_Aires');
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!-- 		<script src="js/examples.js"></script> -->
+		<script>
+			$(document).ready(function () {
+			$('#entradafilter').keyup(function () {
+				var rex = new RegExp($(this).val(), 'i');
+					$('.contenidobusqueda tr').hide();
+					$('.contenidobusqueda tr').filter(function () {
+						return rex.test($(this).text());
+					}).show();
 
+					})
+
+			});
+		</script>
+	
         <script type="text/javascript">
           $(document).ready(function(e)
            {  
@@ -315,7 +330,9 @@ fieldset
     </head>
     <body>
       <div class="col-lg-10 fecha">
+
 <table>
+
     <tr><td> FECHA - DESDE: </td>
         <td>
                                        <div id="fecha_inicio">
@@ -323,8 +340,10 @@ fieldset
                                     <?php
                                     for ($i=1; $i<=31; $i++) {
                                         if ($i == date('j'))
+
                                             echo '<option value="'.$i.'" selected>'.$i.'</option>';
                                         else
+
                                             echo '<option value="'.$i.'">'.$i.'</option>';
                                     }
                                     ?>

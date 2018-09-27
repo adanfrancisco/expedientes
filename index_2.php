@@ -1,21 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="es">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MESA</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-
-
-<button type="button" class="btn btn-primary mesa"onclick="location='mesa/index.php'" >MESA</button>
-<button type="button" class="btn btn-secondary listado" onclick="location='listado/index.php'">LISTADO</button>
-
-
 <?php
 
-/*
 // Page créé par Shepard [Fabian Pijcke] <Shepard8@laposte.net>
 // Arno Esterhuizen <arno.esterhuizen@gmail.com>
 // et Romain Bourdon <rromain@romainbourdon.com>
@@ -544,5 +528,4 @@ a:hover {
 EOPAGE;
 
 echo $pageContents;
-*/
 ?>
