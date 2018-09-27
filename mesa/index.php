@@ -24,7 +24,6 @@
                $("#especials").hide();
                $("#modalidades").hide();
                $("#carrga").hide();
-               $("#otrox").hide();
               
                
            // Cuando le dás click muestra #content
@@ -42,7 +41,6 @@
                     $(".modalidades").toggleClass("hide"); 
                     if( $("#inicial").is(":visible") ){
                         $("#inicial").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#inicial").show();
                     }
@@ -225,8 +223,8 @@
                     $(".904").toggleClass("hide"); 
                     $(".905").toggleClass("hide"); 
                     $(".906").toggleClass("hide"); 
-                    $(".907").toggleClass("hide"); 
                     $(".908").toggleClass("hide"); 
+                    $(".909").toggleClass("hide"); 
                     $(".910").toggleClass("hide"); 
                     $(".911").toggleClass("hide"); 
                     $(".912").toggleClass("hide"); 
@@ -444,7 +442,6 @@
                     $(".modalidades").toggleClass("hide");
                     if( $("#primaria").is(":visible") ){
                         $("#primaria").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#primaria").show();
                     }
@@ -927,7 +924,6 @@
                     $(".superior").toggleClass("hide"); 
                     if( $("#secundarias").is(":visible") ){
                         $("#secundarias").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#secundarias").show();
                     }
@@ -1191,7 +1187,6 @@
                     $(".superior").toggleClass("hide"); 
                     if( $("#agrarias").is(":visible") ){
                         $("#agrarias").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#agrarias").show();
                     }
@@ -1213,7 +1208,6 @@
                     $(".superior").toggleClass("hide"); 
                     if( $("#tecnicas").is(":visible") ){
                         $("#tecnicas").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#tecnicas").show();
                     }
@@ -1244,7 +1238,6 @@
                     $(".psicologia").toggleClass("hide"); 
                     if( $("#superiors").is(":visible") ){
                         $("#superiors").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#superiors").show();
                     }
@@ -1265,7 +1258,6 @@
                     $(".inicio").toggleClass("hide"); 
                     if( $("#modalidades").is(":visible") ){
                         $("#modalidades").hide();
-                        $("#otrox").hide();
                     }else{
                         $("#modalidades").show();
                     }
@@ -1286,7 +1278,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.EEEA1').click(function(){
                     $servicio='0099AE0001';
@@ -1304,7 +1295,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.EEPA-701').click(function(){
                     $servicio='0099DE0701';
@@ -1322,7 +1312,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
 
                 $('.CEA702').click(function(){
@@ -1341,7 +1330,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CEA703').click(function(){
                     $servicio='0099DC0703';
@@ -1359,7 +1347,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CEA704').click(function(){
                     $servicio='0099DC0704';
@@ -1377,7 +1364,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CENS451').click(function(){
                     $servicio='0099DM0451';
@@ -1395,7 +1381,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CENS452').click(function(){
                     $servicio='0099DM0452';
@@ -1413,7 +1398,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CENS453').click(function(){
                     $servicio='0099DM0453';
@@ -1431,7 +1415,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CEF93').click(function(){
                     $servicio='0099FC0093';
@@ -1449,7 +1432,6 @@
                     $(".CFP401").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CFP401').click(function(){
                     $servicio='0099DF0401';
@@ -1467,7 +1449,6 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CIIE200").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                 $('.CIIE200').click(function(){
                     $servicio='0099IC0200';
@@ -1485,7 +1466,6 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide");   
                     $(".PSICO").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
                     $('.PSICO').click(function(){
                     $servicio='1000000000';
@@ -1503,47 +1483,21 @@
                     $(".CEF93").toggleClass("hide"); 
                     $(".CFP401").toggleClass("hide");   
                     $(".CIIE200").toggleClass("hide"); 
-                    $(".OTRO").toggleClass("hide");
                 })
-                $('.OTRO').click(function(){
-                    $servicio='9999OO9999';
-                    console.log($servicio);
-                    $(".EEE501").toggleClass("hide"); 
-                    $(".EEEA1").toggleClass("hide"); 
-                    $(".EEPA-701").toggleClass("hide"); 
-                    $(".CEA701").toggleClass("hide"); 
-                    $(".CEA702").toggleClass("hide"); 
-                    $(".CEA703").toggleClass("hide"); 
-                    $(".CEA704").toggleClass("hide"); 
-                    $(".CENS451").toggleClass("hide"); 
-                    $(".CENS452").toggleClass("hide"); 
-                    $(".CENS453").toggleClass("hide"); 
-                    $(".CEF93").toggleClass("hide"); 
-                    $(".CFP401").toggleClass("hide");   
-                    $(".CIIE200").toggleClass("hide"); 
-                })
+
 $('.carga').click(function(){
     if( $("#carrga").is(":visible") ){
                         $("#carrga").hide();
                     }else{
                         $("#carrga").show();
                     }
-//Verifico si la procedencia es otra!!
-if($servicio=='9999OO9999'){
-    console.log('es otro');
-    $("#otrox").show();
-}else{
-    $("#otrox").hide();
-}   
-                
-$('input:text[name=detalle]').val("");
+    $('input:text[name=detalle]').val("");
 })
                
 $("#combo").change(function () {$("#combo option:selected").each( function () { combo=$(this).val();});});
                
 $('.grabar').on('click', function () 
     {
-        var quien=$('input:text[name=otro_detalle]').val();
         var mensaje=$('input:text[name=detalle]').val();
         var atendio=$('input:text[name=atendio]').val();
         var derivado=combo;
@@ -1552,7 +1506,7 @@ $('.grabar').on('click', function ()
             $.confirm({
                 title: 'Confirme!',
                 content: '<b>LO TRAJO:</b> '
-                + servicio + ' '+ quien
+                + servicio
                 +'<br><b>VA A GUARDAR:</b>'
                 +mensaje
                 +'<BR> <b>ATENDIO:</b> '
@@ -1565,7 +1519,6 @@ $('.grabar').on('click', function ()
                         $.alert('GUARDADO!');
             //****************************************************************************/
                         $.post("grabar.php", { 
-                            quien: quien,
                             servicio: servicio, 
                             mensaje: mensaje,
                             atendio:atendio,
@@ -1638,7 +1591,7 @@ $('.grabar').on('click', function ()
         <button type="button" class="btn btn-warning superior">SUPERIOR</button>
         <button type="button" class="btn btn-info agraria">AGRARIA</button>
         <button type="button" class="btn btn-secondary tecnica">TECNICA</button>
-        <button type="button" class="btn btn-success modalidades">MODALIDADES / OTROS</button>
+        <button type="button" class="btn btn-secondary modalidades">MODALIDADES</button>
         
         <div id="inicial">
             <button type="button" class="btn btn-primary 901">901</button>
@@ -1709,20 +1662,19 @@ $('.grabar').on('click', function ()
              <button type="button" class="btn btn-primary EEST2">EEST2</button>
         </div>   
         <div id="modalidades">
-                <button type="button" class="btn btn-dark EEE501">EEE 501(Especial)</button>
-                <button type="button" class="btn btn-secondary EEEA1">EEE 1 (Artistica)</button>
-                <button type="button" class="btn btn-danger EEPA-701">EEPA-701</button>
-                <button type="button" class="btn btn-danger CEA702">CEA-702</button>
-                <button type="button" class="btn btn-danger CEA703">CEA-703</button>
-                <button type="button" class="btn btn-danger CEA704">CEA-704</button>
-                <button type="button" class="btn btn-warning CENS451">CENS-451</button>
-                <button type="button" class="btn btn-warning CENS452">CENS-452</button>
-                <button type="button" class="btn btn-warning CENS453">CENS-453</button>
-                <button type="button" class="btn btn-secondary CEF93">CEF 93</button>
-                <button type="button" class="btn btn-info CFP401">CFP 401</button>
-                <button type="button" class="btn btn-danger CIIE200">CIIE 200</button>
-                <button type="button" class="btn btn-secondary OTRO">OTROS</button>
-            <!-- <button type="button" class="btn btn-danger PSICO">PSICOLOGIA</button> -->
+                <button type="button" class="btn btn-dark EEE501">ESPECIAL 501</button>
+                <button type="button" class="btn btn-secondary EEEA1">ARTISTICA</button>
+                <button type="button" class="btn btn-danger EEPA-701">ADULTOS-EEPA-701</button>
+                <button type="button" class="btn btn-danger CEA702">SEC-ADULTOS-702</button>
+                <button type="button" class="btn btn-danger CEA703">SEC-ADULTOS-703</button>
+                <button type="button" class="btn btn-danger CEA704">SEC-ADULTOS-704</button>
+                <button type="button" class="btn btn-warning CENS451">SEC-ADULTOS-CENS-451</button>
+                <button type="button" class="btn btn-warning CENS452">SEC-ADULTOS-CENS-452</button>
+                <button type="button" class="btn btn-warning CENS453">SEC-ADULTOS-CENS-453</button>
+                <button type="button" class="btn btn-secondary CEF93">CEF93</button>
+                <button type="button" class="btn btn-info CFP401">FORMACION-PROFESIONAL</button>
+                <button type="button" class="btn btn-danger CIIE200">CIE</button>
+            <button type="button" class="btn btn-danger PSICO">PSICOLOGIA</button>
          </div>
 
     <hr>
@@ -1730,22 +1682,13 @@ $('.grabar').on('click', function ()
    <button type="button" class="btn btn-dark carga">CARGAR</button>
 
 <div id="carrga">
-    <div id="otrox">
-    <input type="text" name="otro_detalle" id="otro_detalle "  maxlength="604" size="60" class="inputstyle" placeholder="DESCRIBA PROCEDENCIA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
-required="">
-    </div>
 
-<input type="text" name="detalle" id="detalle "  maxlength="604" size="60" 
-class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" 
-onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
-required="">
-<input type="text" name="atendio" id="atendio" maxlength="150" size="50" class="inputstyle" 
-placeholder="ATENDIO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" 
-onfocus="javascript:this.value='';" required="">
 
+<input type="text" name="detalle" id="detalle "  maxlength="604" size="60" class="inputstyle" placeholder="ESCRIBA LO QUE INGRESA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';"
+required="">
+<input type="text" name="atendio" id="atendio" maxlength="150" size="50" class="inputstyle" placeholder="ATENDIO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
 <BR>
-    <label class="inputstyle">DERIVADO A:</label>
-    <select name="derivado" id="combo" class="inputstyle" >
+    <select name="derivado" id="combo" >
     <option>seleccione..</option>
         <option>INICIAL</option>
         <option>PRIMARIA</option>
