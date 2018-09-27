@@ -22,7 +22,7 @@ $ICEcoderUserSettings = array(
 "bannedFiles"	=> array(""),
 "bannedPaths"	=> array("/var/www/.git","/var/www/sites/all/modules","/var/www/sites/default/files"),
 "allowedIPs"	=> array("*"),
-"autoLogoutMins"	=> 0,
+"autoLogoutMins"	=> 3,
 "theme"	=> "default",
 "fontSize"	=> "13px",
 "lineWrapping"	=> false,
@@ -43,7 +43,7 @@ $ICEcoderUserSettings = array(
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "C:|wamp|www||listado|grabar.php",
+"previousFiles"		=> "C:|wamp|www||listado|index.php,C:|wamp|www||listado|grabar.php",
 "last10Files"		=> "C:|wamp|www||add|username-check.php,C:|wamp|www||add|index.html,C:|wamp|www||add|script.php,C:|wamp|www||add|alta.php,C:|wamp|www||listado|grabar2.php,C:|wamp|www||listado|grabar.php,C:|wamp|www||listado|index.php,C:|wamp|www||mesa|index.php,C:|wamp|www||mesa|access_conn.php,C:|wamp|www||mesa|grabar.php",
 "favoritePaths"		=> array()
 );

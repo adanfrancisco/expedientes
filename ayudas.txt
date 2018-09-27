@@ -1,0 +1,181 @@
+//////////////////////////////////////////////////////////////////////
+CONECTAR CON PHP DESDE Access////////////
+//////////////////////////////////////////////////////////////////////
+
+<?php
+// Se especifica la ubicación de la base de datos Access (directorio actual)
+$db = getcwd() . "\\" . 'test.mdb';
+// Se define la cadena de conexión
+$dsn = "DRIVER={Microsoft Access Driver (*.mdb)};
+DBQ=$db";
+// Se realiza la conexón con los datos especificados anteriormente
+$conn = odbc_connect( $dsn, '', '' );
+if (!$conn) { exit( "Error al conectar: " . $conn);
+}
+// Se define la consulta que va a ejecutarse
+$sql = "SELECT * FROM Tabla";
+// Se ejecuta la consulta y se guardan los resultados en el recordset rs
+$rs = odbc_exec( $conn, $sql );
+if ( !$rs ) { exit( "Error en la consulta SQL" );
+}
+// Se muestran los resultados
+while ( odbc_fetch_row($rs) ) { $resultado=odbc_result($rs,"Campo"); echo $resultado; }
+// Se cierra la conexión
+odbc_close( $conn );
+?>
+//////////////////////////////////////////////////////////////////////
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+LEER OLEDB IMAGEN DESDE Access////////////
+//////////////////////////////////////////////////////////////////////
+
+Leer imagen desde un campo OLE Object de Access con PHP
+16 diciembre, 2010 by Yannick Warnier 3
+
+Insertar  OLEe object 2
+Insertar  OLE object 1
+hex-jpeg
+Parece una tarea sencilla. Es tan fácil como hacer un query y tomar el dato, pero las cosas siempre se complican cuando se trabaja con formatos cerrados.
+
+La pruebas que he realizado han sido con un archivo Access 2007 con una tabla y un campo del tipo “OLE Object”. Luego agregamos una imagen de prueba de la siguiente manera:
+
+
+
+Click en Insert Object
+
+Seleccionamos un archivo y hacemos click en Ok
+
+Con esto ya tenemos nuestra BD access lista para ser consultada.
+
+Ahora, para conectarnos a la  BD Access con PHP usamos AdoDb usand DSN-less de la siguiente manera:
+
+require ‘adodb.inc.php';
+
+$db =&ADONewConnection(“access”);
+
+$path = ‘/tmp/mydb.mdb';
+
+$dsn=”Driver={Microsoft Access Driver {*.mdb}};Dbq=$path”;
+
+$db->connect($dsn);
+
+if ($db)  {
+
+$sql = “SELECT image from table”;
+
+$result = $db->Execute($sql);
+
+while (!$rs->EOF) {
+
+$image_data = $rs->fields[0];
+
+}
+
+}
+
+El valor de $image_data contiene el OLE Package que a su vez contiene la imagen agregada, pero el problema aquí es de leer este formato OLE package. Buscando en google encontré algunas  fuentes que dicen poder hacerlo, pero usando aspx, aunque no lo he probado, pues no quiero comprar una licencia de Visual Studio de $800, al parecer hay que buscar dentro del OLE Package unos bytes que definen un archivo de imagen en este caso buscaría los siguientes strings dependiendo el formato del archivo…
+
+ 
+
+const string BITMAP_ID_BLOCK = “BM”;
+const string JPG_ID_BLOCK = “u00FFu00D8u00FF”;
+const string PNG_ID_BLOCK = “u0089PNGrnu001an”;
+
+const string GIF_ID_BLOCK = “GIF8″;
+var adfly_id = 2490020; var adfly_advert = 'int'; var frequency_cap = 5; var frequency_delay = 5; var init_delay = 3; var popunder = true; /> const string TIFF_ID_BLOCK = “II*u0000″;
+
+ 
+
+Pero para leer este stream según esta fuente hay que convertir esta data en utf7 y luego buscar el id de JPG. Como todo esto parece raro lo que hice fue ver el código hex de algunos archivos jpeg usando un programa llamado ghex  (sudo apt-get install ghex). Al abrir diferentes imágenes veremos que se repite estos famosos bytes FFD8FFE0
+
+ 
+
+
+
+Ahora que tenemos la “llave” solamente tenemos que convertir $image_data a hex usando la función pack y luego hacer lo inverso con unpack:
+
+ 
+
+$result     = unpack(‘H*’,$image_data);
+
+$image_to_hex = $result[1];
+
+$jpg_id = ‘ffd8ffe0′;
+
+$pos = strrpos($image_to_hex, $jpg_id);
+
+if ($pos === false) {
+
+echo ‘No es posible generar archivo';}
+
+else {
+
+$image_to_hex = substr($image_to_hex, $pos,strlen($image_to_hex));
+
+header(‘Content-Type: image/jpeg’);
+
+echo $result_image = (pack(‘H*’,$image_to_hex));
+
+}
+
+Podemos guardar el resultado de $result_image en un archivo usando file_put_contents y eso es todo!
+
+//////////////////////////////////////////////////////////////////////
+XXXXXX             FIND CHECKBOX          XXXXXXXXXXX
+//////////////////////////////////////////////////////////////////////
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table id="tbl_Datos">
+    <thead>
+        <tr>
+            <th hidden></th>
+            <th>Nombre</th>
+            <th>Seleccionar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td hidden="">1</td>
+            <td>Juan</td>
+            <td><input type="radio" name="datos"></td>
+        </tr>
+        <tr>
+            <td hidden="">2</td>
+            <td>Paco</td>
+            <td><input type="radio" name="datos"></td>
+        </tr>
+        <tr>
+            <td hidden="">3</td>
+            <td>Pedro</td>
+            <td><input type="radio" name="datos"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+$(document).ready(function() {
+    $('input[type=radio]').change(function() {
+        $("#tbl_Datos").find("tr").each(function (idx, row) {
+          if (idx > 0) {
+              var cbkbox = $("td:eq(2) input:checked", row).val();
+              if(cbkbox) {
+                  var JsonData = {};
+                  JsonData.Id = $("td:eq(0)", row).text();
+                  JsonData.Nombre = $("td:eq(1)", row).text();
+                  JsonData.Seleccionar = cbkbox;
+                  alert("Selecionaste a id: " + JsonData.Id + " Nombre:"  + JsonData.Nombre);
+              }
+          }
+        });
+    });
+});
+
+
+//////////////////////////////////////////////////////////////////////
+XXXXXX             FIND CHECKBOX          XXXXXXXXXXX
+//////////////////////////////////////////////////////////////////////
+
+https://www.sitepoint.com/ajaxjquery-getjson-simple-example/

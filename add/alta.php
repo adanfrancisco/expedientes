@@ -138,7 +138,7 @@ ul li:hover p.ayuda {  display: block;  margin: 0.3em;  position: absolute;  top
 </li>
 
 <li class="botones">
-  
+
   <button class="input-submit-blue" id="alta_profe">Guardar</button>	
 </li>
 

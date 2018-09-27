@@ -18,7 +18,7 @@ $ICEcoderUserSettings = array(
 "lockedNav"		=> true,
 "tagWrapperCommand"	=> "ctrl+alt",
 "autoComplete"		=> "keypress",
-"password"		=> "",
+"password"		=> "51468b894f79f7093168c4180d3a78291b12840b10af0b9135f2",
 "bannedFiles"		=> array(),
 "bannedPaths"		=> array("/var/www/.git","/var/www/sites/all/modules","/var/www/sites/default/files"),
 "allowedIPs"		=> array("*"),
@@ -43,8 +43,8 @@ $ICEcoderUserSettings = array(
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "",
-"last10Files"		=> "",
+"previousFiles"		=> "C:|wamp|www||expedientes|edit_table_5|ajax.php,C:|wamp|www||expedientes|edit_table_5|edit.js",
+"last10Files"		=> "C:|wamp|www||expedientes|ayudas.txt,C:|wamp|www||expedientes|edit_table_5|edit.js,C:|wamp|www||expedientes|edit_table_5|ajax.php",
 "favoritePaths"		=> array()
 );
 ?>

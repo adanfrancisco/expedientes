@@ -25,7 +25,7 @@ $anterior=$anterior->format('m/d/Y');
 $sql="SELECT * FROM niveles INNER JOIN (ESCUELA INNER JOIN mesa ON ESCUELA.CLAVE = mesa.escuela) ON niveles.Id_nivel = ESCUELA.NIVEL
   where mesa.fecha >=#".$anterior."#  and niveles.Nivel='".$nivel."' order by mesa.fecha";
 
-echo $sql;
+//echo $sql;
 //$sql="SELECT * FROM mesa where mesa.fecha > #20/06/2018# and mesa.fecha < #22/06/2018#";
 
 //echo '<br>'.$sql;
@@ -37,7 +37,9 @@ echo $exporta;
     $rs = $db->consulta($sql);
     echo '<br/>';
     ?>
-    <table border="1" ALIGN="CENTER">
+
+    <table border ="1" ALIGN="CENTER">
+
         <th>Fecha____Hora</th> <th>CLAVE</th><th>ESCUELA</th><th>MENSAJE</th><th>RECIBIO</th><th>DERIVADO</th>
     <?php
     while ( odbc_fetch_row($rs) )

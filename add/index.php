@@ -3,9 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>MESA-Alta de Personas</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="js/edit.js"></script>
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+		<script src="js/examples.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function()
@@ -13,16 +16,23 @@ $(document).ready(function()
    
 $("#btn_alta").click(function() 
 {
+    //mensaje();
     ingresar_nuevo_docente();
-    console.log("altaaa");
+    console.log("diste click al boton AGREGAR");
     //location.reload();
 });
 
 $("#btn_editar").click(function() 
     {
-        console.log("editar");
-        //ingresar();
-        //location.reload();
+        //levanto el valor del radio en caso que haya mas de una coincidencia
+        alert($('input:radio[name=dni]:checked').val()+'\nindex 25');
+    var dni=$('input:radio[name=dni]:checked').val()
+        //envio la consulta
+        console.log("editar index.php 28");
+
+
+        editar_me(dni);
+
     });
 
 $("#btn_usar").click(function() 
@@ -46,7 +56,7 @@ $('#btn_alta').hide();
             success : function(data)
                 { 
                     $("#result").html(data);
-                     //console.log('encontre');
+                     console.log('encontre');
                  }
             });
            // return false;
@@ -62,10 +72,19 @@ $('#btn_alta').hide();
     <form id="reg-form" action="" method="post" autocomplete="off">
         <fieldset>
             <div>
-                <input type="text" name="name" id="name" maxlength="150" size="20" class="inputstyle" placeholder="APELLIDO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" onfocus="javascript:this.value='';" required="">
+            <label for="name">APELLIDO:</label>
+                <input type="text" name="name" id="name" maxlength="150" size="20" 
+                class="inputstyle" placeholder="APELLIDO" 
+                style="text-transform:uppercase;" 
+                onkeyup="javascript:this.value=this.value.toUpperCase();" 
+                onfocus="javascript:this.value='';" 
+                required=""
+                >
+
                 <span class="retorno" id="result"></span>
             </div>
             <div id="botones">
+
                 <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
                 <button type="button" id="btn_editar" class="btn btn-secondary editar">EDITAR</button>
             </div>
@@ -75,6 +94,8 @@ $('#btn_alta').hide();
 
 </div>
 <?php
-			include ('funciones_js.php');?>
+            include ('js/funciones_js.php');
+            
+            ?>
 </body>
 </html>
