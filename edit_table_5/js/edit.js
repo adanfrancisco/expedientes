@@ -79,13 +79,16 @@ function displayForm( cell ) {
 		prevContent = cell.text();//Guardo el valor previo
 		//form action prevents page refresh when enter pressed.  hidden fields pass primary key and column name
 
-		var tipo = "text";
+		var tipo = "text";clase="";
 		
-		if(campo == 'fech_nac')
-			tipo = "date";
-		
+		if(campo == 'fech_nac')	{tipo = "date";clase="datex";}
+		if(campo == 'cuil')	{tipo = "text";clase="cuilt";}
+		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";}
+		if(campo == 'celular')	{tipo = "text";clase="ttelefono";}
+
+
 		form = '<form action="javascript: this.preventDefault">' +
-				'<input  type="' + tipo + '" size="4" name="newValue" value="'+
+				'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
 			   prevContent+'" /><input type="hidden" name="id" value="'+id+'" />'+
 			   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
 			   //alert($(this).closest('td').attr('name'));

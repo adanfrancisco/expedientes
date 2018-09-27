@@ -8,6 +8,28 @@
 		<script src="js/examples.js"></script>
 
 	<meta charset="utf-8">
+
+
+
+
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!-- 		<script src="js/examples.js"></script> -->
+		<script>
+			$(document).ready(function () {
+			$('#entradafilter').keyup(function () {
+				var rex = new RegExp($(this).val(), 'i');
+					$('.contenidobusqueda tr').hide();
+					$('.contenidobusqueda tr').filter(function () {
+						return rex.test($(this).text());
+					}).show();
+
+					})
+
+			});
+		</script>
+
     	<title>Editable Tables with jQuery</title>
     </head>
     <body>
@@ -127,9 +149,9 @@ echo '<td class="'.odbc_result($rs,"email").'" name="'.odbc_field_name($rs,"8").
 $fecha = '';
 if(odbc_result($rs,"fech_nac") != '')
 $fecha=odbc_result($rs,"fech_nac");
-	//$fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'Y-m-d');
+	$fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'd-m-Y');
 
-echo '<td class="'.$fecha.'" name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
+echo '<td class="'.$fecha.' datex" name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
 
 echo '</tr>';
 						}	
