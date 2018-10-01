@@ -43,8 +43,8 @@ $ICEcoderUserSettings = array(
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "C:|wamp|www||expedientes|edit_table_5|ajax.php,C:|wamp|www||expedientes|edit_table_5|edit.js",
-"last10Files"		=> "C:|wamp|www||expedientes|ayudas.txt,C:|wamp|www||expedientes|edit_table_5|edit.js,C:|wamp|www||expedientes|edit_table_5|ajax.php",
+"previousFiles"		=> "C:|wamp|www||busca|busca2.php,C:|wamp|www||busca|index.php",
+"last10Files"		=> "C:|wamp|www||busca|index.php,C:|wamp|www||busca|busca2.php,C:|wamp|www||expedientes|ayudas.txt,C:|wamp|www||expedientes|edit_table_5|edit.js,C:|wamp|www||expedientes|edit_table_5|ajax.php",
 "favoritePaths"		=> array()
 );
 ?>

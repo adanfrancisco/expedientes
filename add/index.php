@@ -46,7 +46,9 @@ $('#botones').hide();
 $('#btn_alta').hide();
 
     $("#name").keyup(function()
-        {  var name = $(this).val();
+        {
+            alert('si');
+        var name = $(this).val();
         if(name.length > 2)
         {   $("#result").html('buscando...');
         $.ajax({

@@ -1,27 +1,55 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN
-    http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
-    <head>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>MESA-Alta de Personas</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="js/edit.js"></script>
 		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
 		<script src="js/examples.js"></script>
 
-	<meta charset="utf-8">
-   </head>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   
+$("#btn_alta").click(function() 
+{
+    //mensaje();
+    ingresar_nuevo_docente();
+    console.log("diste click al boton AGREGAR");
+    //location.reload();
+});
 
-   <script>
-////BUSQUEDA AJAX
+$("#btn_editar").click(function() 
+    {
+        //levanto el valor del radio en caso que haya mas de una coincidencia
+        alert($('input:radio[name=dni]:checked').val()+'\nindex 25');
+    var dni=$('input:radio[name=dni]:checked').val()
+        //envio la consulta
+        console.log("editar index.php 28");
 
-       $("#busqueda").keyup(function()
-        {  alert('si');
+
+        editar_me(dni);
+
+    });
+
+$("#btn_usar").click(function() 
+    {
+        console.log("usar");
+        //ingresar();
+        //location.reload();
+    });
+
+$('#botones').hide();
+$('#btn_alta').hide();
+
+    $("#name").keyup(function()
+        {
         var name = $(this).val();
-        console.log(name);
-        if(name.length >10)
-        {  
-            alert('si');
-        $("#resultadoBusqueda").html('buscando...');
+        if(name.length == 15)
+        {   $("#result").html('buscando...');
         $.ajax({
             type : 'POST',
             url  : 'chequeo.php',
@@ -35,19 +63,41 @@
            // return false;
         }
 
-});
-   </script>
-    <body>
+});});
+</script>
+</head>
 
+<body>
+<div id="cuerpo">
 
-<form accept-charset="utf-8" method="POST">
-<label>CUIT</label>
-<input type="text"
- name="busqueda" id="busqueda"  class="cuilt" value="" placeholder="" maxlength="14" autocomplete="off"  Autofocus />
-<!--  <input type="text"
- name="busqueda" id="busqueda"  class="cuilt" value="" placeholder="" maxlength="14" autocomplete="off" onKeyUp="buscar();" 
- style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" Autofocus /> -->
-</form>
-<div id="resultadoBusqueda"></div>
+    <form id="reg-form" action="" method="post" autocomplete="off">
+        <fieldset>
+            <div>
+            <label for="name">C.U.I.T./C.U.I.L.:</label>
+                <input type="text" name="name" id="name" maxlength="150" size="20" 
+                class="inputstyle cuilt" placeholder="xx-xx.xxx.xxx-x" 
+                style="text-transform:uppercase;" 
+                onkeyup="javascript:this.value=this.value.toUpperCase();" 
+                onfocus="javascript:this.value='';" 
+                required=""
+                autofocus
+                >
+
+                <span class="retorno" id="result"></span>
+            </div>
+            <div id="botones">
+
+                <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
+                <button type="button" id="btn_editar" class="btn btn-secondary editar">EDITAR</button>
+            </div>
+            <button type="button" id="btn_alta" class="btn btn-primary alta">AGREGAR</button>
+        </fieldset>
+    </form>
+
+</div>
+<?php
+            include ('js/funciones_js.php');
+            
+            ?>
 </body>
-    </html>
+</html>

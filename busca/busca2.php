@@ -2,7 +2,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
     <head>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="js/edit.js"></script>
 		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
 		<script src="js/examples.js"></script>
@@ -39,7 +40,7 @@ $rs = $db->consulta($sql);
 <br/>
 
 
-<table id="tabla" border ="1">
+   	<table id="tabla" border ="1">
     		<thead>
 			<tr>
 				<th class='
@@ -116,14 +117,23 @@ $rs = $db->consulta($sql);
 						echo odbc_field_name($rs,"8");
 					?>
 				</th>
-
+				<th class='
+					<?php
+						echo odbc_field_name($rs,"9");
+					?>
+				'>
+					<?php
+						echo odbc_field_name($rs,"9");
+					?>
+				</th>
 			</tr>
 
     		</thead>
-            <tbody>
-<?php
-
-while ( odbc_fetch_row($rs) )
+    		<tbody>
+    			<?php 
+    				/* $sql = 'SELECT * FROM persona'; */
+    				/* $rs = $db->consulta($sql); */
+					while ( odbc_fetch_row($rs) ){
 echo '<tr class="'.odbc_result($rs,"cuil").'">';
 echo '<td class="'.odbc_result($rs,"cuil").' cuilt"name="'.odbc_field_name($rs,"1").'">'.odbc_result($rs,"cuil").'</td>';
 echo '<td class="'.odbc_result($rs,"apellido").'" name="'.odbc_field_name($rs,"2").'">'.odbc_result($rs,"apellido").'</td>';
@@ -131,15 +141,23 @@ echo '<td class="'.odbc_result($rs,"nombre").'" name="'.odbc_field_name($rs,"3")
 
 ///////////////////////////////COMBO EN CELDA /////////////////////////////////////
 
-echo '<td class="'.odbc_result($rs,"localidad").'" name="'.odbc_field_name($rs,"4").'">'.odbc_result($rs,"localidad_nombre").'</td>';
+echo '<td class="'.odbc_result($rs,"localidad").'" name="'.odbc_field_name($rs,"4").'" data-id="'.odbc_result($rs,"localidad").'">'.odbc_result($rs,"localidad_nombre").'</td>';
 echo '<td class="'.odbc_result($rs,"domicilio").'" name="'.odbc_field_name($rs,"5").'">'.odbc_result($rs,"domicilio").'</td>';
 echo '<td class="'.odbc_result($rs,"telefono").' ttelefono" name="'.odbc_field_name($rs,"6").'">'.odbc_result($rs,"telefono").'</td>';
 echo '<td class="'.odbc_result($rs,"celular").' ttelefono" name="'.odbc_field_name($rs,"7").'">'.odbc_result($rs,"celular").'</td>';
 echo '<td class="'.odbc_result($rs,"email").'" name="'.odbc_field_name($rs,"8").'">'.odbc_result($rs,"email").'</td>';
 
+$fecha = '';
+if(odbc_result($rs,"fech_nac") != '')
+$fecha=odbc_result($rs,"fech_nac");
+	$fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'd-m-Y');
+
+echo '<td class="'.$fecha.' datex" name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
+
 echo '</tr>';
-?>
-</tbody>
+						}	
+				?>
+    		</tbody>
     	</table>
 <script>
 mostrar();
