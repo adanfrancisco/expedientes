@@ -16,23 +16,12 @@
 <?php
 
 /*
-// Page créé par Shepard [Fabian Pijcke] <Shepard8@laposte.net>
-// Arno Esterhuizen <arno.esterhuizen@gmail.com>
-// et Romain Bourdon <rromain@romainbourdon.com>
-// et Hervé Leclerc <herve.leclerc@alterway.fr>
-//  
-// Mise a jour par Herve Leclerc herve.leclerc@alterway.fr
-// Ici par Mark James <http://www.famfamfam.com/lab/icons/silk/>
 
 
-
-//chemin jusqu'au fichier de conf de WampServer
 $wampConfFile = '../wampmanager.conf';
-
-//chemin jusqu'aux fichiers alias
 $aliasDir = '../alias/';
 
-//chemin jusqu'aux fichiers vhosts
+
 $vhostsDir = '../vhosts/';
 
 // on charge le fichier de conf locale

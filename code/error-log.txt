@@ -3303,3 +3303,195 @@
 [03-Sep-2018 16:14:34 UTC] PHP Stack trace:
 [03-Sep-2018 16:14:34 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
 [03-Sep-2018 16:14:34 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:31:48 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:31:48 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:48 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[01-Oct-2018 11:31:48 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:52 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:31:52 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:52 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[01-Oct-2018 11:31:52 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:52 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for C:/wamp/www//busca/busca.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[01-Oct-2018 11:31:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/.versions-index,C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03/.versions-index) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/expedientes/ayudas.txt (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03_expedientes/ayudas.txt (1)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/expedientes/edit_table_5/edit.js (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03_expedientes_edit_table_5/edit.js (1)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   4. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   5. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/expedientes/edit_table_5/edit.js (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03_expedientes_edit_table_5/edit.js (2)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   4. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   5. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/expedientes/edit_table_5/edit.js (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03_expedientes_edit_table_5/edit.js (3)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   4. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   5. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-09-03/expedientes/edit_table_5/edit.js (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-09-03_expedientes_edit_table_5/edit.js (4)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[01-Oct-2018 11:31:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[01-Oct-2018 11:31:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   4. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[01-Oct-2018 11:31:55 UTC] PHP   5. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[01-Oct-2018 11:31:59 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:31:59 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:59 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:31:59 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:59 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:31:59 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:31:59 UTC] PHP Stack trace:
+[01-Oct-2018 11:31:59 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:31:59 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:32:08 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:32:08 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:08 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[01-Oct-2018 11:32:08 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:08 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:32:11 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:11 UTC] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for C:/wamp/www//busca/index.php in C:\wamp\www\code\lib\file-control-xhr.php on line 981
+[01-Oct-2018 11:32:11 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:11 UTC] PHP   2. filesize() C:\wamp\www\code\lib\file-control-xhr.php:981
+[01-Oct-2018 11:32:11 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:32:11 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:11 UTC] PHP Notice:  Undefined variable: windowsNewLines in C:\wamp\www\code\lib\file-control-xhr.php on line 337
+[01-Oct-2018 11:32:11 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:11 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:32:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 139
+[01-Oct-2018 11:32:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:13 UTC] PHP   2. stitchChanges() C:\wamp\www\code\lib\file-control-xhr.php:317
+[01-Oct-2018 11:32:13 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:32:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:13 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:32:13 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:32:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:32:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:32:13 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:34:20 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:34:20 UTC] PHP Stack trace:
+[01-Oct-2018 11:34:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:34:20 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:34:20 UTC] PHP Stack trace:
+[01-Oct-2018 11:34:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:34:20 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:34:20 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:34:20 UTC] PHP Stack trace:
+[01-Oct-2018 11:34:20 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:34:20 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:36:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:36:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:36:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:36:58 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:36:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:36:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:36:58 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:36:58 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:36:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:36:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:36:58 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:37:31 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:37:31 UTC] PHP Stack trace:
+[01-Oct-2018 11:37:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:37:31 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:37:31 UTC] PHP Stack trace:
+[01-Oct-2018 11:37:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:37:31 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:37:31 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:37:31 UTC] PHP Stack trace:
+[01-Oct-2018 11:37:31 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:37:31 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:38:28 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:38:28 UTC] PHP Stack trace:
+[01-Oct-2018 11:38:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:38:28 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:38:28 UTC] PHP Stack trace:
+[01-Oct-2018 11:38:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:38:28 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:38:28 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:38:28 UTC] PHP Stack trace:
+[01-Oct-2018 11:38:28 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:38:28 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:39:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:39:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:39:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:39:55 UTC] PHP Notice:  Undefined variable: filemtime in C:\wamp\www\code\lib\file-control-xhr.php on line 993
+[01-Oct-2018 11:39:55 UTC] PHP Stack trace:
+[01-Oct-2018 11:39:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:40:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:40:42 UTC] PHP Stack trace:
+[01-Oct-2018 11:40:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:40:42 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:40:42 UTC] PHP Stack trace:
+[01-Oct-2018 11:40:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:40:42 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:40:42 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:40:42 UTC] PHP Stack trace:
+[01-Oct-2018 11:40:42 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:40:42 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:41:13 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:41:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:41:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:41:13 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:41:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:41:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:41:13 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:41:13 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:41:13 UTC] PHP Stack trace:
+[01-Oct-2018 11:41:13 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:41:13 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[01-Oct-2018 11:42:58 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[01-Oct-2018 11:42:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:42:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:42:58 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[01-Oct-2018 11:42:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:42:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:42:58 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[01-Oct-2018 11:42:58 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[01-Oct-2018 11:42:58 UTC] PHP Stack trace:
+[01-Oct-2018 11:42:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[01-Oct-2018 11:42:58 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
