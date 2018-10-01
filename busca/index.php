@@ -22,7 +22,7 @@ $("#btn_alta").click(function()
     //location.reload();
 });
 
-$("#btn_editar").click(function() 
+/* $("#btn_editar").click(function() 
     {
         //levanto el valor del radio en caso que haya mas de una coincidencia
         alert($('input:radio[name=dni]:checked').val()+'\nindex 25');
@@ -33,7 +33,7 @@ $("#btn_editar").click(function()
 
         editar_me(dni);
 
-    });
+    }); */
 
 $("#btn_usar").click(function() 
     {
@@ -76,11 +76,7 @@ $('#btn_alta').hide();
             <label for="name">C.U.I.T./C.U.I.L.:</label>
                 <input type="text" name="name" id="name" maxlength="150" size="20" 
                 class="inputstyle cuilt" placeholder="xx-xx.xxx.xxx-x" 
-                style="text-transform:uppercase;" 
-                onkeyup="javascript:this.value=this.value.toUpperCase();" 
-                onfocus="javascript:this.value='';" 
                 required=""
-                autofocus
                 >
 
                 <span class="retorno" id="result"></span>
@@ -88,7 +84,7 @@ $('#btn_alta').hide();
             <div id="botones">
 
                 <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
-                <button type="button" id="btn_editar" class="btn btn-secondary editar">EDITAR</button>
+<!--                 <button type="button" id="btn_editar" class="btn btn-secondary editar">EDITAR</button> -->
             </div>
             <button type="button" id="btn_alta" class="btn btn-primary alta">AGREGAR</button>
         </fieldset>

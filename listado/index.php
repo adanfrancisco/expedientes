@@ -10,7 +10,7 @@ date_default_timezone_set('America/Buenos_Aires');
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
-<!-- 		<script src="js/examples.js"></script> -->
+
 		<script>
 			$(document).ready(function () {
 			$('#entradafilter').keyup(function () {

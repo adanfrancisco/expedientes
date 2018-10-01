@@ -1,26 +1,3 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>MESA-Alta de Personas</title>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-		<!-- <script type="text/javascript" src="js/edit.js"></script> -->
-		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
-		<script src="js/examples.js"></script>
-
-<style type="text/css">
-/* Formatear el formulario a dos columnas */
-body {
-  font: 13px/1.6 Tahoma, sans-serif;
-  background: #F5F5F5;
-}
-table{
-    background:#ffffff;
-    }
-</style>
-
-<script type="text/javascript" src="js/jquery.mask.min.js"></script>
-<script src="js/examples.js"></script>
-
 <?php
 
     include "../mesa/adodb5/adodb.inc.php";
@@ -32,27 +9,26 @@ table{
 
 if($_POST)
     {
-$name = strip_tags($_POST['name']);
+$name = strip_tags($_POST['name1']);
 
 
-$sql="SELECT COUNT(cuil) as counter FROM persona WHERE cuil='".$name."' and activo=2";
+$sql="SELECT COUNT(apellido) as counter FROM persona WHERE apellido='".$name."' and activo=2";
 // echo '<BR>'.$sql;
     $stmt=$db->consulta($sql);
     $arr = odbc_fetch_array($stmt);
- //    echo '<BR>hay: '.$arr['counter'];
+    echo 'hay: '.$arr['counter'];
     $count=$arr['counter'];
 
 //    $count=$stmt->rowCount();
 
    if($count>0)
    {
-/*      echo    '<BR>
-             Ya existe';  */
-$sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad WHERE cuil like '".$name."' and activo=2";
+/*   Ya existe';  */
+$sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad WHERE apellido like '".$name."' and activo=2";
     $rs = $db->consulta($sql);
-    echo '<br/>';
-echo '    <table border="1">
-<th>C.U.I.T.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th><th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th>';
+
+echo '    <table border=1 style="border-collapse:collapse";>
+<th>C.U.I.T.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th><th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th><th>Fecha</th>';
     while ( odbc_fetch_row($rs) )
 echo '
 
@@ -65,8 +41,16 @@ echo '
     echo '<td> '.odbc_result($rs,"domicilio").' </td>';
     echo '<td class="phone_with_ddd"> '.odbc_result($rs,"telefono").' </td>
     <td class="phone_with_ddd"> '.odbc_result($rs,"celular").' </td>
-    <td> '.odbc_result($rs,"email").' </td>
-    </tr>';
+    <td> '.odbc_result($rs,"email").' </td>';
+    $fecha = '';
+    if(odbc_result($rs,"fech_nac") != '')
+    $fecha=odbc_result($rs,"fech_nac");
+        $fecha = date_format(date_create(odbc_result($rs,"fech_nac")), 'd-m-Y');
+
+    echo '<td class="'.$fecha.' datex" name="'.odbc_field_name($rs,"9").'">'. $fecha .'</td>';
+
+    echo '</tr>';
+
 
 echo '</table>';
 echo '
@@ -81,7 +65,8 @@ echo '
 .'<input type="hidden" id="xemail" name="xemail" value="'.odbc_result($rs,"email").'">'
 ;
 ?>
-<script>mostrar();</script>
+<button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
+<!-- <script>mostrar();</script> -->
 <?php
 
    }
@@ -90,8 +75,8 @@ echo '
     ?>
 
     <script>
-        console.log('Hay q dar el alta porque no existe');
-        mostrar_alta();
+        //console.log('Hay q dar el alta porque no existe');
+/*         mostrar_alta(); */
 
     </script>
 
