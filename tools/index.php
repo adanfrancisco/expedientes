@@ -7,23 +7,25 @@
 <meta name="description" content="Sistema Integral - Jefatura Distrital"/>
 <meta name="author" content="Adan Aloe">
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/styles.css">
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+<script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 <script src="js/examples.js"></script>
+<script src="js/edit.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
  <script language="javascript">
 $(document).ready(function(){
     $("#busca").hide();
-    $("#busca1").hide();
+    $("#tabla").hide();
 //HABILITA MENU ADMIN RECURSOS
     $("#recursos").on('click', function () {
        $("#titulo").html("ADMINISTRAR RECURSOS");
+       $("#tabla").show();
        $("#busca").show();
-       $("#busca1").show();
+       $("#name").val('');
     });
 
 //BUSCADOR CUIL
@@ -31,7 +33,9 @@ $(document).ready(function(){
         {
         var name = $(this).val();
         if(name.length == 15)
-        {   $("#result").html('buscando...');
+        { 
+            $("#tabla").hide();
+            $("#result").html('buscando...');
         $.ajax({
             type : 'POST',
             url  : 'chequeo.php',
@@ -43,31 +47,16 @@ $(document).ready(function(){
                  }
             });
            // return false;
-        }
-
-});
-
-//BUSCADOR APELLIDO
-$("#name1").keyup(function()
-        {
+        }else{
             
-        var name = $(this).val();
-        if(name.length >2)
-        {   $("#result").html('buscando...');
-        $.ajax({
-            type : 'POST',
-            url  : 'chequeo1.php',
-            data : $(this).serialize(),
-            success : function(data)
-                { 
-                    $("#result").html(data);
-/*                      console.log('encontre'); */
-                 }
-            });
-           // return false;
+             alert('debe seleccionar desde la tabla');
+            //$("#busca").hide(); 
+            $("#tabla").show();
         }
 
 });
+
+
 /*     $("#nivel").on('change', function () {
         $("#nivel option:selected").each(function () {
             elegido=$(this).val();
@@ -76,9 +65,23 @@ $("#name1").keyup(function()
             });			
         });
    }); */ 
+//BUSCA EN TABLA
+
+
+    $('#entradafilter').keyup(function () {
+        var rex = new RegExp($(this).val(), 'i');
+            $('.contenidobusqueda tr').hide();
+            $('.contenidobusqueda tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+
+            })
+
 
 });
 </script>
+
+
 </head>
 
 <body>
@@ -112,6 +115,8 @@ $("#name1").keyup(function()
 
             <div class="row">
                 <div id="content" class="col-lg-12">
+                 
+
                     <div id="busca">
                             <label for="name">C.U.I.T./C.U.I.L.:</label>
                             <input type="text" name="name" id="name" maxlength="150" size="20" 
@@ -119,15 +124,20 @@ $("#name1").keyup(function()
                             required=""
                             >
                     </div>
-                    <div id="busca1">
-                            <label for="name1">APELLIDO</label>
-                            <input type="text" name="name1" id="name1" maxlength="150" size="20" 
-                            class="inputstyle " placeholder="APELLIDO" 
-                            style="text-transform:uppercase" 
-                            onkeyup="javascript:this.value=this.value.toUpperCase()";
-                            required=""
-                            >
+<!-- AGREGAR DE DATOS-->
+    <table>
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>
+<!-- FIN AGREGAR DE DATOS-->
+                    <div id="tabla">
+                    <?php
+                        require('table.php')
+                    ?>
                     </div>
+
                 </div>
             </div>
         </div>

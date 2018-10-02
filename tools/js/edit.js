@@ -80,59 +80,59 @@ function displayForm( cell ) {
 		//form action prevents page refresh when enter pressed.  hidden fields pass primary key and column name
 
 		var tipo = "text";clase="";
-		if(campo == 'email'){
-			form = '<form action="javascript: this.preventDefault">' +
-			'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
-		   prevContent+'" /><input type="hidden" name="id" value="'+id+'" />'+
-		   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
-
-		}else{
-		if(campo == 'fech_nac')	{tipo = "date";clase="datex";}
-		if(campo == 'cuil')	{tipo = "text";clase="cuilt";}
-		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";}
-		if(campo == 'celular')	{tipo = "text";clase="ttelefono";}
-
-
-		form = '<form action="javascript: this.preventDefault">' +
+if(campo=='cuil'){
+	}else{
+			if(campo == 'email'){
+				form = '<form action="javascript: this.preventDefault">' +
 				'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
-			   prevContent+'" style="text-transform:uppercase" onkeyup="javascript:this.value=this.value.toUpperCase()"; /><input type="hidden" name="id" value="'+id+'" />'+
-			   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
-			   //alert($(this).closest('td').attr('name'));
-			   //style="text-transform:uppercase;" 
-				//onkeyup="javascript:this.value=this.value.toUpperCase();
-			}
-//MUESTRO LOS VALORES PARA SABER CON QUE TRABAJO
-console.log( 
-	'Fila=' + row +' columna:'+col+  
-	' \nID='+id +' VALOR= '+column + '  CAMPO:'+campo+'\nAncho:'+ cellWidth+
-	'\nValorPrevio='+prevContent
-);			   
+			prevContent+'" /><input type="hidden" name="id" value="'+id+'" />'+
+			'<input type="hidden"  name="column" value="'+campo+'" /></form>';
+
+			}else{
+				if(campo == 'fech_nac')	{tipo = "date";clase="datex";}
+				/* if(campo=='cuil'){tipo="text";clase="cuilt";exit;} */
+				if(campo == 'telefono')	{tipo = "text";clase="ttelefono";}
+				if(campo == 'celular')	{tipo = "text";clase="ttelefono";}
+		
+
+				form = '<form action="javascript: this.preventDefault">' +
+						'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
+					prevContent+'" style="text-transform:uppercase" onkeyup="javascript:this.value=this.value.toUpperCase()"; /><input type="hidden" name="id" value="'+id+'" />'+
+					'<input type="hidden"  name="column" value="'+campo+'" /></form>';
+					//alert($(this).closest('td').attr('name'));
+					//style="text-transform:uppercase;" 
+						//onkeyup="javascript:this.value=this.value.toUpperCase();
+					}
+
+		//MUESTRO LOS VALORES PARA SABER CON QUE TRABAJO
+		console.log( 
+			'Fila=' + row +' columna:'+col+  
+			' \nID='+id +' VALOR= '+column + '  CAMPO:'+campo+'\nAncho:'+ cellWidth+
+			'\nValorPrevio='+prevContent
+		);			   
 
 
-	//insert form into td and change focus to input field, set width
-	cell.html(form).find('input[type=text]')
-		.focus()
-		.css('width',cellWidth);
+			//insert form into td and change focus to input field, set width
+			cell.html(form).find('input[type=text]')
+				.focus()
+				.css('width',cellWidth);
 
-	//disable listener on individual cell once clicked
-	cell.on('click', function(){return false});
+			//disable listener on individual cell once clicked
+			cell.on('click', function(){return false});
 
-	//on keypress within td
-	cell.on('keydown',function(e) {
-		if (e.keyCode == 13) {//13 == enter
-			//console.log('presiono enter!!');
+			//on keypress within td
+			cell.on('keydown',function(e) {
+				if (e.keyCode == 13) {
+					changeField(cell, prevContent);
+				} else if (e.keyCode == 27) {
+					cell.text(prevContent);
+					cell.off('click'); 
+				}
+			});
 
-			changeField(cell, prevContent);//update field
-		} else if (e.keyCode == 27) {//27 == escape
-			//console.log('Cancelo!!');
-
-			cell.text(prevContent);//revert to original value
-			cell.off('click'); //reactivate editing
 		}
-	});
-
-}}
-
+	}//fin localidad
+}//fin if
 function changeField( cell, prevContent ) {
 	var campo=cell.closest('td').attr('name');
 	var url = 'ajax.php?edit&',//relative path to PHP processing script
