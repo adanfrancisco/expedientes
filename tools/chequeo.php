@@ -66,7 +66,7 @@ echo '
 .'<input type="hidden" id="xemail" name="xemail" value="'.odbc_result($rs,"email").'">'
 ;
 ?>
-<button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
+<!-- <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button> -->
 <!-- <script>mostrar();</script> -->
 
 <?php

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplos Bitácora Web - Cargar un select dinámicamente con JQUERY</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="http://bitacoraweb.info/wp-content/uploads/2015/08/favicon-bitacora.jpg">
+        <script type="text/javascript" src="jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Cargar un select dinámicamente con JQUERY</h1>
+        <p>Ver artículo completo en: <a href="http://bitacoraweb.info/como-cargar-dinamicamente-un-select-con-jquery/">http://bitacoraweb.info/como-cargar-dinamicamente-un-select-con-jquery/</a></p>
+        <div class="selector-pais">
+            Elige un país
+            <select></select>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $.ajax({
+                            type: "POST",
+                            url: "getPaises.php",
+                            success: function(response)
+                            {
+                                $('.selector-pais select').html(response).fadeIn();
+                            }
+                    });
+
+                });
+            </script>
+        </div>
+        <hr>
+        <div class="sin-json">
+            <h4>Este es un ejemplo sencillo sin JSON</h4>
+            Regiones:
+            <select></select>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".selector-pais select").change(function() {
+                        var form_data = {
+                                is_ajax: 1,
+                                pais: +$(".selector-pais select").val()
+                        };
+                        $.ajax({
+                                type: "POST",
+                                url: "getProvincias.php",
+                                data: form_data,
+                                success: function(response)
+                                {
+                                    $('.sin-json select').html(response).fadeIn();
+                                }
+                        });
+                    });
+
+                });
+            </script>
+        </div>
+        <hr>
+        <div class="con-json">
+            <h4>Este es un ejemplo con JSON</h4>
+            Regiones:
+            <select></select>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".selector-pais select").change(function() {
+                        $(".con-json select").empty();
+                        $.getJSON('getProvinciasJson.php?pais='+$(".selector-pais select").val(),function(data){
+                            $.each(data, function(id,value){
+                                $(".con-json select").append('<option value="'+id+'">'+value+'</option>');
+                            });
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

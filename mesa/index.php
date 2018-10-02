@@ -1540,7 +1540,11 @@ $('input:text[name=detalle]').val("");
 })
                
 $("#combo").change(function () {$("#combo option:selected").each( function () { combo=$(this).val();});});
-               
+
+
+
+
+
 $('.grabar').on('click', function () 
     {
         var quien=$('input:text[name=otro_detalle]').val();
@@ -1607,6 +1611,9 @@ $('.grabar').on('click', function ()
     //location.reload();
 
    /*  }); */
+
+
+   
 
 });
 

@@ -164,24 +164,6 @@ function changeField( cell, prevContent ) {
 		}
 	});
 
-
-/* //send ajax request
- 	$.getJSON(url+input, function(data) {//data argument is used to retrieve response from processing script
-console.log('envio ajax');
-
-	//On success, update cell to new value
-		if (data.success){
-			cell.html(data.value);
-			console.log('fue exitoso');
-		}else {
-			console.log('algo fallo');
-			//On failure, revert to original value and alert
-			cell.html(prevContent);
-		}
-
-	}); */
-
-	//remove click handler to allow tbody handler to make field editable again
 	cell.off('click');
 
 }
