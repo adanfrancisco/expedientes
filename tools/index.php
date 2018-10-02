@@ -24,8 +24,8 @@ $(document).ready(function(){
     $("#recursos").on('click', function () {
        $("#titulo").html("ADMINISTRAR RECURSOS");
        $("#tabla").show();
-       $("#busca").show();
        $("#name").val('');
+       $("#result").html('');
     });
 
 //BUSCADOR CUIL
@@ -49,7 +49,7 @@ $(document).ready(function(){
            // return false;
         }else{
             
-             alert('debe seleccionar desde la tabla');
+            // alert('debe seleccionar desde la tabla');
             //$("#busca").hide(); 
             $("#tabla").show();
         }
@@ -77,7 +77,11 @@ $(document).ready(function(){
 
             })
 
-
+    $("#area_tabla table tr td").click(function() {
+        var celda = $(this);
+        ///alert(celda.html());
+        $("#busca").show();
+      });
 });
 </script>
 
@@ -102,6 +106,7 @@ $(document).ready(function(){
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" id="recursos" href="#">Gestion de Recursos</a>
+            <a class="nav-item nav-link" id="recursos" href="#">Nuevo</a>
         </div>
     </div>
 

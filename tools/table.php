@@ -6,7 +6,7 @@
 			$rs = $db->consulta($sql);
 		?>
 		
-<div class="input-group"> <span class="input-group-addon">Filtrado</span>
+<div class="input-group"> <span class="input-group-addon">BUSCAR</span>
     <input id="entradafilter" type="text" class="form-control">
 </div>
 

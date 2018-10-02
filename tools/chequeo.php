@@ -27,7 +27,7 @@ $sql="SELECT COUNT(cuil) as counter FROM persona WHERE cuil='".$name."' and acti
              Ya existe';  */
 $sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad WHERE cuil like '".$name."' and activo=2";
     $rs = $db->consulta($sql);
-    echo '<br/>';
+
 echo '<table border=1 style="border-collapse:collapse";>
 <th>C.U.I.T.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th>
 <th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th><th>FECHA</th>';

@@ -81,6 +81,13 @@ function displayForm( cell ) {
 
 		var tipo = "text";clase="";
 if(campo=='cuil'){
+	$("#tabla table tr td").click(function() {
+		var celda = $(this);
+		$("#name").val(celda.html());
+		$("#busca").show();
+		$("#name").focus();
+        //alert(celda.html());
+      });
 	}else{
 			if(campo == 'email'){
 				form = '<form action="javascript: this.preventDefault">' +
