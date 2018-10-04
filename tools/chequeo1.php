@@ -9,35 +9,32 @@
 
 if($_POST)
     {
-$name = strip_tags($_POST['name']);
+$name = strip_tags($_POST['name1']);
 
 
-$sql="SELECT COUNT(cuil) as counter FROM persona WHERE cuil='".$name."' and activo=2";
- //echo '<BR>'.$sql;
+$sql="SELECT COUNT(apellido) as counter FROM persona WHERE apellido='".$name."' and activo=2";
+// echo '<BR>'.$sql;
     $stmt=$db->consulta($sql);
     $arr = odbc_fetch_array($stmt);
-    //echo '<BR>hay: '.$arr['counter'];
+    echo 'hay: '.$arr['counter'];
     $count=$arr['counter'];
 
 //    $count=$stmt->rowCount();
 
    if($count>0)
    {
-/*      echo    '<BR>
-             Ya existe';  */
-$sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad 
-WHERE cuil like '".$name."' and activo=2";
+/*   Ya existe';  */
+$sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad WHERE apellido like '".$name."' and activo=2";
     $rs = $db->consulta($sql);
 
-echo '<table border=1 style="border-collapse:collapse";>
-<th>D.N.I.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th>
-<th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th><th>FECHA</th>';
+echo '    <table border=1 style="border-collapse:collapse";>
+<th>C.U.I.T.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th><th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th><th>Fecha</th>';
     while ( odbc_fetch_row($rs) )
 echo '
 
     <tr>
 
-    <td class="dnix" name="dni" id="dni" value='.odbc_result($rs,"cuil").'>'.odbc_result($rs,"cuil").'</td>
+    <td name="cuit" id="cuit" value='.odbc_result($rs,"cuil").'>'.odbc_result($rs,"cuil").'</td>
     <td> '.odbc_result($rs,"apellido").'   </td>
     <td> '.odbc_result($rs,"nombre").'</td>';
     echo '<td class="'.odbc_result($rs,"localidad").'" name="'.odbc_field_name($rs,"4").'" data-id="'.odbc_result($rs,"localidad").'">'.odbc_result($rs,"localidad_nombre").'</td>';
@@ -54,6 +51,7 @@ echo '
 
     echo '</tr>';
 
+
 echo '</table>';
 echo '
 <input type="hidden" id="xdni" name="xdni" value="'.odbc_result($rs,"cuil").'">'
@@ -67,9 +65,8 @@ echo '
 .'<input type="hidden" id="xemail" name="xemail" value="'.odbc_result($rs,"email").'">'
 ;
 ?>
-<!-- <button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button> -->
+<button type="button" id="btn_usar" class="btn btn-primary usar">USAR</button>
 <!-- <script>mostrar();</script> -->
-
 <?php
 
    }
@@ -79,7 +76,7 @@ echo '
 
     <script>
         //console.log('Hay q dar el alta porque no existe');
-      /*   mostrar_alta(); */
+/*         mostrar_alta(); */
 
     </script>
 

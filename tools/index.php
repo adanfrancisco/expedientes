@@ -26,6 +26,84 @@
 <script src="js/bootstrap.min.js"></script>
 
 
+<SCRIPT>
+function IsNumeric(valor) 
+{
+    var log=valor.length; var sw="S"; 
+    for (x=0; x<log; x++) 
+        { 
+            v1=valor.substr(x,1); 
+            v2 = parseInt(v1); 
+            //Compruebo si es un valor numÃ©rico 
+            if (isNaN(v2)) { sw= "N";} 
+        }
+    if (sw=="S") {return true;} else {return false; } 
+}
+
+var primerslap=false; 
+var segundoslap=false; 
+function calcLong(txt, dst, formul, maximo)
+
+      {
+      var largo
+      largo = formul[txt].value.length
+      if (largo > maximo)
+      formul[txt].value = formul[txt].value.substring(0,maximo)
+      formul[dst].value = formul[txt].value.length
+      }
+
+function formateafecha(fecha) 
+       { 
+           var long = fecha.length; 
+           var dia; 
+           var mes; 
+           var ano; 
+           if ((long>=2) && (primerslap==false)) 
+           {
+               dia=fecha.substr(0,2); 
+               if ((IsNumeric(dia)==true) && (dia<=31) && (dia!="00")) 
+               { 
+                   fecha=fecha.substr(0,2)+"/"+fecha.substr(3,7); primerslap=true; 
+               } 
+               else 
+               { fecha=""; primerslap=false;
+                } 
+           }else{ 
+               dia=fecha.substr(0,1); 
+               if (IsNumeric(dia)==false) 
+               {
+                   fecha="";} 
+               if ((long<=2) && (primerslap=true)) 
+               {
+                   fecha=fecha.substr(0,1); primerslap=false; 
+               } 
+            } 
+           if ((long>=5) && (segundoslap==false)) 
+           { mes=fecha.substr(3,2); 
+            if ((IsNumeric(mes)==true) &&(mes<=12) && (mes!="00")) { fecha=fecha.substr(0,5)+"/"+fecha.substr(6,4); segundoslap=true; } 
+            else { fecha=fecha.substr(0,3);; segundoslap=false;} 
+           } 
+           else { if ((long<=5) && (segundoslap=true)) { fecha=fecha.substr(0,4); segundoslap=false; } } 
+           if (long>=7) 
+           { ano=fecha.substr(6,4); 
+            if (IsNumeric(ano)==false) { fecha=fecha.substr(0,6); } 
+            else { if (long==10){ if ((ano==0) || (ano<1900) || (ano>2100)) { fecha=fecha.substr(0,6); } } } 
+           } 
+           if (long>=10) 
+           { 
+               fecha=fecha.substr(0,10); 
+               dia=fecha.substr(0,2); 
+               mes=fecha.substr(3,2); 
+               ano=fecha.substr(6,4); 
+               // AÃ±o no viciesto y es febrero y el dia es mayor a 28 
+               if ( (ano%4 != 0) && (mes ==02) && (dia > 28) ) { fecha=fecha.substr(0,2)+"/"; } 
+           } 
+return (fecha); 
+}
+</SCRIPT> 
+
+
+
  <script language="javascript">
 $(document).ready(function(){
     $("#busca").hide();
@@ -35,6 +113,8 @@ $(document).ready(function(){
     $("#recursos").on('click', function () {
        $("#titulo").html("ADMINISTRAR RECURSOS");
 //       $("#resulta").hide();
+    $("#busca").show();
+    $("#alta").hide();
        $("#tabla").show();
        $("#name").val('');
        $("#result").html('');
@@ -45,7 +125,7 @@ $(document).ready(function(){
         $("#name").keyup(function()
         {
         var name = $(this).val();
-        if(name.length == 15)
+        if(name.length == 8)
         { 
             $("#tabla").hide();
             $("#result").html('buscando...');
@@ -57,6 +137,7 @@ $(document).ready(function(){
                 { 
                     $("#resulta").html(data);
                     $("#result").html('');
+                    //$("#busca").hide()
                  }
             });
         }else{
@@ -81,7 +162,8 @@ $("#nuevo_registro").click(function()
 
 $("#btn_guardar_nuevo").click(function(){
 $("#result").show();
-        var cuil=$('input:text[name=cuil]').val();
+        var dni=$('input:text[name=dni]').val();
+       // var cuil=$('input:text[name=cuil]').val();
         var apellido=$('input:text[name=apellido]').val();
         var nombre=$('input:text[name=nombre]').val();
 ///////////////////  localidad - levanto el atributo name :)
@@ -92,16 +174,16 @@ var localidadX =$('option:selected', ".selector-localidades").attr('name');
         var telcel=$('input:text[name=telcel]').val();
         var email=$('input:text[name=email]').val();
         var fecha=$('input:text[name=fecha]').val();
+        
 //INICIO RUTINA POPUP
             $.confirm({
                 title: 'Confirme!',
-                content: '<b>C.U.I.L.:</b>'
-                +cuil
-                +'<BR> <b>APELLIDO:</b> '
-                +apellido
-                +'<BR> <b>NOMBRE:</b>' 
-                +nombre + '<BR> <b>localidad:</b>'+localidadX+
-                '<BR> Domicilio: '+domicilio + '<br>TEL:'+ telfijo +
+                content: 
+                '<BR><b>D.N.I.:</b>'+dni
+                +'<BR> <b>APELLIDO:</b> '+apellido
+                +'<BR> <b>NOMBRE:</b>'+nombre 
+                + '<BR> <b>localidad:</b>'+localidadX
+                +'<BR> Domicilio: '+domicilio + '<br>TEL:'+ telfijo +
                 '<br>CEL:'+telcel +'<br>email: '+email + '<br>Fecha:'+fecha
                 ,
                 buttons: {
@@ -111,7 +193,7 @@ var localidadX =$('option:selected', ".selector-localidades").attr('name');
 
 $.post (
     "nuevo_registro.php", {
-        cuil: cuil,
+        dni:dni,
         apellido:apellido,
         nombre:nombre,
         localidad:localidadX,
@@ -169,15 +251,6 @@ $.getJSON('localidadesX.php', function(data) {
 				$(".selector-localidades").append('<option name="' + key + '">' + value + '</option>'); 
 			}); // close each()
 		});
-/*                     $.ajax({
-                            type: "POST",
-                            url: "localidades.php",
-                            success: function(response)
-                            {
-                                $('.selector-localidades').html(response).fadeIn();
-                            }
-                    }); */
-      
 });
 
 
@@ -220,18 +293,25 @@ $.getJSON('localidadesX.php', function(data) {
             <div class="row">
                 <div id="content" class="col-lg-12">
                  <DIV id="alta">
-                 <label for="name">C.U.I.T./C.U.I.L.:</label>
+                 <label for="name">D.N.I.:</label>
+                            <input type="text" name="dni" id="dni" maxlength="150" size="20" 
+                            class="inputstyle" placeholder="xx.xxx.xxx" 
+                            required=""
+                            >
+
+ <!--                 <label for="name">DNI.:</label>
                             <input type="text" name="cuil" id="cuil" maxlength="150" size="20" 
                             class="inputstyle cuilt" placeholder="xx-xx.xxx.xxx-x" 
                             required=""
-                            >
-                            <label for="name">APELLIDO:</label>
+                            > -->
+                        <label for="name">APELLIDO:</label>
                             <input type="text" name="apellido" id="apellido" maxlength="150" size="20" 
                             class="inputstyle" placeholder="APELLIDO" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();
                             required=""
                             >
+                            <br>                            
                             <label for="name">NOMBRE:</label>
                             <input type="text" name="nombre" id="nombre" maxlength="150" size="20" 
                             class="inputstyle" placeholder="NOMBRE" 
@@ -239,7 +319,7 @@ $.getJSON('localidadesX.php', function(data) {
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
                             >   
-                            <br>
+                            
 
                             <label for="name">LOCALIDAD:</label>
                             <select class="selector-localidades" name="localidad" id="localidad">
@@ -247,19 +327,20 @@ $.getJSON('localidadesX.php', function(data) {
                             </select>
 
                             <label for="name">DOMICILIO:</label>
-                            <input type="text" name="domicilio" id="domicilio" maxlength="150" size="20" 
+                            <input type="text" name="domicilio" id="domicilio" maxlength="500" size="20" 
                             class="inputstyle" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
                             > 
+                            <br>
                             <label for="name">TELEFONO FJO:</label>
                             <input type="text" name="telfijo" id="telfijo" maxlength="150" size="20" 
                             class="inputstyle ttelefono" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
-                            > <br>
+                            > 
                             <label for="name">TELEFONO CEL:</label>
                             <input type="text" name="telcel" id="telcel" maxlength="150" size="20" 
                             class="inputstyle ttelefono" placeholder="NOMBRE" 
@@ -274,31 +355,43 @@ $.getJSON('localidadesX.php', function(data) {
 						    onkeyup="javascript:this.value=this.value.toLowerCase();                            
                             required=""
                             > 
+                            <br>
                             <label for="name">FECHA:</label>
                             <input type="text" name="fecha" id="fecha" maxlength="150" size="20" 
                             class="inputstyle datex" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
-						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
+						    onKeyUp = "this.value=formateafecha(this.value);"                            
                             required=""
-                            >                                                        <br>
+                            >   
+
+<!-- <input name="fechan" id="fechan" 
+class="input-text align-center" 
+style="padding: 0; width: 260px" type="text" id="clave" value="" maxlength="10" 
+placeholder="NACIO EL 17/11/1973" style="text-transform:uppercase;" 
+onKeyUp = "this.value=formateafecha(this.value);" onfocus="javascript:this.value='';"
+required="">  -->                            
+                            
+                            
+                            
+                                                                                 <br>
                             <button type="button" id="btn_guardar_nuevo" class="btn btn-primary usar">GUARDAR</button>                      
                  </DIV>
 
-                    <div id="busca">
-                            <label for="name">C.U.I.T./C.U.I.L.:</label>
-                            <input type="text" name="name" id="name" maxlength="150" size="20" 
-                            class="inputstyle cuilt" placeholder="xx-xx.xxx.xxx-x" 
-                            required=""
-                            >
-                            
-                            <button type="button" id="btn_usar" class="btn btn-primary usar pull-right">USAR</button>
-                    </div>
+                <div id="busca">
+                        <label for="name">D.N.I.:</label>
+                        <input type="text" name="name" id="name" maxlength="150" size="20" 
+                        class="inputstyle" placeholder="xx.xxx.xxx" 
+                        required=""
+                        >
+                        
+                        <button type="button" id="btn_usar" class="btn btn-primary usar pull-right">USAR</button>
+                </div>
 
-                    <div id="tabla">
-                    <?php
-                        require('table.php')
-                    ?>
-                    </div>
+                <div id="tabla">
+                <?php
+                    require('table.php')
+                ?>
+                </div>
 
                 </div>
             </div>

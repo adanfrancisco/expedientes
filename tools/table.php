@@ -19,9 +19,7 @@
 						echo odbc_field_name($rs,"1");
 					?>
 				'>
-					<?php
-						echo odbc_field_name($rs,"1");
-					?>
+					DNI
 				</th>
 				<th class='
 					<?php
@@ -106,7 +104,7 @@
     				/* $rs = $db->consulta($sql); */
 					while ( odbc_fetch_row($rs) ){
 echo '<tr class="'.odbc_result($rs,"cuil").'">';
-echo '<td class="'.odbc_result($rs,"cuil").' cuilt"name="'.odbc_field_name($rs,"1").'">'.odbc_result($rs,"cuil").'</td>';
+echo '<td class="'.odbc_result($rs,"cuil").' "name="'.odbc_field_name($rs,"1").'">'.odbc_result($rs,"cuil").'</td>';
 echo '<td class="'.odbc_result($rs,"apellido").'" name="'.odbc_field_name($rs,"2").'">'.odbc_result($rs,"apellido").'</td>';
 echo '<td class="'.odbc_result($rs,"nombre").'" name="'.odbc_field_name($rs,"3").'">'.odbc_result($rs,"nombre").'</td>';
 

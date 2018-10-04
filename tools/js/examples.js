@@ -4,6 +4,7 @@ $(function() {
   $('.date_time').mask('00/00/0000 00:00:00');
   $('.cep').mask('00000-000');
   $('.phone').mask('0000-0000');
+  $('.dnix').mask('00.000.000', {placeholder: "__.___.___"});
   $('.cuilt').mask('00-00.000.000-0', {placeholder: "__-__.___.___-_"});
   $('.ttelefono').mask('(00) 0000-0000', {placeholder: "(__) ____-____"});
   $('.phone_us').mask('(000) 000-0000');
