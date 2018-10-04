@@ -87,19 +87,17 @@ function displayForm( cell ) {
 		   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
 
 		}else{
-		//if(campo == 'fech_nac')	{tipo = "date";clase="datex";}
+		if(campo == 'fech_nac')	{tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)"}
 		//if(campo == 'cuil')	{tipo = "text";clase="";}
-		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";}
-		if(campo == 'celular')	{tipo = "text";clase="ttelefono";}
+		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
+		if(campo == 'celular')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
 
 
 		form = '<form action="javascript: this.preventDefault">' +
 				'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
-			   prevContent+'" style="text-transform:uppercase" onkeyup="javascript:this.value=this.value.toUpperCase()"; /><input type="hidden" name="id" value="'+id+'" />'+
+			   prevContent+'" style="text-transform:uppercase" onkeyup="'+ kiup+'"; /><input type="hidden" name="id" value="'+id+'" />'+
 			   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
-			   //alert($(this).closest('td').attr('name'));
-			   //style="text-transform:uppercase;" 
-				//onkeyup="javascript:this.value=this.value.toUpperCase();
+
 			}
 //MUESTRO LOS VALORES PARA SABER CON QUE TRABAJO
 console.log( 
@@ -156,24 +154,6 @@ function changeField( cell, prevContent ) {
 			cell.html(prevContent);
 		}
 	});
-
-
-/* //send ajax request
- 	$.getJSON(url+input, function(data) {//data argument is used to retrieve response from processing script
-console.log('envio ajax');
-
-	//On success, update cell to new value
-		if (data.success){
-			cell.html(data.value);
-			console.log('fue exitoso');
-		}else {
-			console.log('algo fallo');
-			//On failure, revert to original value and alert
-			cell.html(prevContent);
-		}
-
-	}); */
-
 	//remove click handler to allow tbody handler to make field editable again
 	cell.off('click');
 
@@ -208,4 +188,81 @@ function getLocalidad(id){
 	
 	return localidad;
 	
+}
+
+
+
+
+function IsNumeric(valor) 
+{
+    var log=valor.length; var sw="S"; 
+    for (x=0; x<log; x++) 
+        { 
+            v1=valor.substr(x,1); 
+            v2 = parseInt(v1); 
+            //Compruebo si es un valor numÃ©rico 
+            if (isNaN(v2)) { sw= "N";} 
+        }
+    if (sw=="S") {return true;} else {return false; } 
+}
+
+var primerslap=false; 
+var segundoslap=false; 
+function calcLong(txt, dst, formul, maximo)
+
+      {
+      var largo
+      largo = formul[txt].value.length
+      if (largo > maximo)
+      formul[txt].value = formul[txt].value.substring(0,maximo)
+      formul[dst].value = formul[txt].value.length
+      }
+
+function formateafecha(fecha) 
+       { 
+           var long = fecha.length; 
+           var dia; 
+           var mes; 
+           var ano; 
+           if ((long>=2) && (primerslap==false)) 
+           {
+               dia=fecha.substr(0,2); 
+               if ((IsNumeric(dia)==true) && (dia<=31) && (dia!="00")) 
+               { 
+                   fecha=fecha.substr(0,2)+"/"+fecha.substr(3,7); primerslap=true; 
+               } 
+               else 
+               { fecha=""; primerslap=false;
+                } 
+           }else{ 
+               dia=fecha.substr(0,1); 
+               if (IsNumeric(dia)==false) 
+               {
+                   fecha="";} 
+               if ((long<=2) && (primerslap=true)) 
+               {
+                   fecha=fecha.substr(0,1); primerslap=false; 
+               } 
+            } 
+           if ((long>=5) && (segundoslap==false)) 
+           { mes=fecha.substr(3,2); 
+            if ((IsNumeric(mes)==true) &&(mes<=12) && (mes!="00")) { fecha=fecha.substr(0,5)+"/"+fecha.substr(6,4); segundoslap=true; } 
+            else { fecha=fecha.substr(0,3);; segundoslap=false;} 
+           } 
+           else { if ((long<=5) && (segundoslap=true)) { fecha=fecha.substr(0,4); segundoslap=false; } } 
+           if (long>=7) 
+           { ano=fecha.substr(6,4); 
+            if (IsNumeric(ano)==false) { fecha=fecha.substr(0,6); } 
+            else { if (long==10){ if ((ano==0) || (ano<1900) || (ano>2100)) { fecha=fecha.substr(0,6); } } } 
+           } 
+           if (long>=10) 
+           { 
+               fecha=fecha.substr(0,10); 
+               dia=fecha.substr(0,2); 
+               mes=fecha.substr(3,2); 
+               ano=fecha.substr(6,4); 
+               // AÃ±o no viciesto y es febrero y el dia es mayor a 28 
+               if ( (ano%4 != 0) && (mes ==02) && (dia > 28) ) { fecha=fecha.substr(0,2)+"/"; } 
+           } 
+return (fecha); 
 }
