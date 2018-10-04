@@ -57,22 +57,14 @@ $(document).ready(function(){
                 { 
                     $("#resulta").html(data);
                     $("#result").html('');
-/*                      console.log('encontre'); */
                  }
             });
-           // return false;
         }else{
-            
-            // alert('debe seleccionar desde la tabla');
-            //$("#busca").hide(); 
             $("#tabla").show();
         }
 
 });
 
-
-
-//NUEVO REGISTRO
 $("#nuevo_registro").click(function()
 
     {
@@ -92,7 +84,14 @@ $("#result").show();
         var cuil=$('input:text[name=cuil]').val();
         var apellido=$('input:text[name=apellido]').val();
         var nombre=$('input:text[name=nombre]').val();
-
+///////////////////  localidad - levanto el atributo name :)
+var localidadX =$('option:selected', ".selector-localidades").attr('name');
+///////////////////  localidad
+        var domicilio=$('input:text[name=domicilio]').val();
+        var telfijo=$('input:text[name=telfijo]').val();
+        var telcel=$('input:text[name=telcel]').val();
+        var email=$('input:text[name=email]').val();
+        var fecha=$('input:text[name=fecha]').val();
 //INICIO RUTINA POPUP
             $.confirm({
                 title: 'Confirme!',
@@ -101,23 +100,41 @@ $("#result").show();
                 +'<BR> <b>APELLIDO:</b> '
                 +apellido
                 +'<BR> <b>NOMBRE:</b>' 
-                +nombre,
-
+                +nombre + '<BR> <b>localidad:</b>'+localidadX+
+                '<BR> Domicilio: '+domicilio + '<br>TEL:'+ telfijo +
+                '<br>CEL:'+telcel +'<br>email: '+email + '<br>Fecha:'+fecha
+                ,
                 buttons: {
                     SI: function () {
                         $.alert('GUARDADO!');
             //****************************************************************************/
-            $.post("nuevo_registro.php", { 
-                    cuil: cuil,apellido:apellido,nombre,nombre },function(data){
-                        $("#result").html(data);});    
 
-            //****************************************************************************/
-            //          Limpio las variables, excepto el servicio que queda activo
-            //          por si trajo mas de una cosa para cargar
-                        $('input:text[name=detalle]').val("")
-                        $("#carrga").hide();
-                        console.log('se guardo..'+cuil+' '+apellido+' ' +nombre);
+$.post (
+    "nuevo_registro.php", {
+        cuil: cuil,
+        apellido:apellido,
+        nombre:nombre,
+        localidad:localidadX,
+        domicilio:domicilio,
+        telfijo:telfijo,
+        telcel:telcel,
+        email:email,
+        fecha,fecha
+    },
 
+    function(data){
+    $("#busca").hide();
+    $("#alta").hide();
+    $("#tabla").hide();
+        $("#result").html(data);
+
+    });
+   
+/*     function () {
+        console.log ('se guardo');
+    }); */
+
+//***********************************************************************************************
                     },
                     NO: function () {
                         $.alert('No se guardo!');
@@ -128,18 +145,6 @@ $("#result").show();
 //FIN RUTINA POPUP
 });
 
-
-
-
-
-/*     $("#nivel").on('change', function () {
-        $("#nivel option:selected").each(function () {
-            elegido=$(this).val();
-            $.post("curso.php", { elegido: elegido }, function(data) {
-                $("#curso").html(data);
-            });			
-        });
-   }); */ 
 //BUSCA EN TABLA
 
 
@@ -159,15 +164,19 @@ $("#result").show();
       });
 
 ///carga combo localidades
-
-                    $.ajax({
+$.getJSON('localidadesX.php', function(data) {
+			$.each(data, function(key, value) {
+				$(".selector-localidades").append('<option name="' + key + '">' + value + '</option>'); 
+			}); // close each()
+		});
+/*                     $.ajax({
                             type: "POST",
                             url: "localidades.php",
                             success: function(response)
                             {
                                 $('.selector-localidades').html(response).fadeIn();
                             }
-                    });
+                    }); */
       
 });
 
@@ -233,34 +242,45 @@ $("#result").show();
                             <br>
 
                             <label for="name">LOCALIDAD:</label>
-                            <select>
-                            <option>
-                            si
-                            </option>
+                            <select class="selector-localidades" name="localidad" id="localidad">
+                                <option></option>
                             </select>
 
                             <label for="name">DOMICILIO:</label>
-                            <input type="text" name="nombre" id="nombre" maxlength="150" size="20" 
+                            <input type="text" name="domicilio" id="domicilio" maxlength="150" size="20" 
                             class="inputstyle" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
                             > 
                             <label for="name">TELEFONO FJO:</label>
-                            <input type="text" name="nombre" id="nombre" maxlength="150" size="20" 
-                            class="inputstyle" placeholder="NOMBRE" 
+                            <input type="text" name="telfijo" id="telfijo" maxlength="150" size="20" 
+                            class="inputstyle ttelefono" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
                             > <br>
                             <label for="name">TELEFONO CEL:</label>
-                            <input type="text" name="nombre" id="nombre" maxlength="150" size="20" 
-                            class="inputstyle" placeholder="NOMBRE" 
+                            <input type="text" name="telcel" id="telcel" maxlength="150" size="20" 
+                            class="inputstyle ttelefono" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
                             required=""
                             > 
-                            <br>
+                            <label for="name">EMAIL:</label>
+                            <input type="text" name="email" id="email" maxlength="150" size="20" 
+                            class="inputstyle" placeholder="NOMBRE" 
+                            style="text-transform:lowercase;" 
+						    onkeyup="javascript:this.value=this.value.toLowerCase();                            
+                            required=""
+                            > 
+                            <label for="name">FECHA:</label>
+                            <input type="text" name="fecha" id="fecha" maxlength="150" size="20" 
+                            class="inputstyle datex" placeholder="NOMBRE" 
+                            style="text-transform:uppercase;" 
+						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
+                            required=""
+                            >                                                        <br>
                             <button type="button" id="btn_guardar_nuevo" class="btn btn-primary usar">GUARDAR</button>                      
                  </DIV>
 
