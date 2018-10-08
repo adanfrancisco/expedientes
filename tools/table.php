@@ -2,7 +2,7 @@
 		<?php 
 		date_default_timezone_set('America/Los_Angeles');
 			include 'db.php';
-			$sql = 'SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad';
+			$sql = 'SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad where persona.activo=2';
 			$rs = $db->consulta($sql);
 		?>
 		

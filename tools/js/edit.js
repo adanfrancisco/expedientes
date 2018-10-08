@@ -79,26 +79,25 @@ function displayForm( cell ) {
 		prevContent = cell.text();//Guardo el valor previo
 		//form action prevents page refresh when enter pressed.  hidden fields pass primary key and column name
 
-		var tipo = "text";clase="";
-		if(campo == 'email'){
-			form = '<form action="javascript: this.preventDefault">' +
-			'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
-		   prevContent+'" /><input type="hidden" name="id" value="'+id+'" />'+
-		   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
+		var tipo = "text";clase="";kiup='';
+			
 
-		}else{
+
+		/* if(campo == 'apellido')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"}
+		if(campo == 'nombre')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"} */
+		if(campo == 'email')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toLowerCase()"}
 		if(campo == 'fech_nac')	{tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)"}
 		//if(campo == 'cuil')	{tipo = "text";clase="";}
 		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
 		if(campo == 'celular')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
-
+		
 
 		form = '<form action="javascript: this.preventDefault">' +
 				'<input   type="' + tipo + '" class="'+ clase +'" size="4" name="newValue" value="'+
 			   prevContent+'" style="text-transform:uppercase" onkeyup="'+ kiup+'"; /><input type="hidden" name="id" value="'+id+'" />'+
 			   '<input type="hidden"  name="column" value="'+campo+'" /></form>';
 
-			}
+			
 //MUESTRO LOS VALORES PARA SABER CON QUE TRABAJO
 console.log( 
 	'Fila=' + row +' columna:'+col+  

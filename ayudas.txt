@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////
 CONECTAR CON PHP DESDE Access////////////
 //////////////////////////////////////////////////////////////////////
-
+    
 <?php
 // Se especifica la ubicación de la base de datos Access (directorio actual)
 $db = getcwd() . "\\" . 'test.mdb';
@@ -179,3 +179,19 @@ XXXXXX             FIND CHECKBOX          XXXXXXXXXXX
 //////////////////////////////////////////////////////////////////////
 
 https://www.sitepoint.com/ajaxjquery-getjson-simple-example/
+
+
+//////////////////////////////////////////////////////////////////////
+XXXXXX            combo parameter        XXXXXXXXXXX
+//////////////////////////////////////////////////////////////////////
+$("#category").on('change', function () {
+        $("#category option:selected").each(function () {
+            var id_category = $(this).val();
+            $.post("subcategories.php", { id_category: id_category }, function(data) {
+                $("#subcategory").html(data);
+            });			
+        });
+   });
+
+
+   

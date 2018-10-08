@@ -31,6 +31,8 @@
 
  <script language="javascript">
 $(document).ready(function(){
+    
+    $("#lugar_que_se_asigna").hide();
     $("#busca").hide();
     $("#alta").hide();
     $("#tabla").hide();
@@ -71,10 +73,14 @@ $(document).ready(function(){
 
 });
 
+
+
+$("#btn_usar").click(function(){$("#lugar_que_se_asigna").show();});
+
 $("#nuevo_registro").click(function()
 
     {
-
+        $("#lugar_que_se_asigna").hide();
     $("#busca").hide();
     $("#alta").show();
     $("#tabla").hide();
@@ -170,12 +176,128 @@ $.post (
         $("#busca").show();
       });
 
+
+
+
+    $("#nivel").on('change', function () {
+        $("#nivel option:selected").each(function () {
+            nivel=$(this).val();
+            cod_nivel =$('option:selected', "#nivel").attr('name');
+            console.log('el combo: '+nivel+' tiene valor: '+cod_nivel);
+///////////////////////////////////// CARGO ESCUELA EN FUNCION DEL NIVEL //////////////////////            
+            $.post("escuelasX.php", { cod_nivel: cod_nivel }, function(data){
+                $("#escuelas").html(data);
+            });		
+///////////////////////////////////// CARGO ESCUELA EN FUNCION DEL NIVEL //////////////////////            	
+        });
+   });
+
+//*****************SI CAMBIA LA ESCUELA   *********************************************
+$("#escuelas").on('change', function () {
+        $("#escuelas option:selected").each(function () {
+            escuelas=$(this).val();
+             cod_escuelas =$('option:selected', "#escuelas").attr('name');
+            console.log('el combo: '+escuelas+' tiene valor: '+cod_escuelas);
+///////////////////////////////////// CARGO ESCUELA EN FUNCION DEL NIVEL //////////////////////            
+//            $.post("escuelasX.php", { cod_nivel: cod_nivel }, function(data){
+//            $("#escuelas").html(data);
+//            });		
+///////////////////////////////////// CARGO ESCUELA EN FUNCION DEL NIVEL //////////////////////            	
+        });
+   });
+
+//**********************************************************************************************
+$("#cargos").on('change', function () {
+        $("#cargos option:selected").each(function () {
+            cargos=$(this).val();
+            cod_cargos =$('option:selected', "#cargos").attr('name');
+            console.log('el combo: '+cargos+' tiene valor: '+cod_cargos);
+
+        });
+   });
+//**********************************************************************************************
 ///carga combo localidades
 $.getJSON('localidadesX.php', function(data) {
 			$.each(data, function(key, value) {
 				$(".selector-localidades").append('<option name="' + key + '">' + value + '</option>'); 
 			}); // close each()
-		});
+        });
+        
+//carga niveles
+$.getJSON('nivelesX.php', function(data) {
+			$.each(data, function(key, value) {
+				$(".selector-nivel").append('<option name="' + key + '">' + value + '</option>'); 
+			}); // close each()
+        });   
+        
+        //carga niveles
+$.getJSON('cargosX.php', function(data) {
+			$.each(data, function(key, value) {
+				$(".selector-cargos").append('<option name="' + key + '">' + value + '</option>'); 
+			}); // close each()
+		});        
+
+$("#btn_guarda_cargo").click(function(){
+//alert('Escuela: ' +cod_escuelas+' Nivel: '+cod_nivel + ' Cargo: '+cod_cargos);
+name=$("#name").val();
+console.log('escuela, cargo, nivel:'+cod_escuelas + ' ' + cod_cargos + ' ' + cod_nivel);
+//INICIO RUTINA POPUP
+$.confirm({
+                title: 'Confirme!',
+                content: 
+                '<BR><b>DNI:</b>' + name
+                +'<BR><b>ESCUELA:</b>' + escuelas
+                +'<BR> <b>NIVEL:</b> ' + nivel
+                +'<BR> <b>CARGO:</b>' +cargos
+                ,
+                buttons: {
+                    SI: function () {
+                        $.alert('GUARDADO!');
+            //****************************************************************************/
+
+ $.post (
+    "nuevo_cargo.php", {
+        dni:name,
+        cod_escuelas:cod_escuelas,
+        cod_cargos:cod_cargos,
+        cod_nivel:cod_nivel
+        
+    },
+
+    function(data){
+    $("#lugar_que_se_asigna").hide();
+    $("#busca").hide();
+    $("#alta").hide();
+    $("#tabla").hide();
+
+        $("#result").html(data);
+
+    }); 
+   
+/*     function () {
+        console.log ('se guardo');
+    }); */
+
+//***********************************************************************************************
+                    },
+                    NO: function () {
+                        $.alert('No se guardo!');
+                        console.log('NO SE HA ALMACENADO....');
+                    },
+                }
+            });
+//FIN RUTINA POPUP
+
+});
+
+
+
+
+
+
+
+
+
 });
 
 
@@ -202,8 +324,9 @@ $.getJSON('localidadesX.php', function(data) {
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" id="recursos" href="#">Gestion de Recursos</a>
-            <a class="nav-item nav-link" id="nuevo_registro" href="#">Nuevo</a>
+            <a class="nav-item nav-link" id="recursos" href="#">GRILLA</a>
+            <a class="nav-item nav-link" id="nuevo_registro" href="#">NUEVO</a>
+            <a class="nav-item nav-link" id="buscar_por_escuela" href="#">ESCUELA</a>
         </div>
     </div>
 
@@ -221,20 +344,12 @@ $.getJSON('localidadesX.php', function(data) {
                  <label for="name">D.N.I.:</label>
                             <input type="text" name="dni" id="dni" maxlength="150" size="20" 
                             class="inputstyle" placeholder="xx.xxx.xxx" 
-                            required=""
                             >
-
- <!--                 <label for="name">DNI.:</label>
-                            <input type="text" name="cuil" id="cuil" maxlength="150" size="20" 
-                            class="inputstyle cuilt" placeholder="xx-xx.xxx.xxx-x" 
-                            required=""
-                            > -->
                         <label for="name">APELLIDO:</label>
                             <input type="text" name="apellido" id="apellido" maxlength="150" size="20" 
                             class="inputstyle" placeholder="APELLIDO" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();
-                            required=""
                             >
                             <br>                            
                             <label for="name">NOMBRE:</label>
@@ -242,7 +357,6 @@ $.getJSON('localidadesX.php', function(data) {
                             class="inputstyle" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
-                            required=""
                             >   
                             
 
@@ -256,7 +370,6 @@ $.getJSON('localidadesX.php', function(data) {
                             class="inputstyle" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
-                            required=""
                             > 
                             <br>
                             <label for="name">TELEFONO FJO:</label>
@@ -264,40 +377,25 @@ $.getJSON('localidadesX.php', function(data) {
                             class="inputstyle ttelefono" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
-                            required=""
                             > 
                             <label for="name">TELEFONO CEL:</label>
                             <input type="text" name="telcel" id="telcel" maxlength="150" size="20" 
                             class="inputstyle ttelefono" placeholder="NOMBRE" 
                             style="text-transform:uppercase;" 
 						    onkeyup="javascript:this.value=this.value.toUpperCase();                            
-                            required=""
                             > 
                             <label for="name">EMAIL:</label>
                             <input type="text" name="email" id="email" maxlength="150" size="20" 
                             class="inputstyle" placeholder="NOMBRE" 
                             style="text-transform:lowercase;" 
 						    onkeyup="javascript:this.value=this.value.toLowerCase();                            
-                            required=""
                             > 
                             <br>
                             <label for="name">FECHA:</label>
                             <input type="text" name="fecha" id="fecha" maxlength="150" size="20" 
                             class="inputstyle datex" placeholder="NOMBRE" 
 						    onKeyUp = "this.value=formateafecha(this.value);"                            
-                            required=""
                             >   
-
-<!-- <input name="fechan" id="fechan" 
-class="input-text align-center" 
-style="padding: 0; width: 260px" type="text" id="clave" value="" maxlength="10" 
-placeholder="NACIO EL 17/11/1973" style="text-transform:uppercase;" 
-onKeyUp = "this.value=formateafecha(this.value);" onfocus="javascript:this.value='';"
-required="">  -->                            
-                            
-                            
-                            
-                                                                                 <br>
                             <button type="button" id="btn_guardar_nuevo" class="btn btn-primary usar">GUARDAR</button>                      
                  </DIV>
 
@@ -305,7 +403,6 @@ required="">  -->
                         <label for="name">D.N.I.:</label>
                         <input type="text" name="name" id="name" maxlength="150" size="20" 
                         class="inputstyle" placeholder="xx.xxx.xxx" 
-                        required=""
                         >
                         
                         <button type="button" id="btn_usar" class="btn btn-primary usar pull-right">USAR</button>
@@ -319,10 +416,32 @@ required="">  -->
 
                 </div>
             </div>
+
+            
         </div>
         <div id="card-title">
             <div id="row">
                     <div id="result" class="col-lg-12"></div>
+<!-- lugar_que_se_asigna -->
+            <div id="lugar_que_se_asigna">
+                    <label for="name">NIVEL:</label>
+                                    <select class="selector-nivel" name="nivel" id="nivel">
+                                        <option></option>
+                                    </select>
+                                    <br>
+                    <label for="name">ESCUELAS:</label>
+                                    <select class="selector-escuelas" name="escuelas" id="escuelas">
+                                        <option></option>
+                                    </select>   
+                                    
+                                    <br>                            
+                    <label for="name">CARGO:</label>
+                    <select class="selector-cargos" name="cargos" id="cargos">
+                        <option></option>
+                    </select>  
+            <button type="button" id="btn_guarda_cargo" class="btn btn-primary usar">GUARDAR</button>
+            </div>
+<!-- fin lugar_que_se_asigna -->            
             </div>
         </div>
 
