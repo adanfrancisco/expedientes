@@ -9,7 +9,17 @@ if($_POST)
         $dni=isset($_POST['dni']) ? $_POST['dni']  : null;
 
 //busco a ver si ya esta...
-echo  'dni: ' .$dni .' CARGO: '. $cod_cargos .' ESCUELA:'. $cod_escuelas .'  NIVEL: '. $cod_nivel.' <BR><b>Registro Guardado!</b>';
+$cargo="SELECT * from CARGOS where id_cargo=".$cod_cargos;
+$rs1 = $db->consulta($cargo);
+while ( odbc_fetch_row($rs1) ){
+$carguillo=odbc_result($rs1,"cargo");}
+
+$nivel="SELECT * from NIVELES where id_nivel=".$cod_nivel;
+$rs2 = $db->consulta($nivel);
+while ( odbc_fetch_row($rs2) ){
+$nivelillo=odbc_result($rs2,"nivel");}
+
+echo  'dni: ' .$dni .' CARGO: '. $carguillo .' ESCUELA:'. $cod_escuelas .'  NIVEL: '. $nivelillo.' <BR><b>Registro Guardado!</b>';
 $sql="SELECT count(persona) as counter FROM SERVICIOS where persona='$dni' and escuela = '$cod_escuelas' and cargo =  $cod_cargos";
 //echo '<br>'.$sql;
 $stmt=$db->consulta($sql);

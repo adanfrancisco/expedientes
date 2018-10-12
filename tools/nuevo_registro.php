@@ -34,7 +34,7 @@ if($count>0){
 
   //      echo $sql;
         $rs = $db->consulta($sql);
-        echo ' Registro Guardado!';
+        echo ' Exitoso!';
         }
 }
 

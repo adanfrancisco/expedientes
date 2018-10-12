@@ -36,17 +36,34 @@ $(document).ready(function(){
     $("#busca").hide();
     $("#alta").hide();
     $("#tabla").hide();
+    $("#tabla2").hide();
 //HABILITA MENU ADMIN RECURSOS
     $("#recursos").on('click', function () {
        $("#titulo").html("ADMINISTRAR RECURSOS");
 //       $("#resulta").hide();
     $("#busca").show();
     $("#alta").hide();
-       $("#tabla").show();
+       $("#tabla").show();$("#tabla2").hide();
        $("#name").val('');
        $("#result").html('');
        $("#resulta").html('');
     });
+
+
+
+//BUSCAR POR ESCUELA
+$("#buscar_por_escuela").on('click', function () {
+       $("#titulo").html("VER ESCUELAS");
+//       $("#resulta").hide();
+    $("#busca").show();
+    $("#alta").hide();
+    $("#tabla").hide();
+       $("#tabla2").show();
+       $("#name").val('');
+       $("#result").html('');
+       $("#resulta").html('');
+    });
+
 
 //BUSCADOR CUIL
         $("#name").keyup(function()
@@ -84,12 +101,16 @@ $("#nuevo_registro").click(function()
     $("#busca").hide();
     $("#alta").show();
     $("#tabla").hide();
+    $("#tabla2").hide();
     $("#result").hide();
     $("#resulta").hide();
     $('#cuil').val('');
     $('#apellido').val('');
     $('#nombre').val('');
     });
+
+
+
 
 $("#btn_guardar_nuevo").click(function(){
 $("#result").show();
@@ -269,7 +290,7 @@ $.confirm({
     $("#busca").hide();
     $("#alta").hide();
     $("#tabla").hide();
-
+    $("#tabla2").hide();
         $("#result").html(data);
 
     }); 
@@ -413,7 +434,11 @@ $.confirm({
                     require('table.php')
                 ?>
                 </div>
-
+                <div id="tabla2">
+                <?php
+                    require('table_escuela.php')
+                ?>
+                </div>
                 </div>
             </div>
 
