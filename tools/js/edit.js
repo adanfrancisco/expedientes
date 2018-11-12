@@ -1,4 +1,4 @@
-var localidades = {};
+var  localidades = {};
 
 $(function() {
 
@@ -86,7 +86,7 @@ function displayForm( cell ) {
 
 		if(campo == 'apellido')	{ tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"  }
 		if(campo == 'nombre')	{ tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()" } 
-		if(campo == 'email')	{ tipo = "text";kiup="javascript:this.value=this.value.toLowerCase()" } 
+		/* if(campo == 'email')	{ tipo = "text";kiup="javascript:this.value=this.value.toLowerCase()" }  */
 		if(campo == 'fech_nac')	{ tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)" }
 		if(campo == 'telefono')	{ tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()" }
 		if(campo == 'celular')	{ tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()" }
