@@ -17,12 +17,12 @@ $(function() {
 
 function displayForm( cell ) {
 
-	var col = cell.parent().children().parent().children().index(cell);
-	var row = cell.parent().parent().children().index(cell.parent());
+	let col = cell.parent().children().parent().children().index(cell);
+	let row = cell.parent().parent().children().index(cell.parent());
 	campo=cell.closest('td').attr('name');
 	
 	if(campo=='localidad'){
-		var idactual = cell.data('id');
+		let idactual = cell.data('id');
 		
 		var column = cell.attr('class'),//class of td corresponds to database table column
 			id = cell.closest('tr').attr('class'),// Clase de ese atributo //id corresponde a primary key
@@ -71,6 +71,7 @@ function displayForm( cell ) {
 			cell.html(getLocalidad(idAnterior));
 		}
 	});
+//si no es Localidad...	
 }else{
 	var column = cell.attr('class'),//class of td corresponds to database table column
 		id = cell.closest('tr').attr('class'),// Clase de ese atributo //id corresponde a primary key
@@ -83,13 +84,12 @@ function displayForm( cell ) {
 			
 
 
-		if(campo == 'apellido')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"}
-		if(campo == 'nombre')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"} 
-		
-		if(campo == 'fech_nac')	{tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)"}
-		
-		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
-		if(campo == 'celular')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
+		if(campo == 'apellido')	{ tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"  }
+		if(campo == 'nombre')	{ tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()" } 
+		if(campo == 'email')	{ tipo = "text";kiup="javascript:this.value=this.value.toLowerCase()" } 
+		if(campo == 'fech_nac')	{ tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)" }
+		if(campo == 'telefono')	{ tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()" }
+		if(campo == 'celular')	{ tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()" }
 		
 
 		form = '<form action="javascript: this.preventDefault">' +
