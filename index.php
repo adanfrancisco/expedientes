@@ -4,9 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MESA</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <script src="../tools/js/jquery-1.7.min.js"></script>         <script src="../tools/js/bootstrap.min.js"></script>
+        <link href="../tools/css/bootstrap.min.css" rel="stylesheet">
 
 
 <button type="button" class="btn btn-primary mesa"onclick="location='mesa/index.php'" >MESA</button>

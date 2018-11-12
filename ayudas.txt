@@ -189,7 +189,7 @@ $("#category").on('change', function () {
             var id_category = $(this).val();
             $.post("subcategories.php", { id_category: id_category }, function(data) {
                 $("#subcategory").html(data);
-            });			
+            });
         });
    });
 

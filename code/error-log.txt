@@ -3495,3 +3495,106 @@
 [01-Oct-2018 11:42:58 UTC] PHP Stack trace:
 [01-Oct-2018 11:42:58 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
 [01-Oct-2018 11:42:58 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[05-Nov-2018 11:18:55 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/.versions-index,C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01/.versions-index) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/busca.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/busca.php (1)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/busca.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/busca.php (2)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/busca.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/busca.php (3)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (1)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (2),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (2)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (3),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (3)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (4),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (4)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (5),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (5)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:55 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:55 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:55 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:55 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (6),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (6)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:55 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:55 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:56 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:56 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:56 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:56 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/busca/index.php (7),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01_busca/index.php (7)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:56 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:56 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:56 UTC] PHP   3. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:847
+[05-Nov-2018 11:18:56 UTC] PHP   4. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:18:56 UTC] PHP Warning:  rename(C:/wamp/www/code/lib/../backups/localhost/2018-10-01/index.php (1),C:/wamp/www/code/lib/../tmp/.C__wamp_www_code_lib_.._backups_localhost_2018-10-01/index.php (1)) [<a href='function.rename'>function.rename</a>]: El sistema no puede encontrar la ruta especificada. (code: 3) in C:\wamp\www\code\lib\file-control-xhr.php on line 850
+[05-Nov-2018 11:18:56 UTC] PHP Stack trace:
+[05-Nov-2018 11:18:56 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:18:56 UTC] PHP   2. rrmdir() C:\wamp\www\code\lib\file-control-xhr.php:436
+[05-Nov-2018 11:18:56 UTC] PHP   3. rename() C:\wamp\www\code\lib\file-control-xhr.php:850
+[05-Nov-2018 11:20:10 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[05-Nov-2018 11:20:10 UTC] PHP Stack trace:
+[05-Nov-2018 11:20:10 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:20:10 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[05-Nov-2018 11:20:10 UTC] PHP Stack trace:
+[05-Nov-2018 11:20:10 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:20:10 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[05-Nov-2018 11:20:10 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[05-Nov-2018 11:20:10 UTC] PHP Stack trace:
+[05-Nov-2018 11:20:10 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:20:10 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324
+[05-Nov-2018 11:21:48 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp\www\code\lib\file-control-xhr.php on line 76
+[05-Nov-2018 11:21:48 UTC] PHP Stack trace:
+[05-Nov-2018 11:21:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:21:48 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 323
+[05-Nov-2018 11:21:48 UTC] PHP Stack trace:
+[05-Nov-2018 11:21:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:21:48 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:323
+[05-Nov-2018 11:21:48 UTC] PHP Warning:  preg_match_all() expects at least 3 parameters, 2 given in C:\wamp\www\code\lib\file-control-xhr.php on line 324
+[05-Nov-2018 11:21:48 UTC] PHP Stack trace:
+[05-Nov-2018 11:21:48 UTC] PHP   1. {main}() C:\wamp\www\code\lib\file-control-xhr.php:0
+[05-Nov-2018 11:21:48 UTC] PHP   2. preg_match_all() C:\wamp\www\code\lib\file-control-xhr.php:324

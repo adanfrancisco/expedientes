@@ -44,7 +44,7 @@ $ICEcoderUserSettings = array(
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
 "previousFiles"		=> "",
-"last10Files"		=> "C:|wamp|www||edit_table_5|table.php,C:|wamp|www||index.php,C:|wamp|www||busca|index.php,C:|wamp|www||busca|busca.php,C:|wamp|www||add|username-check.php,C:|wamp|www||add|index.html,C:|wamp|www||add|script.php,C:|wamp|www||add|alta.php,C:|wamp|www||listado|grabar2.php,C:|wamp|www||listado|grabar.php",
+"last10Files"		=> "C:|wamp|www||update.php,C:|wamp|www||ayudas.txt,C:|wamp|www||edit_table_5|table.php,C:|wamp|www||index.php,C:|wamp|www||busca|index.php,C:|wamp|www||busca|busca.php,C:|wamp|www||add|username-check.php,C:|wamp|www||add|index.html,C:|wamp|www||add|script.php,C:|wamp|www||add|alta.php",
 "favoritePaths"		=> array()
 );
 ?>
