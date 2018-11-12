@@ -44,7 +44,7 @@ echo '
     echo '<td> '.odbc_result($rs,"domicilio").' </td>';
     echo '<td class="phone_with_ddd"> '.odbc_result($rs,"telefono").' </td>
     <td class="phone_with_ddd"> '.odbc_result($rs,"celular").' </td>
-    <td> '.odbc_result($rs,"email").' </td>';
+    <td class ="texto"> '.odbc_result($rs,"email").' </td>';
     $fecha = '';
     if(odbc_result($rs,"fech_nac") != '')
     $fecha=odbc_result($rs,"fech_nac");

@@ -85,9 +85,9 @@ function displayForm( cell ) {
 
 		if(campo == 'apellido')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"}
 		if(campo == 'nombre')	{tipo = "text";kiup="javascript:this.value=this.value.toUpperCase()"} 
-		if(campo == 'email')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toLowerCase()"}
+		
 		if(campo == 'fech_nac')	{tipo = "text";kiup = "javascript:this.value=formateafecha(this.value)"}
-		//if(campo == 'cuil')	{tipo = "text";clase="";}
+		
 		if(campo == 'telefono')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
 		if(campo == 'celular')	{tipo = "text";clase="ttelefono";kiup="javascript:this.value=this.value.toUpperCase()"}
 		
