@@ -25,11 +25,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-
-
-
-
- <script language="javascript">
+<script language="javascript">
 $(document).ready(function(){
     
     $("#lugar_que_se_asigna").hide();
@@ -347,7 +343,7 @@ $.confirm({
         <div class="navbar-nav">
             <a class="nav-item nav-link" id="recursos" href="#">GRILLA</a>
             <a class="nav-item nav-link" id="nuevo_registro" href="#">NUEVO</a>
-            <a class="nav-item nav-link" id="buscar_por_escuela" href="#">ESCUELA</a>
+            <!-- <a class="nav-item nav-link" id="buscar_por_escuela" href="#">ESCUELA</a> -->
         </div>
     </div>
 

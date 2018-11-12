@@ -28,7 +28,7 @@ $sql="SELECT COUNT(cuil) as counter FROM persona WHERE cuil='".$name."' and acti
 $sql="SELECT * FROM persona INNER JOIN localidades  ON localidades.idLocalidad = persona.localidad 
 WHERE cuil like '".$name."' and activo=2";
     $rs = $db->consulta($sql);
-
+//echo $sql.'<BR>';
 echo '<table border=1 style="border-collapse:collapse";>
 <th>D.N.I.</th><th>APELLIDO</th> <th>NOMBRE</th><th>LOCALIDAD</th>
 <th>DOMICILIO</th><th>TELEFONO</th><th>CELULAR</th><th>EMAIL</th><th>FECHA</th>';
@@ -55,6 +55,31 @@ echo '
     echo '</tr>';
 
 echo '</table>';
+
+$sql_cargo="SELECT persona.cuil, cargos.cargo as cargo, ESCUELA.CLAVE as clave,
+ ESCUELA.CUE as cue, ESCUELA.NOMBRE as nombre
+FROM persona INNER JOIN (ESCUELA INNER JOIN (cargos INNER JOIN SERVICIOS ON cargos.id_cargo = SERVICIOS.cargo) ON ESCUELA.CLAVE = SERVICIOS.escuela) ON persona.cuil = SERVICIOS.persona
+WHERE (((persona.cuil) Like '".$name."')) ";
+
+    $rs1 = $db->consulta($sql_cargo);
+//echo $sql_cargo;
+    echo '<table border=1 style="border-collapse:collapse";>
+    
+    <th>CARGO</th><th>CLAVE</th><th>CUE</th><th>ESCUELA</th>';
+        while ( odbc_fetch_row($rs1) )
+    echo '
+        <tr>
+        <td> '.odbc_result($rs1,"cargo").'   </td>
+        <td> '.odbc_result($rs1,"clave").'</td>
+        <td> '.odbc_result($rs1,"cue").'</td>
+        <td> '.odbc_result($rs1,"nombre").'</td>
+
+        </tr>
+    </table>';
+
+        
+
+
 echo '
 <input type="hidden" id="xdni" name="xdni" value="'.odbc_result($rs,"cuil").'">'
 .'<input type="hidden" id="xapellido" name="xapellido" value="'.odbc_result($rs,"apellido").'">'
